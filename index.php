@@ -159,7 +159,334 @@
 
   <!-- Curriculum Section -->
   
-  
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --bg-2: #ffffff;
+      --white: #111827;
+      --text: #111827;
+      --text-muted: #4b5563;
+      --font: 'DM Sans', -apple-system, sans-serif;
+      --font-display: 'Sora', sans-serif;
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
+      --nav-h: 72px;
+      --ticker-h: 36px;
+      --cur-ease-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      --cur-white-05: rgba(255, 255, 255, 0.05);
+      --cur-white-10: rgba(255, 255, 255, 0.1);
+      --cur-white-40: rgba(255, 255, 255, 0.4);
+      --cur-white-50: rgba(255, 255, 255, 0.5);
+      --cur-white-75: rgba(255, 255, 255, 0.75);
+      --cur-white-80: rgba(255, 255, 255, 0.8);
+      --cur-white-85: rgba(255, 255, 255, 0.85);
+      --cur-sticky-top: calc(var(--nav-h) + var(--ticker-h));
+      --cur-stack-base: 16px;
+      --cur-stack-step: 24px;
+    }
+
+    * { box-sizing: border-box; }
+    /* html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font);
+      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    } */
+    a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+    ul { list-style: none; margin: 0; padding: 0; }
+
+    .container {
+      width: min(1300px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 72px 0;
+      background: #ffffff;
+    }
+    .section-header { margin-bottom: 56px; text-align: center; }
+    .section-label {
+      display: inline-block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #4ade80; margin-bottom: 14px;
+    }
+    .section-title {
+      font-family: var(--font-display); font-size: clamp(1.85rem, 4vw, 3rem); font-weight: 800; line-height: 1.1; color: var(--white); margin-bottom: 16px;
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, rgba(36,144,56,1) 0%, rgba(87,199,133,1) 50%, rgba(237,221,83,1) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+
+    .curriculum-section {
+      --cur-ease-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      --cur-white-05: rgba(15, 23, 42, 0.05);
+      --cur-white-10: rgba(15, 23, 42, 0.1);
+      --cur-white-40: rgba(15, 23, 42, 0.4);
+      --cur-white-50: rgba(15, 23, 42, 0.5);
+      --cur-white-75: rgba(15, 23, 42, 0.75);
+      --cur-white-80: rgba(15, 23, 42, 0.8);
+      --cur-white-85: rgba(15, 23, 42, 0.85);
+      --cur-sticky-top: calc(var(--nav-h) + var(--ticker-h));
+      --cur-stack-base: 16px;
+      --cur-stack-step: 24px;
+      background: #ffffff;
+      color: #111827;
+      padding: 72px 0;
+    }
+
+    .cur-nav-list li:nth-child(1), .card-purple, .metric-purple, .semester-purple, .bullet-purple { --t-accent: #a78bfa; --t-accent-sem: #c4b5fd; --t-rgb: 139, 92, 246; --t-nav-rgb: 167, 139, 250; --t-pill-rgb: 167, 139, 250; --t-card-border: rgba(167, 139, 250, 0.25); --t-card-from: rgba(20, 15, 35, 0.97); --t-card-to: rgba(12, 8, 25, 0.97); --t-card-shadow: rgba(167, 139, 250, 0.06); }
+    .cur-nav-list li:nth-child(2), .card-cyan, .metric-cyan, .semester-cyan, .bullet-cyan { --t-accent: #22d3ee; --t-accent-sem: #67e8f9; --t-rgb: 6, 182, 212; --t-nav-rgb: 34, 211, 238; --t-pill-rgb: 6, 182, 212; --t-card-border: rgba(34, 211, 238, 0.25); --t-card-from: rgba(8, 25, 35, 0.97); --t-card-to: rgba(5, 15, 22, 0.97); --t-card-shadow: rgba(34, 211, 238, 0.06); }
+    .cur-nav-list li:nth-child(3), .card-green, .metric-green, .semester-green, .bullet-green { --t-accent: #4ade80; --t-accent-sem: #86efac; --t-rgb: 34, 197, 94; --t-nav-rgb: 74, 222, 128; --t-pill-rgb: 34, 197, 94; --t-card-border: rgba(74, 222, 128, 0.25); --t-card-from: rgba(8, 35, 18, 0.97); --t-card-to: rgba(5, 22, 10, 0.97); --t-card-shadow: rgba(74, 222, 128, 0.06); }
+    .cur-nav-list li:nth-child(4), .card-orange, .metric-orange, .semester-orange, .bullet-orange { --t-accent: #fb923c; --t-accent-sem: #fdba74; --t-rgb: 249, 115, 22; --t-nav-rgb: 251, 146, 60; --t-pill-rgb: 249, 115, 22; --t-card-border: rgba(251, 146, 60, 0.25); --t-card-from: rgba(35, 20, 8, 0.97); --t-card-to: rgba(22, 12, 5, 0.97); --t-card-shadow: rgba(251, 146, 60, 0.06); }
+
+    .container--curriculum { max-width: 1450px; }
+    .curriculum-layout { display: grid; grid-template-columns: 280px 1fr; gap: 60px; align-items: start; }
+    .curriculum-cards-stack { position: relative; padding-bottom: 10vh; }
+    .curriculum-header { margin-bottom: 48px; }
+    .curriculum-path-badge {
+      display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: 0.35em; text-transform: uppercase; color: #475569; padding: 8px 16px; background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 100px; margin-bottom: 18px;
+    }
+
+    .curriculum-sidebar { position: sticky; top: calc(var(--cur-sticky-top) + 16px); padding: 24px 0; z-index: 50; }
+    .cur-nav-list { display: flex; flex-direction: column; gap: 20px; }
+    .curriculum-section .cur-nav-link { display: flex; flex-direction: column; padding: 16px 20px 16px 50px; color: var(--cur-white-40); font-weight: 700; border-radius: 12px; transition: all 0.3s var(--cur-ease-bounce); position: relative; cursor: pointer; }
+    .curriculum-section .cur-nav-link::before { content: ''; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); width: 12px; height: 12px; border-radius: 50%; background: var(--cur-white-10); transition: all 0.3s ease; }
+    .cur-nav-num { display: inline-flex; align-items: center; justify-content: center; width: auto; min-width: 86px; height: auto; padding: 8px 10px; border-radius: 999px; font-size: 12px; font-weight: 800; background: var(--cur-white-10); color: var(--cur-white-50); margin-bottom: 8px; flex-shrink: 0; white-space: nowrap; }
+    .cur-nav-title { font-size: 18px; color: inherit; line-height: 1.2; }
+    .curriculum-section .cur-nav-link:hover { color: #111827; background: #f8fafc; transform: translateX(10px); }
+    .curriculum-section .cur-nav-link.active { color: #111827; background: #f1f5f9; }
+    .cur-nav-list li .cur-nav-num { background: rgba(var(--t-nav-rgb), 0.2); color: var(--t-accent); }
+    .curriculum-section .cur-nav-link.active .cur-nav-title { color: #0f766e; }
+    .cur-nav-list li .cur-nav-link.active::before { background: #10b981; box-shadow: 0 0 15px rgba(16, 185, 129, 0.35); }
+
+    .curriculum-card { position: sticky; top: calc(var(--cur-sticky-top) + var(--cur-stack-base) + var(--cur-stack-step) * var(--stack-index)); z-index: calc(var(--stack-index) + 1); background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border-radius: 20px; padding: 28px; margin-bottom: 20px; border: 1px solid rgba(148, 163, 184, 0.25); box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08); color: #0f172a; transition: transform 0.4s var(--cur-ease-bounce), border-color 0.4s ease, box-shadow 0.4s ease; will-change: transform; }
+    .curriculum-card:hover { transform: translateY(-5px); }
+    .curriculum-card.card-purple, .curriculum-card.card-cyan, .curriculum-card.card-green, .curriculum-card.card-orange, .curriculum-card.card-white { border-color: rgba(148, 163, 184, 0.35); background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08); color: #0f172a; }
+    .curriculum-card .curriculum-year-num { color: #0a0a0a; opacity: 1; }
+    .curriculum-card .curriculum-card-header h3 { color: #0f172a; }
+    .curriculum-card .curriculum-card-subtitle { color: #475569; }
+    .curriculum-card .curriculum-course-item { color: #334155; }
+    .curriculum-card .curriculum-bottom-tag { background: #f1f5f9; color: #334155; border: 1px solid #e2e8f0; }
+    .curriculum-card .curriculum-semester-box { background: #ffffff; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
+
+    #curriculum #year1 { --stack-index: 0; }
+    #curriculum #year2 { --stack-index: 1; }
+    #curriculum #year3 { --stack-index: 2; }
+    #curriculum #year4 { --stack-index: 3; }
+
+    .curriculum-card-body { display: block; max-height: 440px; overflow-y: auto; padding-right: 10px; }
+    .curriculum-card-body::-webkit-scrollbar { width: 5px; }
+    .curriculum-card-body::-webkit-scrollbar-track { background: var(--cur-white-05); }
+    .curriculum-card-body::-webkit-scrollbar-thumb { background: var(--cur-white-10); border-radius: 10px; }
+
+    .curriculum-card-header { display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto auto; gap: 16px; margin-bottom: 32px; align-items: start; position: relative; }
+    .curriculum-title-row { grid-column: 1 / 2; grid-row: 1 / 2; display: flex; align-items: center; gap: 16px; }
+    .curriculum-country-flag { position: absolute; top: 0; right: 0; font-size: 20px; line-height: 1; background: rgba(255,255,255,0.9); border: 1px solid #e5e7eb; border-radius: 999px; width: 42px; height: 42px; display: grid; place-items: center; box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08); }
+    .curriculum-card-subtitle { grid-column: 1 / -1; grid-row: 2 / 3; font-size: 15px; color: var(--cur-white-75); line-height: 1.6; margin: 0; }
+    .curriculum-card-header h3 { font-family: var(--font-display); font-size: 32px; font-weight: 800; margin: 0; color: #111827; }
+    .card-purple h3, .card-cyan h3, .card-green h3, .card-orange h3 { text-shadow: 0 0 30px rgba(var(--t-rgb), 0.4); }
+    .curriculum-year-num { width: auto; min-width: 96px; height: auto; padding: 10px 14px; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 22px; font-weight: 800; border-radius: 12px; flex-shrink: 0; transition: transform 0.3s var(--cur-ease-bounce); white-space: nowrap; }
+    .curriculum-card:hover .curriculum-year-num { transform: scale(1.1); }
+    .curriculum-card .curriculum-year-num { background: linear-gradient(135deg, #eef2ff, #f8fafc); color: #111827; text-shadow: none; border: 1px solid #e5e7eb; }
+
+    .curriculum-semesters { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 24px; align-items: stretch; }
+    .curriculum-semester-box { background: #ffffff; border-radius: 14px; padding: 16px; transition: background 0.3s ease, transform 0.3s ease; display: flex; flex-direction: column; border: 1px solid #eef2f7; }
+    .curriculum-semester-box .curriculum-course-list { flex: 1; }
+    .curriculum-semester-box:hover { background: #f8fafc; transform: translateY(-2px); }
+    .curriculum-semester-tag { display: inline-flex; align-items: center; padding: 6px 16px; border-radius: 20px; font-size: 14px; font-weight: 700; margin-bottom: 14px; margin-right: 8px; }
+    .semester-purple, .semester-cyan, .semester-green, .semester-orange { background: #f1f5f9; color: #334155; text-shadow: none; border: 1px solid #e5e7eb; }
+    .semester-dark { background: #1e293b; color: #ffffff; border: 1px solid #334155; }
+    .curriculum-course-list { display: flex; flex-direction: column; gap: 10px; }
+    .curriculum-course-item { padding: 6px 0; font-size: 13.5px; color: #334155; display: flex; align-items: flex-start; gap: 10px; transition: transform 0.2s ease, color 0.2s ease; }
+    .curriculum-course-item:hover { transform: translateX(6px); color: #111827; }
+    .curriculum-section [class^="bullet-"] { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
+    .bullet-purple, .bullet-cyan, .bullet-green, .bullet-orange { background: #10b981; box-shadow: none; }
+    .bullet-yellow { background: #fbbf24; box-shadow: 0 0 10px rgba(251,191,36,0.8); }
+    .bullet-pink { background: #f472b6; box-shadow: 0 0 10px rgba(244,114,182,0.8); }
+
+    .curriculum-bottom-tags { display: flex; gap: 20px; flex-wrap: wrap; padding: 16px 32px; background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 16px; justify-content: center; margin-top: 24px; }
+    .curriculum-bottom-tag { display: flex; align-items: center; gap: 8px; font-size: 15px; color: #334155; transition: transform 0.2s ease, color 0.2s ease; }
+    .curriculum-bottom-tag:hover { transform: translateY(-3px); color: #111827; }
+    .curriculum-tag-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .tag-dot-purple { background: #a855f7; }
+    .tag-dot-cyan { background: #06b6d4; }
+    .tag-dot-emerald { background: #10b981; }
+    .tag-dot-amber { background: #f59e0b; }
+
+    @media (max-width: 991.98px) {
+      .curriculum-layout { grid-template-columns: minmax(0, 1fr); gap: 0; }
+      .curriculum-sidebar { position: sticky; top: 0; padding: 10px 0; background: rgba(6, 6, 16, 0.96); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.07); margin-bottom: 0; }
+      .cur-nav-list { flex-direction: row; gap: 10px; overflow-x: auto; padding: 4px 16px 10px; scrollbar-width: none; }
+      .cur-nav-list::-webkit-scrollbar { display: none; }
+      .curriculum-section .cur-nav-link { flex-shrink: 0; flex-direction: row; gap: 8px; align-items: center; padding: 8px 16px; border-radius: 100px; white-space: nowrap; min-height: 44px; transform: none !important; border: 1px solid var(--cur-white-10); background: rgba(255,255,255,0.04); }
+      .curriculum-section .cur-nav-link::before { position: static; transform: none; width: 8px; height: 8px; }
+      .cur-nav-num { margin-bottom: 0; }
+      .cur-nav-title { font-size: 14px; }
+      .cur-nav-list li .cur-nav-link.active { background: rgba(var(--t-pill-rgb), 0.2); border-color: rgba(var(--t-pill-rgb), 0.5); color: #ffffff; }
+      .cur-nav-list li .cur-nav-link.active .cur-nav-num { background: rgba(255,255,255,0.25); color: #ffffff; }
+      .cur-nav-list li .cur-nav-link.active .cur-nav-title { color: #ffffff; }
+      .curriculum-card { margin-bottom: 16px; }
+      .curriculum-semesters { display: flex; flex-wrap: nowrap; gap: 16px; overflow-x: auto; padding-bottom: 8px; scrollbar-width: none; }
+      .curriculum-semesters::-webkit-scrollbar { display: none; }
+      .curriculum-semester-box { flex: 0 0 45%; min-width: 300px; }
+    }
+
+    @media (max-width: 767.98px) {
+      .curriculum-card { padding: 20px 16px; margin-bottom: 14px; }
+      .curriculum-card-header { grid-template-columns: 1fr; grid-template-rows: auto auto auto; gap: 12px; margin-bottom: 20px; }
+      .curriculum-title-row { grid-column: 1 / -1; grid-row: 1 / 2; }
+      .curriculum-card-subtitle { grid-row: 2 / 3; font-size: 13px; }
+      .curriculum-year-num { min-width: 84px; padding: 8px 12px; font-size: 18px; border-radius: 10px; }
+      .curriculum-card-header h3 { font-size: 22px; }
+      .curriculum-semesters { gap: 12px; margin-bottom: 16px; }
+      .curriculum-semester-box { padding: 14px; border-radius: 12px; flex: 0 0 88%; min-width: 88%; max-width: 88%; width: 88%; }
+      .curriculum-semester-tag { font-size: 13px; padding: 6px 14px; margin-bottom: 12px; }
+      .curriculum-course-item { font-size: 13px; padding: 4px 0; }
+      .curriculum-bottom-tags { padding: 14px 16px; gap: 12px; margin-top: 18px; border-radius: 14px; }
+      .curriculum-bottom-tag { font-size: 13px; }
+    }
+  </style>
+
+   <main class="section curriculum-section" id="curriculum">
+    <div class="container container--curriculum">
+      <div class="section-header">
+        <span class="curriculum-path-badge">Curriculum Path</span>
+        <h2 class="section-title">Your Global<span class="gradient-text">Learning Journey</span></h2>
+      </div>
+
+      <div class="curriculum-layout">
+        <nav class="curriculum-sidebar" aria-label="Curriculum years">
+          <ul class="cur-nav-list">
+            <li><a href="#year1" data-target="year1" class="cur-nav-link active"><span class="cur-nav-num">1st Year</span><span class="cur-nav-title">Dubai Track</span></a></li>
+            <li><a href="#year2" data-target="year2" class="cur-nav-link"><span class="cur-nav-num">2nd Year</span><span class="cur-nav-title">China Track</span></a></li>
+            <li><a href="#year3" data-target="year3" class="cur-nav-link"><span class="cur-nav-num">3rd Year</span><span class="cur-nav-title">JapanTrack</span></a></li>
+            <li><a href="#year4" data-target="year4" class="cur-nav-link"><span class="cur-nav-num">4th Year</span><span class="cur-nav-title">Germany Track International</span></a></li>
+          </ul>
+        </nav>
+
+        <div class="curriculum-cards-stack">
+          <section id="year1" class="curriculum-card card-purple">
+            <div class="curriculum-card-header">
+              <span class="curriculum-country-flag" aria-label="UAE flag">🇦🇪</span>
+              <div class="curriculum-title-row"><span class="curriculum-year-num" aria-hidden="true">1st Year</span><h3>Dubai Track</h3></div>
+              <p class="curriculum-card-subtitle">Classroom + On Job Training — fast-track your healthcare career with hands-on skills and industry-ready certification.</p>
+            </div>
+            <div class="curriculum-card-body">
+              <div class="curriculum-semesters">
+                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-purple">Program Details</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-purple" aria-hidden="true"></span>Classroom + On Job Training</li><li class="curriculum-course-item"><span class="bullet-cyan" aria-hidden="true"></span>Eligibility: 12th Pass</li><li class="curriculum-course-item"><span class="bullet-pink" aria-hidden="true"></span>Intake: Rolling Admissions</li></ul></div>
+                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-purple">Career Outcomes</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-green" aria-hidden="true"></span>Salary Range: ₹12,000 – ₹30,000/month</li><li class="curriculum-course-item"><span class="bullet-cyan" aria-hidden="true"></span>Industry-recognised skill certification</li><li class="curriculum-course-item"><span class="bullet-purple" aria-hidden="true"></span>Direct placement assistance on completion</li></ul></div>
+              </div>
+              <div class="curriculum-bottom-tags"><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-purple"></span>Healthcare</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-cyan"></span>Certification</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-emerald"></span>Placement</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-amber"></span>On-Job Training</span></div>
+            </div>
+          </section>
+
+          <section id="year2" class="curriculum-card card-cyan">
+            <div class="curriculum-card-header">
+              <span class="curriculum-country-flag" aria-label="China flag">🇨🇳</span>
+              <div class="curriculum-title-row"><span class="curriculum-year-num" aria-hidden="true">2nd Year</span><h3>China Track</h3></div>
+              <p class="curriculum-card-subtitle">Full university degree with partnered University — specialise in allied health sciences with campus life, internships, and guaranteed career outcomes.</p>
+            </div>
+            <div class="curriculum-card-body">
+              <div class="curriculum-semesters">
+                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-cyan">Specialisations</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-cyan"></span>Nursing (B.Sc)</li><li class="curriculum-course-item"><span class="bullet-purple"></span>Physiotherapy</li><li class="curriculum-course-item"><span class="bullet-green"></span>Occupational Therapy (OT)</li><li class="curriculum-course-item"><span class="bullet-pink"></span>Radiology &amp; Imaging</li><li class="curriculum-course-item"><span class="bullet-orange"></span>Optometry</li><li class="curriculum-course-item"><span class="bullet-yellow"></span>Audiology &amp; Speech Therapy</li><li class="curriculum-course-item"><span class="bullet-cyan"></span>Microbiology / Dialysis &amp; More</li></ul></div>
+                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-cyan">Program Highlights</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-green"></span>Cambridge Healthcare English</li><li class="curriculum-course-item"><span class="bullet-purple"></span>Personality Development</li><li class="curriculum-course-item"><span class="bullet-cyan"></span>Clinical Internships</li><li class="curriculum-course-item"><span class="bullet-pink"></span>Eligibility: 12th Pass with Biology</li><li class="curriculum-course-item"><span class="bullet-orange"></span>Pathway: Campus → Internship</li><li class="curriculum-course-item"><span class="bullet-green"></span>Intake: July 2026</li></ul></div>
+              </div>
+              <div class="curriculum-bottom-tags"><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-cyan"></span>Nursing</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-emerald"></span>Allied Health</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-purple"></span>Campus Life</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-amber"></span>Career</span></div>
+            </div>
+          </section>
+
+          <section id="year3" class="curriculum-card card-white">
+            <div class="curriculum-card-header">
+              <span class="curriculum-country-flag" aria-label="Japan flag">🇯🇵</span>
+              <div class="curriculum-title-row"><span class="curriculum-year-num" aria-hidden="true">3rd Year</span><h3>Japan Track</h3></div>
+              <p class="curriculum-card-subtitle">Become a globally qualified nursing professional through international clinical exposure, AI-powered healthcare training, advanced certifications, and international placement opportunities.</p>
+            </div>
+            <div class="curriculum-card-body">
+              <div class="curriculum-semesters">
+                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-dark">Year 1 – Dubai Pathway</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-green"></span>Clinical Practice Exposure</li><li class="curriculum-course-item"><span class="bullet-yellow"></span>Hospital Observation &amp; Training</li><li class="curriculum-course-item"><span class="bullet-purple"></span>Global Healthcare Standards</li></ul></div>
+                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-dark">Year 2 – China Pathway</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-pink"></span>AI in Healthcare Practice</li><li class="curriculum-course-item"><span class="bullet-cyan"></span>Smart Hospital Technologies</li><li class="curriculum-course-item"><span class="bullet-orange"></span>Healthcare Innovation Training</li></ul></div>
+                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-dark">Year 3 – Philippines Pathway</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-purple"></span>Advanced Life Support (ALS) Certification</li><li class="curriculum-course-item"><span class="bullet-green"></span>Emergency &amp; Critical Care Training</li><li class="curriculum-course-item"><span class="bullet-yellow"></span>International Clinical Skill Enhancement</li></ul></div>
+                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-dark">Year 4 – Germany Pathway</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-orange"></span>Placement Preparation Program</li><li class="curriculum-course-item"><span class="bullet-pink"></span>German Healthcare System Orientation</li><li class="curriculum-course-item"><span class="bullet-cyan"></span>Employment Support for Eligible Students</li></ul></div>
+                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-dark">Integrated Career Dev</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-green"></span>IELTS &amp; English Communication Training</li><li class="curriculum-course-item"><span class="bullet-purple"></span>German Language Training (A1 - B2 Levels)</li><li class="curriculum-course-item"><span class="bullet-pink"></span>Personality Dev &amp; Professional Grooming</li><li class="curriculum-course-item"><span class="bullet-yellow"></span>Interview Preparation &amp; Career Readiness</li></ul></div>
+              </div>
+              <div class="curriculum-bottom-tags"><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-purple"></span>Global Exposure</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-cyan"></span>Advanced Certifications</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-emerald"></span>Clinical Practice</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-amber"></span>Language Training</span></div>
+            </div>
+          </section>
+
+          <section id="year4" class="curriculum-card card-orange">
+            <div class="curriculum-card-header">
+              <span class="curriculum-country-flag" aria-label="Germany flag">🇩🇪</span>
+              <div class="curriculum-title-row"><span class="curriculum-year-num" aria-hidden="true">4th Year</span><h3>Germany Track</h3></div>
+              <p class="curriculum-card-subtitle">Lead teams, launch startups, and work on the next generation of autonomous AI systems.</p>
+            </div>
+            <div class="curriculum-card-body">
+              <div class="curriculum-semesters">
+                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-orange">Semester 7</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-orange"></span>Product Management for AI at Scale</li><li class="curriculum-course-item"><span class="bullet-green"></span>Scaling AI Systems (Infrastructure &amp; Cost)</li><li class="curriculum-course-item"><span class="bullet-purple"></span>Leadership &amp; Team Dynamics</li><li class="curriculum-course-item"><span class="bullet-pink"></span>Startup Incubation I</li><li class="curriculum-course-item"><span class="bullet-cyan"></span>Advanced Elective</li></ul></div>
+                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-orange">Semester 8</div><div class="curriculum-semester-tag semester-orange">+Final Launch</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-yellow"></span>Startup Incubation II (Demo Day)</li><li class="curriculum-course-item"><span class="bullet-orange"></span>Deployment &amp; Reliability Engineering</li><li class="curriculum-course-item"><span class="bullet-green"></span>Executive Communication &amp; Negotiation</li><li class="curriculum-course-item"><span class="bullet-purple"></span>Final Capstone Launch</li><li class="curriculum-course-item"><span class="bullet-pink"></span>Career Acceleration Program</li></ul></div>
+              </div>
+              <div class="curriculum-bottom-tags"><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-amber"></span>Leadership</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-emerald"></span>Startup</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-cyan"></span>Scale</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-purple"></span>Career</span></div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      const section = document.getElementById('curriculum');
+      if (!section) return;
+
+      const navLinks = section.querySelectorAll('.cur-nav-link');
+      const cards = section.querySelectorAll('.curriculum-card');
+
+      function setActive(cardId) {
+        navLinks.forEach((link) => {
+          link.classList.toggle('active', link.dataset.target === cardId);
+        });
+      }
+
+      function updateActiveFromScroll() {
+        const trigger = window.innerHeight * 0.35;
+        let activeId = cards[0]?.id || null;
+
+        for (let i = cards.length - 1; i >= 0; i--) {
+          const card = cards[i];
+          const rect = card.getBoundingClientRect();
+          if (rect.top <= trigger) {
+            activeId = card.id;
+            break;
+          }
+        }
+
+        setActive(activeId);
+      }
+
+      navLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const target = document.getElementById(link.dataset.target);
+          if (!target) return;
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          setActive(target.id);
+        });
+      });
+
+      cards.forEach((card) => {
+        card.addEventListener('click', (e) => {
+          if (e.target.closest('a, button')) return;
+          setActive(card.id);
+        });
+      });
+
+      updateActiveFromScroll();
+      window.addEventListener('scroll', updateActiveFromScroll, { passive: true });
+      window.addEventListener('resize', updateActiveFromScroll, { passive: true });
+    })();
+  </script>
 
   <!-- Featured Programs -->
   <section class="section programs-section" id="programs">
