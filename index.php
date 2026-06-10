@@ -379,7 +379,7 @@
 
           <section id="year3" class="curriculum-card card-white">
             <div class="curriculum-card-header">
-              <img class="curriculum-country-flag" src="assets/images/flag-jp.svg" alt="Japan flag" />
+              <img class="curriculum-country-flag" src="assets/images/jp-flag.jpg" alt="Japan flag" />
               <div class="curriculum-title-row"><span class="curriculum-year-num" aria-hidden="true">3rd Year</span><h3>Japan Track</h3></div>
               <p class="curriculum-card-subtitle">Become a globally qualified nursing professional through international clinical exposure, AI-powered healthcare training, advanced certifications, and international placement opportunities.</p>
             </div>
@@ -394,7 +394,7 @@
 
           <section id="year4" class="curriculum-card card-orange">
             <div class="curriculum-card-header">
-              <img class="curriculum-country-flag" src="assets/images/flag-jp.svg" alt="Japan flag" style="right: 70px;" />
+              <img class="curriculum-country-flag" src="assets/images/jp-flag.jpg" alt="Japan flag" style="right: 70px;" />
               <img class="curriculum-country-flag" src="assets/images/flag-de.svg" alt="Germany flag" />
               <div class="curriculum-title-row"><span class="curriculum-year-num" aria-hidden="true">4th Year</span><h3>Germany/Japan Track</h3></div>
               <p class="curriculum-card-subtitle">Lead teams, launch startups, and work on the next generation of autonomous AI systems.</p>
