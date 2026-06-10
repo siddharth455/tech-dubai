@@ -262,7 +262,7 @@
 
     .curriculum-card-header { display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto auto; gap: 16px; margin-bottom: 32px; align-items: start; position: relative; }
     .curriculum-title-row { grid-column: 1 / 2; grid-row: 1 / 2; display: flex; align-items: center; gap: 16px; }
-    .curriculum-country-flag { position: absolute; top: 0; right: 0; font-size: 20px; line-height: 1; background: rgba(255,255,255,0.9); border: 1px solid #e5e7eb; border-radius: 999px; width: 42px; height: 42px; display: grid; place-items: center; box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08); }
+    .curriculum-country-flag { position: absolute; top: 0; right: 0; width: 60px; height: auto; object-fit: contain; }
     .curriculum-card-subtitle { grid-column: 1 / -1; grid-row: 2 / 3; font-size: 15px; color: var(--cur-white-75); line-height: 1.6; margin: 0; }
     .curriculum-card-header h3 { font-family: var(--font-display); font-size: 32px; font-weight: 800; margin: 0; color: #111827; }
     .card-purple h3, .card-cyan h3, .card-green h3, .card-orange h3 { text-shadow: 0 0 30px rgba(var(--t-rgb), 0.4); }
@@ -273,6 +273,7 @@
     .curriculum-semesters { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 24px; align-items: stretch; }
     .curriculum-semester-box { background: #ffffff; border-radius: 14px; padding: 16px; transition: background 0.3s ease, transform 0.3s ease; display: flex; flex-direction: column; border: 1px solid #eef2f7; }
     .curriculum-semester-box .curriculum-course-list { flex: 1; }
+    .curriculum-semester-box img { width: 100%; height: auto; object-fit: cover; border-radius: 8px; margin-top: auto; }
     .curriculum-semester-box:hover { background: #f8fafc; transform: translateY(-2px); }
     .curriculum-semester-tag { display: inline-flex; align-items: center; padding: 6px 16px; border-radius: 20px; font-size: 14px; font-weight: 700; margin-bottom: 14px; margin-right: 8px; }
     .semester-purple, .semester-cyan, .semester-green, .semester-orange { background: #f1f5f9; color: #334155; text-shadow: none; border: 1px solid #e5e7eb; }
@@ -348,14 +349,14 @@
         <div class="curriculum-cards-stack">
           <section id="year1" class="curriculum-card card-purple">
             <div class="curriculum-card-header">
-              <span class="curriculum-country-flag" aria-label="UAE flag">🇦🇪</span>
+              <img class="curriculum-country-flag" src="assets/images/flag-ae.svg" alt="UAE flag" />
               <div class="curriculum-title-row"><span class="curriculum-year-num" aria-hidden="true">1st Year</span><h3>Dubai Track</h3></div>
               <p class="curriculum-card-subtitle">Classroom + On Job Training — fast-track your healthcare career with hands-on skills and industry-ready certification.</p>
             </div>
             <div class="curriculum-card-body">
               <div class="curriculum-semesters">
                 <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-purple">Program Details</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-purple" aria-hidden="true"></span>Classroom + On Job Training</li><li class="curriculum-course-item"><span class="bullet-cyan" aria-hidden="true"></span>Eligibility: 12th Pass</li><li class="curriculum-course-item"><span class="bullet-pink" aria-hidden="true"></span>Intake: Rolling Admissions</li></ul></div>
-                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-purple">Career Outcomes</div><img src="assets/images/dubai-design.jpeg"></div>
+                <div class="curriculum-semester-box"><img src="assets/images/dubai-design.jpeg"></div>
               </div>
               <div class="curriculum-bottom-tags"><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-purple"></span>Healthcare</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-cyan"></span>Certification</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-emerald"></span>Placement</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-amber"></span>On-Job Training</span></div>
             </div>
@@ -363,14 +364,14 @@
 
           <section id="year2" class="curriculum-card card-cyan">
             <div class="curriculum-card-header">
-              <span class="curriculum-country-flag" aria-label="China flag">🇨🇳</span>
+              <img class="curriculum-country-flag" src="assets/images/flag-cn.svg" alt="China flag" />
               <div class="curriculum-title-row"><span class="curriculum-year-num" aria-hidden="true">2nd Year</span><h3>China Track</h3></div>
               <p class="curriculum-card-subtitle">Full university degree with partnered University — specialise in allied health sciences with campus life, internships, and guaranteed career outcomes.</p>
             </div>
             <div class="curriculum-card-body">
               <div class="curriculum-semesters">
                 <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-cyan">Specialisations</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-cyan"></span>Nursing (B.Sc)</li><li class="curriculum-course-item"><span class="bullet-purple"></span>Physiotherapy</li><li class="curriculum-course-item"><span class="bullet-green"></span>Occupational Therapy (OT)</li><li class="curriculum-course-item"><span class="bullet-pink"></span>Radiology &amp; Imaging</li><li class="curriculum-course-item"><span class="bullet-orange"></span>Optometry</li><li class="curriculum-course-item"><span class="bullet-yellow"></span>Audiology &amp; Speech Therapy</li><li class="curriculum-course-item"><span class="bullet-cyan"></span>Microbiology / Dialysis &amp; More</li></ul></div>
-                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-cyan">Program Highlights</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-green"></span>Cambridge Healthcare English</li><li class="curriculum-course-item"><span class="bullet-purple"></span>Personality Development</li><li class="curriculum-course-item"><span class="bullet-cyan"></span>Clinical Internships</li><li class="curriculum-course-item"><span class="bullet-pink"></span>Eligibility: 12th Pass with Biology</li><li class="curriculum-course-item"><span class="bullet-orange"></span>Pathway: Campus → Internship</li><li class="curriculum-course-item"><span class="bullet-green"></span>Intake: July 2026</li></ul></div>
+                <div class="curriculum-semester-box"><img src="assets/images/china.jpg"></div>
               </div>
               <div class="curriculum-bottom-tags"><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-cyan"></span>Nursing</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-emerald"></span>Allied Health</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-purple"></span>Campus Life</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-amber"></span>Career</span></div>
             </div>
@@ -378,17 +379,14 @@
 
           <section id="year3" class="curriculum-card card-white">
             <div class="curriculum-card-header">
-              <span class="curriculum-country-flag" aria-label="Japan flag">🇯🇵</span>
+              <img class="curriculum-country-flag" src="assets/images/flag-jp.svg" alt="Japan flag" />
               <div class="curriculum-title-row"><span class="curriculum-year-num" aria-hidden="true">3rd Year</span><h3>Japan Track</h3></div>
               <p class="curriculum-card-subtitle">Become a globally qualified nursing professional through international clinical exposure, AI-powered healthcare training, advanced certifications, and international placement opportunities.</p>
             </div>
             <div class="curriculum-card-body">
               <div class="curriculum-semesters">
-                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-dark">Year 1 – Dubai Pathway</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-green"></span>Clinical Practice Exposure</li><li class="curriculum-course-item"><span class="bullet-yellow"></span>Hospital Observation &amp; Training</li><li class="curriculum-course-item"><span class="bullet-purple"></span>Global Healthcare Standards</li></ul></div>
-                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-dark">Year 2 – China Pathway</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-pink"></span>AI in Healthcare Practice</li><li class="curriculum-course-item"><span class="bullet-cyan"></span>Smart Hospital Technologies</li><li class="curriculum-course-item"><span class="bullet-orange"></span>Healthcare Innovation Training</li></ul></div>
-                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-dark">Year 3 – Philippines Pathway</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-purple"></span>Advanced Life Support (ALS) Certification</li><li class="curriculum-course-item"><span class="bullet-green"></span>Emergency &amp; Critical Care Training</li><li class="curriculum-course-item"><span class="bullet-yellow"></span>International Clinical Skill Enhancement</li></ul></div>
-                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-dark">Year 4 – Germany Pathway</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-orange"></span>Placement Preparation Program</li><li class="curriculum-course-item"><span class="bullet-pink"></span>German Healthcare System Orientation</li><li class="curriculum-course-item"><span class="bullet-cyan"></span>Employment Support for Eligible Students</li></ul></div>
-                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-dark">Integrated Career Dev</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-green"></span>IELTS &amp; English Communication Training</li><li class="curriculum-course-item"><span class="bullet-purple"></span>German Language Training (A1 - B2 Levels)</li><li class="curriculum-course-item"><span class="bullet-pink"></span>Personality Dev &amp; Professional Grooming</li><li class="curriculum-course-item"><span class="bullet-yellow"></span>Interview Preparation &amp; Career Readiness</li></ul></div>
+                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-dark">Pathways</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-green"></span>Year 1 – Dubai Pathway: Clinical Practice Exposure, Hospital Observation & Training, Global Healthcare Standards</li><li class="curriculum-course-item"><span class="bullet-pink"></span>Year 2 – China Pathway: AI in Healthcare Practice, Smart Hospital Technologies, Healthcare Innovation Training</li><li class="curriculum-course-item"><span class="bullet-purple"></span>Year 3 – Philippines Pathway: Advanced Life Support (ALS) Certification, Emergency & Critical Care Training, International Clinical Skill Enhancement</li><li class="curriculum-course-item"><span class="bullet-orange"></span>Year 4 – Germany Pathway: Placement Preparation Program, German Healthcare System Orientation, Employment Support for Eligible Students</li><li class="curriculum-course-item"><span class="bullet-yellow"></span>Integrated Career Dev: IELTS & English Communication Training, German Language Training (A1 - B2 Levels), Personality Dev & Professional Grooming, Interview Preparation & Career Readiness</li></ul></div>
+                <div class="curriculum-semester-box"><img src="assets/images/nursing.png"></div>
               </div>
               <div class="curriculum-bottom-tags"><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-purple"></span>Global Exposure</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-cyan"></span>Advanced Certifications</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-emerald"></span>Clinical Practice</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-amber"></span>Language Training</span></div>
             </div>
@@ -396,14 +394,15 @@
 
           <section id="year4" class="curriculum-card card-orange">
             <div class="curriculum-card-header">
-              <span class="curriculum-country-flag" aria-label="Germany flag">🇩🇪</span>
-              <div class="curriculum-title-row"><span class="curriculum-year-num" aria-hidden="true">4th Year</span><h3>Germany Track</h3></div>
+              <img class="curriculum-country-flag" src="assets/images/flag-jp.svg" alt="Japan flag" style="right: 70px;" />
+              <img class="curriculum-country-flag" src="assets/images/flag-de.svg" alt="Germany flag" />
+              <div class="curriculum-title-row"><span class="curriculum-year-num" aria-hidden="true">4th Year</span><h3>Germany/Japan Track</h3></div>
               <p class="curriculum-card-subtitle">Lead teams, launch startups, and work on the next generation of autonomous AI systems.</p>
             </div>
             <div class="curriculum-card-body">
               <div class="curriculum-semesters">
-                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-orange">Semester 7</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-orange"></span>Product Management for AI at Scale</li><li class="curriculum-course-item"><span class="bullet-green"></span>Scaling AI Systems (Infrastructure &amp; Cost)</li><li class="curriculum-course-item"><span class="bullet-purple"></span>Leadership &amp; Team Dynamics</li><li class="curriculum-course-item"><span class="bullet-pink"></span>Startup Incubation I</li><li class="curriculum-course-item"><span class="bullet-cyan"></span>Advanced Elective</li></ul></div>
-                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-orange">Semester 8</div><div class="curriculum-semester-tag semester-orange">+Final Launch</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-yellow"></span>Startup Incubation II (Demo Day)</li><li class="curriculum-course-item"><span class="bullet-orange"></span>Deployment &amp; Reliability Engineering</li><li class="curriculum-course-item"><span class="bullet-green"></span>Executive Communication &amp; Negotiation</li><li class="curriculum-course-item"><span class="bullet-purple"></span>Final Capstone Launch</li><li class="curriculum-course-item"><span class="bullet-pink"></span>Career Acceleration Program</li></ul></div>
+                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-orange">Semesters</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-orange"></span>Semester 7: Product Management for AI at Scale, Scaling AI Systems (Infrastructure & Cost), Leadership & Team Dynamics, Startup Incubation I, Advanced Elective</li><li class="curriculum-course-item"><span class="bullet-yellow"></span>Semester 8: Startup Incubation II (Demo Day), Deployment & Reliability Engineering, Executive Communication & Negotiation, Final Capstone Launch, Career Acceleration Program</li></ul></div>
+                <div class="curriculum-semester-box"><img src="assets/images/nursing.png"></div>
               </div>
               <div class="curriculum-bottom-tags"><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-amber"></span>Leadership</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-emerald"></span>Startup</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-cyan"></span>Scale</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-purple"></span>Career</span></div>
             </div>
