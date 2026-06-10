@@ -45,5 +45,21 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Curriculum Section
+// Contact form
+
+document.addEventListener('DOMContentLoaded', () => {
+  const revealItems = document.querySelectorAll('.cta-reveal-up');
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  revealItems.forEach((item) => observer.observe(item));
+});
+
 
