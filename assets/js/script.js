@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
       spaceBetween: 24,
       loop: true,
       autoplay: {
-        delay: 3000,
+        delay: 6000,
         disableOnInteraction: false,
       },
       pagination: {
