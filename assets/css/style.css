@@ -631,3 +631,142 @@ a { text-decoration: none; color: inherit; }
   .badge-top-right, .badge-mid-left, .badge-bottom-right { position: static; }
   .hero-left { text-align: left; }
 }
+
+/* Contact Form */
+
+.cta-page-shell { min-height: 100vh; }
+
+.cta-container {
+  width: min(1200px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.cta-contact-section {
+  padding: 72px 0;
+  background: #ffffff;
+}
+
+.cta-contact-grid {
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.cta-section-label {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  color: #2563eb;
+  margin-bottom: 8px;
+}
+
+.cta-section-title {
+  font-family: 'Sora', Arial, sans-serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.08;
+  margin: 0 0 14px;
+  color: #0f172a;
+}
+
+.cta-text-accent { color: #2563eb; }
+
+.cta-section-desc {
+  color: #475569;
+  line-height: 1.7;
+  max-width: 540px;
+  margin: 0;
+}
+
+.cta-contact-details { margin-top: 28px; }
+.cta-contact-item { display: flex; gap: 14px; margin-bottom: 18px; align-items: flex-start; }
+.cta-contact-item span:first-child { font-size: 1.15rem; line-height: 1.2; }
+.cta-contact-item strong { display: block; font-size: 0.8rem; color: #64748b; margin-bottom: 2px; text-transform: uppercase; letter-spacing: 0.12em; }
+.cta-contact-item span:last-child, .cta-contact-item div > span { font-size: 0.95rem; color: #111827; }
+
+.cta-contact-form {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+.cta-contact-form h3 {
+  font-family: 'Sora', Arial, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 18px;
+}
+
+.cta-form-group { margin-bottom: 14px; }
+.cta-form-group input,
+.cta-form-group select,
+.cta-form-group textarea {
+  width: 100%;
+  padding: 13px 14px;
+  background: #ffffff;
+  border: 1px solid #dbe4f0;
+  border-radius: 12px;
+  color: #0f172a;
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.cta-form-group input::placeholder,
+.cta-form-group textarea::placeholder { color: #64748b; }
+.cta-form-group input:focus,
+.cta-form-group select:focus,
+.cta-form-group textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+}
+.cta-form-group select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; }
+.cta-form-group select option { background: #ffffff; color: #0f172a; }
+.cta-form-group textarea { min-height: 100px; resize: vertical; }
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.cta-btn:hover { transform: translateY(-1px); }
+.cta-btn-primary {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.18);
+}
+.cta-btn-lg { padding: 13px 18px; font-size: 0.98rem; }
+.cta-w-full { width: 100%; }
+
+.cta-form-note {
+  margin: 10px 0 0;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.cta-reveal-up {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.cta-reveal-up.is-visible { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 980px) {
+  .cta-contact-grid { grid-template-columns: 1fr; gap: 32px; }
+}
+
+@media (max-width: 640px) {
+  .cta-contact-section { padding: 56px 0; }
+  .cta-contact-form { padding: 22px; border-radius: 18px; }
+}

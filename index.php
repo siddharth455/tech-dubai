@@ -882,25 +882,73 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
   </section>
 
+  <!-- Contact Form -->
+    <main class="cta-page-shell">
+    <section class="cta-contact-section" id="contact">
+      <div class="cta-container">
+        <div class="cta-contact-grid">
+          <article class="cta-contact-info cta-reveal-up">
+            <span class="cta-section-label">Get In Touch</span>
+            <h2 class="cta-section-title">Ready to Join the <span class="cta-text-accent">2026 Cohort?</span></h2>
+            <p class="cta-section-desc">Take the first step. Our admissions team is ready to guide you through the process.</p>
+
+            <div class="cta-contact-details">
+              <div class="cta-contact-item">
+                <span>📧</span>
+                <div>
+                  <strong>Email</strong>
+                  <span>admissions@careerbuddy.tech</span>
+                </div>
+              </div>
+              <div class="cta-contact-item">
+                <span>📞</span>
+                <div>
+                  <strong>Phone</strong>
+                  <span>+91 98765 43210</span>
+                </div>
+              </div>
+              <div class="cta-contact-item">
+                <span>📍</span>
+                <div>
+                  <strong>Campus</strong>
+                  <span>Tech Park, Bangalore, India</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <div class="cta-contact-form cta-reveal-up" id="apply">
+            <span id="ee-form-36">
+              <script src="https://eeconfigstaticfiles.blob.core.windows.net/staticfiles/applyadmission.gnc/ee-form-widget/form-36/widget.js"></script>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <!-- External JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
-</body>
-</html>
+
+ 
+
+ 
+ 
  <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="#" class="logo"><span class="logo-mark">CB</span><span class="logo-text">Career Buddy <em>Tech</em></span></a>
+                    <a href="#" class="logo"><span class="logo-mark">CB</span><span class="logo-text">Career Buddy <em>College</em></span></a>
                     <p>Empowering the next generation of tech innovators with premium, industry-ready education.</p>
                 </div>
-                <div class="footer-links"><h4>Programs</h4><a href="#programs">Nusing</a><a href="#programs">BPT</a><a href="#apply">Apply Now</a></div>
-                <div class="footer-links"><h4>Company</h4><a href="#why-us">About</a><a href="#testimonials">Curriculum</a></div>
+                <div class="footer-links"><h4>Programs</h4><a href="#programs">Bsc Nursing</a><a href="#programs">Physiotherapy</a><a href="#apply">Apply Now</a></div>
+                <div class="footer-links"><h4>Company</h4><a href="#why-us">About</a><a href="#testimonials">Stories</a><a href="#faq">FAQ</a></div>
                 <div class="footer-links"><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a></div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <?php echo date('Y'); ?> Career Buddy Tech. All rights reserved.</p>
+                <p>&copy; <?php echo date('Y'); ?> Career Buddy College. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -910,3 +958,6 @@ document.addEventListener('DOMContentLoaded', () => {
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>
