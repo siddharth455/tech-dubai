@@ -943,7 +943,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <a href="#" class="logo"><span class="logo-mark">CB</span><span class="logo-text">Career Buddy <em>College</em></span></a>
                     <p>Empowering the next generation of tech innovators with premium, industry-ready education.</p>
                 </div>
-                <div class="footer-links"><h4>Programs</h4><a href="#programs">CS/IT</a><a href="#programs">Tech & Business</a><a href="#apply">Apply Now</a></div>
+                <div class="footer-links"><h4>Programs</h4><a href="#programs">Bsc Nursing</a><a href="#programs">Physiotherapy</a><a href="#apply">Apply Now</a></div>
                 <div class="footer-links"><h4>Company</h4><a href="#why-us">About</a><a href="#testimonials">Stories</a><a href="#faq">FAQ</a></div>
                 <div class="footer-links"><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a></div>
             </div>
