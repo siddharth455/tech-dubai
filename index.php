@@ -22,7 +22,7 @@
     <div class="container nav-container">
       <a href="#" class="logo">
         <span class="logo-img"><img src="assets/images/cbc.logo.png" alt="Career Buddy Tech Logo" /></span>
-        <span style="color:#E8E008; font-size:1.5rem;">Career Buddy College<sup class="logo-sup">+</sup></span>
+        <span style=" font-size:1.5rem;" class="text-accent">Career Buddy College<sup class="logo-sup">+</sup></span>
       </a>
       
       <nav class="nav-links" id="navLinks">
@@ -31,7 +31,7 @@
         <a href="#faq" class="nav-link">FAQ</a>
       </nav>
       
-      <a href="#apply" class="btn btn-primary btn-nav">Apply Now</a>
+      <a href="#apply" class="btn btn-primary btn-nav ">Apply Now</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
       </button>
