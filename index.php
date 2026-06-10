@@ -62,7 +62,7 @@
           <a href="#programs" class="btn btn-outline-hero">Explore Programs</a>
         </div>
 
-        <span class="seats-badge">Only 120 seats — 2026 Batch</span>
+        <span class="seats-badge">Only 30 seats — 2026 Batch</span>
       </div>
 
       <!-- Hero Right Image & Badges -->
@@ -330,7 +330,7 @@
     <div class="container container--curriculum">
       <div class="section-header">
         <span class="curriculum-path-badge">Curriculum Path</span>
-        <h2 class="section-title">Your Global<span class="gradient-text">Learning Journey</span></h2>
+        <h2 class="section-title">Your Global<span class="gradient-text"> Learning Journey</span></h2>
       </div>
 
       <div class="curriculum-layout">
@@ -750,7 +750,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="section-header">
               <span class="section-label reveal-up">Featured Programs</span>
               <h2 class="section-title reveal-up">Choose Your Path to the <span class="text-accent">Top 1%</span></h2>
-              <p class="section-desc reveal-up">Two industry-aligned undergraduate programs designed to make you job-ready from day one.</p>
+              <p class="section-desc reveal-up text-center">Three Global Healthcare-aligned undergraduated programs designed to make you Global Healthcare job-ready from day one.</p>
           </div>
 
           <div class="swiper programs-swiper" style="padding-bottom: 50px;">
@@ -787,7 +787,7 @@ document.addEventListener('DOMContentLoaded', () => {
                           <span class="program-eligibility-label">Eligibility</span>
                           <ul class="program-eligibility-list">
                               <li>10+2 (12th) pass with Physics, Chemistry, Biology &amp; English</li>
-                              <li>Minimum 45% aggregate marks in PCB</li>
+                              <li>Minimum 50% aggregate marks in PCB</li>
                               <li>Age: 17–35 years as on 31 December of the admission year</li>
                           </ul>
                       </div>
@@ -827,7 +827,7 @@ document.addEventListener('DOMContentLoaded', () => {
                           <span class="program-eligibility-label">Eligibility</span>
                           <ul class="program-eligibility-list">
                               <li>10+2 (12th) pass in any stream (Arts, Science or Commerce)</li>
-                              <li>Minimum 40% aggregate marks</li>
+                              <li>Minimum 50% aggregate marks</li>
                               <li>Age: 17–35 years as on 31 December of the admission year</li>
                           </ul>
                       </div>
