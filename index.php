@@ -890,7 +890,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="campus-grid">
                 <div class="campus-info reveal-up">
                     <span class="section-label">Your degree is awarded by</span>
-                    <h2 class="section-title">Partner University<br><span class="text-muted">NAAC Grade · UGC Recognized</span></h2>
+                    <h2 class="section-title">Partner Institution<br><span class="text-muted">NAAC Grade · UGC Recognized</span></h2>
                     <p class="section-desc">A recognized university with modern infrastructure. Don't miss out on the full college experience.</p>
                     <div class="campus-stats">
                         <div class="campus-stat"><strong>5</strong><span>Acres Campus</span></div>
@@ -901,10 +901,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="campus-gallery reveal-up">
                     <div class="swiper campus-swiper">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80" alt="Campus" loading="lazy"></div>
-                            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80" alt="Campus building" loading="lazy"></div>
-                            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80" alt="Campus interior" loading="lazy"></div>
-                            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="Campus library" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="assets/images/1.webp" alt="Campus" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="assets/images/2.webp" alt="Campus building" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="assets/images/3.webp" alt="Campus interior" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="assets/images/4.webp" alt="Campus library" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="assets/images/5.webp" alt="Campus interior" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="assets/images/6.webp" alt="Campus library" loading="lazy"></div>
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
@@ -967,7 +969,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="#" class="logo"><span class="logo-mark">CB</span><span class="logo-text">Career Buddy <em>College</em></span></a>
+                    <a href="#" class="logo"><span class="logo-mark"><img src="assets/images/cbc.logo.png" alt="Career Buddy College Logo" style="width: 100px;"></span><span class="logo-text" style="color: #e8e008;">Career Buddy College<sup class="logo-sup">+</sup></span></a>
                     <p>Empowering the next generation of tech innovators with premium, industry-ready education.</p>
                 </div>
                 <div class="footer-links"><h4>Programs</h4><a href="#programs">Bsc Nursing</a><a href="#programs">Physiotherapy</a><a href="#apply">Apply Now</a></div>
