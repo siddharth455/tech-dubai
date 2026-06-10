@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" width="160" height="40">
+  <circle cx="20" cy="20" r="12" fill="#1e90ff"/>
+  <path d="M15 20h10M20 15v10" stroke="#fff" stroke-width="3"/>
+  <text x="40" y="27" font-family="Arial, sans-serif" font-weight="bold" font-size="20" fill="#333">Life Care</text>
+</svg>
