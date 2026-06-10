@@ -22,7 +22,7 @@
     <div class="container nav-container">
       <a href="#" class="logo">
         <span class="logo-img"><img src="assets/images/cbc.logo.png" alt="Career Buddy Tech Logo" /></span>
-        <span style=" font-size:1.5rem;" class="text-accent">Career Buddy College<sup class="logo-sup">+</sup></span>
+        <span style=" font-size:1.5rem; color:yellow " class="logo-text-accent">Career Buddy College<sup class="logo-sup">+</sup></span>
       </a>
       
       <nav class="nav-links" id="navLinks">
@@ -31,7 +31,7 @@
         <a href="#faq" class="nav-link">FAQ</a>
       </nav>
       
-      <a href="#apply" class="btn btn-primary btn-nav ">Apply Now</a>
+      <a href="#apply" class="btn btn-primary btn-nav">Apply Now</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
       </button>
@@ -233,7 +233,7 @@
     .cur-nav-title { font-size: 18px; color: inherit; line-height: 1.2;display: flex; justify-content:flex-start;gap: 10px; }
     .curriculum-section .cur-nav-link:hover { color: #111827; background: #f8fafc; transform: translateX(10px); }
     .curriculum-section .cur-nav-link.active { color: #111827; background: #f1f5f9; }
-    .cur-nav-list li .cur-nav-num { background: rgba(var(--t-nav-rgb), 0.2); color: var(--t-accent); }
+    .cur-nav-list li .cur-nav-num { background: rgba(var(--t-nav-rgb), 0.2); color: #000; }
     .curriculum-section .cur-nav-link.active .cur-nav-title { color: #0f766e; }
     .cur-nav-list li .cur-nav-link.active::before { background: #10b981; box-shadow: 0 0 15px rgba(16, 185, 129, 0.35); }
 
