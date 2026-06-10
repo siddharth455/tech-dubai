@@ -108,7 +108,7 @@ a { text-decoration: none; color: inherit; }
   padding: 40px 0 24px;
   border-bottom: 1px solid var(--border);
   background:
-    linear-gradient(180deg, rgba(7,17,31,0) 0%, rgba(7,17,31,0.65) 100%),
+    rgba(20, 37, 60, 0.8),
     radial-gradient(circle at top right, rgba(92, 158, 255, 0.14), transparent 20%);
 }
 .hero-canvas { position: absolute; inset: 0; z-index: 0; opacity: .35; }
@@ -133,9 +133,9 @@ a { text-decoration: none; color: inherit; }
 .hero-image-wrapper { position: relative; width: 100%; max-width: 480px; }
 .hero-person-img { border-radius: 30px; overflow: hidden; background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); border: 1px solid var(--border); box-shadow: var(--shadow); }
 .hero-person-img img { width: 100%; min-height: 500px; object-fit: cover; }
-.hero-float-badge { position: absolute; display: grid; gap: 2px; padding: 12px 14px; border-radius: 16px; background: rgba(6, 10, 18, 0.9); border: 1px solid rgba(255,255,255,0.08); box-shadow: var(--shadow); max-width: 150px; }
+.hero-float-badge { position: absolute; display: grid; gap: 2px; padding: 12px 14px; border-radius: 16px; background: rgba(6, 10, 18, 0.9); border: 1px solid rgba(255,255,255,0.08); box-shadow: var(--shadow); max-width: 150px;color: #fff; }
 .hero-float-badge strong { font-size: 1.15rem; color: #fff; }
-.hero-float-badge span { color: var(--muted);}
+.hero-float-badge span { color: #fff;}
 .badge-top-right { top: 10px; right: -10px; }
 .badge-mid-left { left: -14px; bottom: 110px; }
 .badge-bottom-right { right: 8px; bottom: -6px; }
@@ -508,7 +508,7 @@ a { text-decoration: none; color: inherit; }
 }
 .metric-item strong {
   font-size: 1.05rem;
-  color: var(--accent);
+  color: #000;
 }
 .metric-item span {
   font-size: 0.75rem;
