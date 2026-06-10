@@ -160,29 +160,7 @@
   <!-- Curriculum Section -->
   
   <style>
-    :root {
-      --bg: #f5f7fb;
-      --bg-2: #ffffff;
-      --white: #111827;
-      --text: #111827;
-      --text-muted: #4b5563;
-      --font: 'DM Sans', -apple-system, sans-serif;
-      --font-display: 'Sora', sans-serif;
-      --ease: cubic-bezier(0.16, 1, 0.3, 1);
-      --nav-h: 72px;
-      --ticker-h: 36px;
-      --cur-ease-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      --cur-white-05: rgba(255, 255, 255, 0.05);
-      --cur-white-10: rgba(255, 255, 255, 0.1);
-      --cur-white-40: rgba(255, 255, 255, 0.4);
-      --cur-white-50: rgba(255, 255, 255, 0.5);
-      --cur-white-75: rgba(255, 255, 255, 0.75);
-      --cur-white-80: rgba(255, 255, 255, 0.8);
-      --cur-white-85: rgba(255, 255, 255, 0.85);
-      --cur-sticky-top: calc(var(--nav-h) + var(--ticker-h));
-      --cur-stack-base: 16px;
-      --cur-stack-step: 24px;
-    }
+    
 
     * { box-sizing: border-box; }
     /* html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
