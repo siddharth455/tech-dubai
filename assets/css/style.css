@@ -93,7 +93,7 @@ a { text-decoration: none; color: inherit; }
   font-weight: 700; transition: transform .2s ease, background .2s ease, border-color .2s ease;
 }
 .btn:hover { transform: translateY(-1px); }
-.btn-primary { background: linear-gradient(135deg, #ffe54d 0%, #f3c94a 50%, #ffde59 100%); color: #07111f; }
+.btn-primary { background: linear-gradient(90deg, rgba(36, 144, 56, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%); }
 .btn-outline-hero {
   border-color: rgba(255,255,255,0.18); color: #fff;
   background: rgba(255,255,255,0.04);
