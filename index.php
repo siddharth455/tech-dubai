@@ -464,7 +464,277 @@
       window.addEventListener('resize', updateActiveFromScroll, { passive: true });
     })();
   </script>
+<!-- AI Trends vs Traditional Education -->
+    <section id="ai-trends" class="section">
+        <div class="container" style="max-width: 1400px;">
+            <div class="section-header center reveal-up">
+                <span class="section-label">THE WORLD IS CHANGING</span>
+                <h2 class="section-title">Why Not <span class="gradient-text">normal Bsc Nursing or BPT Physiotherapy?</span></h2>
+                <p class="section-desc mt-3">The job market of 2030 won't look like 2019's. Here's what's happening.</p>
+            </div>
 
+            <!-- Trend Cards Grid -->
+            <div class="ai-trends-grid">
+                <!-- Trend 1 -->
+                <div class="reveal-up">
+                    <div class="trend-card">
+                        <div class="chart-placeholder">
+                            <canvas id="chart1"></canvas>
+                        </div>
+                        <h4>Global Salary Comparison</h4>
+                        <p>Nurses in Germany and Japan earn significantly more than in India. <span class="text-purple-400">Germany/Japan: ₹2.5L - 4L/mo vs India: ₹20K - 35K/mo</span></p>
+                    </div>
+                </div>
+
+                <!-- Trend 2 -->
+                <div class="reveal-up">
+                    <div class="trend-card">
+                        <div class="chart-placeholder">
+                            <canvas id="chart2"></canvas>
+                        </div>
+                        <h4>Rising Demand in Germany</h4>
+                        <p>The requirement for qualified nurses in Germany is growing exponentially. <span class="text-yellow-400">Estimated 500,000+ vacancies by 2030</span></p>
+                    </div>
+                </div>
+
+                <!-- Trend 3 -->
+                <div class="reveal-up">
+                    <div class="trend-card">
+                        <div class="chart-placeholder">
+                            <canvas id="chart3"></canvas>
+                        </div>
+                        <h4>Global Healthcare Vacancies</h4>
+                        <p>Japan and Germany are facing acute shortages of healthcare professionals. <span class="text-green-400">International pathways → Guaranteed Global Career</span></p>
+                    </div>
+                </div>
+
+                <!-- Trend 4 -->
+                <div class="reveal-up">
+                    <div class="trend-card">
+                        <div class="chart-placeholder">
+                            <canvas id="chart4"></canvas>
+                        </div>
+                        <h4>Career Progression Gap</h4>
+                        <p><span class="text-green-400">Global Track: 10x higher savings potential</span> compared to traditional local practice. Secure your future globally.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparison Cards -->
+            <div class="ai-trends-grid">
+                <!-- Zenith AI -->
+                <div class="reveal-up">
+                    <div class="comparison-card ai-card">
+                        <div class="comparison-header ai-header">
+                            <h4>Career Buddy College</h4>
+                        </div>
+                        <ul class="comparison-list">
+                            <li class="comparison-item">
+                                <span class="check-icon">✓</span>
+                                <span>Curriculum by AI researchers. Taught by Industry professionals</span>
+                            </li>
+                            <li class="comparison-item">
+                                <span class="check-icon">✓</span>
+                                <span>4 externships + 2 paid internships</span>
+                            </li>
+                            <li class="comparison-item">
+                                <span class="check-icon">✓</span>
+                                <span>6-module High-RBI Integrated</span>
+                            </li>
+                            <li class="comparison-item">
+                                <span class="check-icon">✓</span>
+                                <span>Start coding from day 1 and start working in Industry from year 1</span>
+                            </li>
+                            <li class="comparison-item">
+                                <span class="check-icon">✓</span>
+                                <span>Graduate with portfolio + network + skills</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Traditional Bsc Nursing  -->
+                <div class="reveal-up">
+                    <div class="comparison-card traditional-card">
+                        <div class="comparison-header traditional-header">
+                            <h4>Traditional Nursing</h4>
+                        </div>
+                        <ul class="comparison-list">
+                            <li class="comparison-item">
+                                <span class="cross-icon">⚠</span>
+                                <span>Outdated curriculum updated every 10-15 years</span>
+                            </li>
+                            <li class="comparison-item">
+                                <span class="cross-icon">⚠</span>
+                                <span>Theory heavy, exam-focused</span>
+                            </li>
+                            <li class="comparison-item">
+                                <span class="cross-icon">⚠</span>
+                                <span>No buildtech or product skills</span>
+                            </li>
+                            <li class="comparison-item">
+                                <span class="cross-icon">⚠</span>
+                                <span>Struggle to get 1 Internship in final year</span>
+                            </li>
+                            <li class="comparison-item">
+                                <span class="cross-icon">⚠</span>
+                                <span>Graduate with CGPA, hope for placement</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+      // --- AI Trends Charts ---
+function initAITrendsCharts() {
+    // Chart 1: Monthly Salary Comparison
+    const ctx1 = document.getElementById('chart1');
+    if (ctx1) {
+        new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: ['India', 'Japan', 'Germany'],
+                datasets: [{
+                    label: 'Avg. Monthly Salary (INR)',
+                    data: [28000, 260000, 320000],
+                    backgroundColor: ['rgba(255, 255, 255, 0.2)', '#22d3ee', '#a78bfa'],
+                    borderColor: ['rgba(255, 255, 255, 0.5)', '#22d3ee', '#a78bfa'],
+                    borderWidth: 1,
+                    borderRadius: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                animation: { duration: 2000, easing: 'easeOutQuart' },
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { grid: { display: false }, ticks: { color: 'rgba(255,255,255,0.7)' } },
+                    y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: 'rgba(255,255,255,0.5)' } }
+                }
+            }
+        });
+    }
+    
+    // Chart 2: Rising Demand in Germany
+    const ctx2 = document.getElementById('chart2');
+    if (ctx2) {
+        new Chart(ctx2, {
+            type: 'line',
+            data: {
+                labels: ['2022', '2024', '2026', '2028', '2030'],
+                datasets: [{
+                    label: 'Nursing Vacancies',
+                    data: [180000, 260000, 340000, 420000, 500000],
+                    borderColor: '#fbbf24',
+                    backgroundColor: 'rgba(251, 191, 36, 0.1)',
+                    borderWidth: 3,
+                    fill: true,
+                    tension: 0.4,
+                    pointBackgroundColor: '#fbbf24'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                animation: { duration: 2000, easing: 'easeOutQuart' },
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { grid: { display: false }, ticks: { color: 'rgba(255,255,255,0.7)' } },
+                    y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: 'rgba(255,255,255,0.5)' } }
+                }
+            }
+        });
+    }
+    
+    // Chart 3: Global Vacancy Comparison
+    const ctx3 = document.getElementById('chart3');
+    if (ctx3) {
+        new Chart(ctx3, {
+            type: 'doughnut',
+            data: {
+                labels: ['Germany', 'Japan', 'Other EU'],
+                datasets: [{
+                    data: [45, 35, 20],
+                    backgroundColor: ['#a78bfa', '#22d3ee', 'rgba(255, 255, 255, 0.1)'],
+                    borderWidth: 0,
+                    hoverOffset: 15
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '70%',
+                plugins: { 
+                    legend: { 
+                        position: 'bottom',
+                        labels: { color: 'rgba(255,255,255,0.8)', padding: 20, font: { size: 11 } } 
+                    } 
+                }
+            }
+        });
+    }
+    
+    // Chart 4: Career Savings Potential
+    const ctx4 = document.getElementById('chart4');
+    if (ctx4) {
+        new Chart(ctx4, {
+            type: 'line',
+            data: {
+                labels: ['Yr 1', 'Yr 2', 'Yr 3', 'Yr 4', 'Yr 5'],
+                datasets: [
+                    { 
+                        label: 'Global Track (Savings)', 
+                        data: [12, 30, 55, 85, 120], 
+                        borderColor: '#4ade80', 
+                        borderWidth: 3, 
+                        fill: false, 
+                        tension: 0.4 
+                    },
+                    { 
+                        label: 'Local Track (Savings)', 
+                        data: [1, 2.5, 4.5, 7, 10], 
+                        borderColor: 'rgba(255,255,255,0.3)', 
+                        borderWidth: 2, 
+                        borderDash: [5, 5], 
+                        fill: false 
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { 
+                    legend: { 
+                        position: 'top',
+                        labels: { color: 'rgba(255,255,255,0.7)', font: { size: 10 } } 
+                    } 
+                },
+                scales: {
+                    x: { grid: { display: false }, ticks: { color: 'rgba(255,255,255,0.5)' } },
+                    y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: 'rgba(255,255,255,0.5)' } }
+                }
+            }
+        });
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize charts when section comes into view
+    const aiTrendsSection = document.getElementById('ai-trends');
+    if (aiTrendsSection) {
+        const chartObserver = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                initAITrendsCharts();
+                chartObserver.unobserve(aiTrendsSection);
+            }
+        }, { threshold: 0.2 });
+        chartObserver.observe(aiTrendsSection);
+    }
+});
+      </script>
   <!-- Featured Programs -->
   <section class="section programs-section" id="programs">
       <div class="container">
@@ -625,3 +895,9 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
