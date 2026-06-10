@@ -889,7 +889,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="cta-contact-grid">
           <article class="cta-contact-info cta-reveal-up">
             <span class="cta-section-label">Get In Touch</span>
-            <h2 class="cta-section-title">Ready to Join the <span class="cta-text-accent">2026 Cohort?</span></h2>
+            <h2 class="cta-section-title">Ready to Join the <span class="text-accent">2026 Cohort?</span></h2>
             <p class="cta-section-desc">Take the first step. Our admissions team is ready to guide you through the process.</p>
 
             <div class="cta-contact-details">
@@ -930,12 +930,7 @@ document.addEventListener('DOMContentLoaded', () => {
   <!-- External JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
-
- 
-
- 
- 
- <!-- Footer -->
+<!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">

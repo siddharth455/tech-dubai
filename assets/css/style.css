@@ -123,7 +123,12 @@ a { text-decoration: none; color: inherit; }
 }
 .hero-eyebrow { color: var(--accent-2); text-transform: uppercase; letter-spacing: .2em; font-size: .75rem; font-weight: 700; }
 .hero-title { font-family: 'Sora', sans-serif; font-size: clamp(2.4rem, 6vw, 4rem); line-height: 1.05; margin: 8px 0 14px; }
-.text-accent { color: var(--accent); }
+.text-accent {
+  background: linear-gradient(90deg, rgba(36, 144, 56, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 .hero-sub { color: var(--muted); max-width: 520px; font-size: 0.95rem; line-height: 1.6; }
 
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 16px; }
