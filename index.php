@@ -882,6 +882,38 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
   </section>
 
+
+  <!-- Campus -->
+
+  <section class="section campus-section" id="campus">
+        <div class="container">
+            <div class="campus-grid">
+                <div class="campus-info reveal-up">
+                    <span class="section-label">Your degree is awarded by</span>
+                    <h2 class="section-title">Partner University<br><span class="text-muted">NAAC Grade · UGC Recognized</span></h2>
+                    <p class="section-desc">A recognized university with modern infrastructure. Don't miss out on the full college experience.</p>
+                    <div class="campus-stats">
+                        <div class="campus-stat"><strong>5</strong><span>Acres Campus</span></div>
+                        
+                        <div class="campus-stat"><strong>Yes</strong><span>UGC Recognized</span></div>
+                    </div>
+                </div>
+                <div class="campus-gallery reveal-up">
+                    <div class="swiper campus-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80" alt="Campus" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80" alt="Campus building" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80" alt="Campus interior" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="Campus library" loading="lazy"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
   <!-- Contact Form -->
     <main class="cta-page-shell">
     <section class="cta-contact-section" id="contact">
