@@ -270,7 +270,7 @@
     .curriculum-semesters { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 24px; align-items: stretch; }
     .curriculum-semester-box { background: #ffffff; border-radius: 14px; padding: 16px; transition: background 0.3s ease, transform 0.3s ease; display: flex; flex-direction: column; border: 1px solid #eef2f7; }
     .curriculum-semester-box .curriculum-course-list { flex: 1; }
-    .curriculum-semester-box img { width: 100%; height: auto; object-fit: cover; border-radius: 8px; margin-top: auto; }
+    .curriculum-semester-box img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; margin-top: auto; }
     .curriculum-semester-box:hover { background: #f8fafc; transform: translateY(-2px); }
     .curriculum-semester-tag { display: inline-flex; align-items: center; padding: 6px 16px; border-radius: 20px; font-size: 14px; font-weight: 700; margin-bottom: 14px; margin-right: 8px; }
     .semester-purple, .semester-cyan, .semester-green, .semester-orange { background: #f1f5f9; color: #334155; text-shadow: none; border: 1px solid #e5e7eb; }
@@ -300,7 +300,7 @@
       .curriculum-section .cur-nav-link { flex-shrink: 0; flex-direction: row; gap: 8px; align-items: center; padding: 8px 16px; border-radius: 100px; white-space: nowrap; min-height: 44px; transform: none !important; border: 1px solid var(--cur-white-10); background: rgba(255,255,255,0.04); }
       .curriculum-section .cur-nav-link::before { position: static; transform: none; width: 8px; height: 8px; }
       .cur-nav-num { margin-bottom: 0; }
-      .cur-nav-title { font-size: 14px; }
+      .cur-nav-title { font-size: 14px; color:white;}
       .cur-nav-list li .cur-nav-link.active { background: rgba(var(--t-pill-rgb), 0.2); border-color: rgba(var(--t-pill-rgb), 0.5); color: #ffffff; }
       .cur-nav-list li .cur-nav-link.active .cur-nav-num { background: rgba(255,255,255,0.25); color: #ffffff; }
       .cur-nav-list li .cur-nav-link.active .cur-nav-title { color: #ffffff; }
@@ -316,13 +316,15 @@
       .curriculum-title-row { grid-column: 1 / -1; grid-row: 1 / 2; }
       .curriculum-card-subtitle { grid-row: 2 / 3; font-size: 13px; }
       .curriculum-year-num { min-width: 84px; padding: 8px 12px; font-size: 18px; border-radius: 10px; }
-      .curriculum-card-header h3 { font-size: 22px; }
+      .curriculum-card-header h3 { font-size: 15px; }
       .curriculum-semesters { gap: 12px; margin-bottom: 16px; }
       .curriculum-semester-box { padding: 14px; border-radius: 12px; flex: 0 0 88%; min-width: 88%; max-width: 88%; width: 88%; }
       .curriculum-semester-tag { font-size: 13px; padding: 6px 14px; margin-bottom: 12px; }
       .curriculum-course-item { font-size: 13px; padding: 4px 0; }
       .curriculum-bottom-tags { padding: 14px 16px; gap: 12px; margin-top: 18px; border-radius: 14px; }
       .curriculum-bottom-tag { font-size: 13px; }
+      .year-4-flg{display: none;}
+      .curriculum-sidebar{display:none;}
     }
   </style>
 
@@ -389,8 +391,8 @@
 
           <section id="year4" class="curriculum-card card-orange">
             <div class="curriculum-card-header">
-              <img class="curriculum-country-flag" src="assets/images/jp-flag.jpg" alt="Japan flag" style="right: 80px;" />
-              <img class="curriculum-country-flag" src="assets/images/flag-de.svg" alt="Germany flag" style="right: 10px;"/>
+              <img class="curriculum-country-flag year-4-flg" src="assets/images/jp-flag.jpg" alt="Japan flag" style="right: 80px;" />
+              <img class="curriculum-country-flag year-4-flg" src="assets/images/flag-de.svg" alt="Germany flag" style="right: 10px;"/>
               <div class="curriculum-title-row"><span class="curriculum-year-num" aria-hidden="true">4th Year</span><h3>Germany/Japan Career Track</h3></div>
               <p class="curriculum-card-subtitle">The Japan/Germany career track is a specialised placement-driven program designed for nursing & physiotherapy students who aspire to build succedful careers in Germany or Japan.<br>
             Unlike a study tour, this is long-term career development pathway that prepares students through language training, International health care orientation, interview preparation, certification support, & placement assistance.</p>
@@ -467,7 +469,7 @@
   </script>
 <!-- AI Trends vs Traditional Education -->
     <section id="ai-trends" class="section">
-        <div class="container" style="max-width: 1400px;">
+        <div class="container" style="max-width: 1600px;">
             <div class="section-header center reveal-up">
                 <span class="section-label">THE WORLD OF HEALTHCARE IS CHANGING</span>
                 <h2 class="section-title">Why Not <span class="gradient-text">Normal  Nursing or Physiotherapy?</span></h2>
@@ -676,7 +678,7 @@ function initAITrendsCharts() {
                 plugins: { 
                     legend: { 
                         position: 'bottom',
-                        labels: { color: 'rgba(255,255,255,0.8)', padding: 20, font: { size: 11 } } 
+                        labels: { color: 'rgba(255,255,255,0.8)', padding: 12, font: { size: 10 } } 
                     } 
                 }
             }
@@ -715,7 +717,7 @@ function initAITrendsCharts() {
                 plugins: { 
                     legend: { 
                         position: 'top',
-                        labels: { color: 'rgba(255,255,255,0.7)', font: { size: 10 } } 
+                        labels: { color: 'rgba(255,255,255,0.7)', font: { size: 9 }, padding: 8 } 
                     } 
                 },
                 scales: {
@@ -966,12 +968,14 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="#" class="logo"><span class="logo-mark"><img src="assets/images/cbc.logo.png" alt="Career Buddy College Logo" style="width: 100px;"></span><span class="logo-text" style="color: #e8e008;">Career Buddy College<sup class="logo-sup">+</sup></span></a>
+                    <a href="#" class="logo"><span class="logo-mark"><img src="assets/images/cbc.logo.png" alt="Career Buddy College Logo"></span><span class="logo-text" style="color: #e8e008;">Career Buddy College<sup class="logo-sup">+</sup></span></a>
                     <p>Empowering the next generation of tech innovators with premium, industry-ready education.</p>
                 </div>
-                <div class="footer-links"><h4>Programs</h4><a href="#programs">Bsc Nursing</a><a href="#programs">Physiotherapy</a><a href="#apply">Apply Now</a></div>
-                <div class="footer-links"><h4>Company</h4><a href="#why-us">About</a><a href="#testimonials">Stories</a><a href="#faq">FAQ</a></div>
-                <div class="footer-links"><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a></div>
+                <div class="footer-links-wrapper">
+                    <div class="footer-links"><h4>Programs</h4><a href="#programs">Bsc Nursing</a><a href="#programs">Physiotherapy</a><a href="#apply">Apply Now</a></div>
+                    <div class="footer-links"><h4>Company</h4><a href="#why-us">About</a><a href="#testimonials">Stories</a><a href="#faq">FAQ</a></div>
+                    <div class="footer-links"><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a></div>
+                </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; <?php echo date('Y'); ?> Career Buddy College. All rights reserved.</p>
