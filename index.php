@@ -22,23 +22,22 @@
     <div class="ticker-track">
       <span>Curriculum by Top Industry Experts</span>
       <span class="ticker-dot"></span>
-      <span>Up to 100% Scholarships Available</span>
+      <span>NAAC  Graded Institution Partner</span>
       <span class="ticker-dot"></span>
-      <span>NAAC A Grade University Partner</span>
-      <span class="ticker-dot"></span>
-      <span>Next Intake Closes June 30</span>
+      <span>Next Intake Closes 15 July</span>
       <span class="ticker-dot"></span>
       <span>Only 30 Seats for 2026 Batch</span>
       <span class="ticker-dot"></span>
-      <span>Curriculum by Top Industry Experts</span>
+      <span>Curriculum by Top Healthcre Experts</span>
       <span class="ticker-dot"></span>
-      <span>Up to 100% Scholarships Available</span>
+      <span>NAAC  Graded Institution Partner</span>
       <span class="ticker-dot"></span>
-      <span>NAAC A Grade University Partner</span>
-      <span class="ticker-dot"></span>
-      <span>Next Intake Closes June 30</span>
+     <span>Next Intake Closes 15 July</span>
       <span class="ticker-dot"></span>
       <span>Only 30 Seats for 2026 Batch</span>
+      <span class="ticker-dot"></span>
+      <span>Admissions Open 2026 Cohort</span>
+      <span class="ticker-dot"></span>
     </div>
   </div>
 
@@ -102,7 +101,7 @@
             <span>Students Placed</span>
           </div>
           <div class="hero-float-badge badge-mid-left">
-            <strong>₹<span data-count="18">18</span>L+</strong>
+            <strong>₹<span data-count="18">22</span>L+</strong>
             <span>Avg Placement</span>
           </div>
           <div class="hero-float-badge badge-bottom-right">
@@ -945,28 +944,33 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="container">
       <div class="section-header center">
         <span class="section-label reveal-up">Why Career Buddy College</span>
-        <h2 class="section-title reveal-up" style="color:#000;">Education <span class="text-accent">Reimagined for the Digital Age</span></h2>
+        <h2 class="section-title reveal-up" style="color:#000;">Healthcare Education <span class="text-accent">Reimagined for Today's Age</span></h2>
       </div>
       <div class="why-grid">
         <div class="why-card reveal-up">
           <div class="why-num">01</div>
-          <h3>Industry-Curated Curriculum</h3>
-          <p>Programs designed with input from 50+ top tech companies ensuring you learn what employers need.</p>
+          <h3>Industry Aligned Curriculum as per Global Standard</h3>
+          <p>Curriculum designed by global healthcare experts, updated to match international standards and latest industry practices.</p>
         </div>
         <div class="why-card reveal-up">
           <div class="why-num">02</div>
-          <h3>Live Project Experience</h3>
-          <p>Work on real-world projects from day one. Build a portfolio that speaks louder than any degree.</p>
+          <h3>Live Global Healthcare Exposure</h3>
+          <p>Get hands-on experience in international hospitals across Dubai, China, Japan, and Germany from year one.</p>
         </div>
         <div class="why-card reveal-up">
           <div class="why-num">03</div>
           <h3>1:1 Mentor Support</h3>
-          <p>Personal mentors from Google, Amazon, Microsoft guide your journey with weekly sessions.</p>
+          <p>Personal guidance from experienced healthcare professionals and mentors with weekly one-on-one sessions.</p>
         </div>
         <div class="why-card reveal-up">
           <div class="why-num">04</div>
-          <h3>Guaranteed Placements</h3>
-          <p>98% placement rate with dedicated career services, mock interviews, and direct referrals.</p>
+          <h3>Abroad Placement Assistance</h3>
+          <p>Dedicated career services for international placements, including interview prep and direct referrals to 100+ global partners.</p>
+        </div>
+        <div class="why-card reveal-up">
+          <div class="why-num">05</div>
+          <h3>Multiple Country Visit Opportunity</h3>
+          <p>Experience healthcare systems across 4 different countries with structured international visits and clinical rotations.</p>
         </div>
       </div>
     </div>
@@ -986,11 +990,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false"><span>What is the Global Track in BSc Nursing?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer"><p>The Global Track includes real practice in Dubai, China, Japan, Germany hospitals, AI in Healthcare practice in China, German language classes, IELTS preparation, and international clinical practice.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false"><span>Are scholarships available?</span><span class="faq-icon">+</span></button>
-          <div class="faq-answer"><p>Yes — merit-based scholarships up to 100% tuition waiver, need-based aid, and special scholarships for women in healthcare and first-generation learners.</p></div>
+          <div class="faq-answer"><p>The Global Track includes real practice in Dubai, China, Singapore,Japan/Germany hospitals, AI in Healthcare practice in China, German language classes, IELTS preparation, and international clinical practice.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false"><span>What international placements are available?</span><span class="faq-icon">+</span></button>
