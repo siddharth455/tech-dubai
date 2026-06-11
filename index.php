@@ -73,8 +73,8 @@
       <div class="hero-left">
         <p class="hero-eyebrow">Built and delivered with industry leaders</p>
         <h1 class="hero-title">
-          Bsc in <span class="text-accent">Nursing</span> +<br>
-          <span class="text-accent">German Career Track</span>
+          Bsc in <span class="text-accent-yellow" style="color: #e8e008;">Nursing</span> +<br>
+          <span class="text-accent-yellow" style="color: #e8e008;">German Career Track</span>
         </h1>
         <p class="hero-sub">
           4-year nursing degree programs. Learn, lead, and care with the expertise needed to thrive in modern healthcare.
@@ -1022,7 +1022,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span>📞</span>
                 <div>
                   <strong>Phone</strong>
-                  <span>+91 7300900900</span>
+                  <span>+91 7300900100</span>
                 </div>
               </div>
               <div class="cta-contact-item">
@@ -1055,15 +1055,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="footer-brand">
                     <a href="#" class="logo"><span class="logo-mark"><img src="assets/images/cbc.logo.png" alt="Career Buddy College Logo"></span><span class="logo-text" style="color: #e8e008;">Career Buddy College<sup class="logo-sup">+</sup></span></a>
                     <p>Empowering the next generation of tech innovators with premium, industry-ready education.</p>
+                    
                 </div>
                 <div class="footer-links-wrapper">
-                    <div class="footer-links"><h4>Programs</h4><a href="#programs">Bsc Nursing</a><a href="#programs">Physiotherapy</a><a href="#apply">Apply Now</a></div>
+                    <div class="footer-links"><h4>Programs</h4><a href="#programs">Bsc Nursing</a><a href="#programs">Physiotherapy</a><a href="#programs">GNM</a><a href="#apply">Apply Now</a></div>
                     <div class="footer-links"><h4>Company</h4><a href="#why-us">About</a><a href="#testimonials">Stories</a><a href="#faq">FAQ</a></div>
                     <div class="footer-links"><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a></div>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; <?php echo date('Y'); ?> Career Buddy College. All rights reserved.</p>
+                <p class="text-center"><sup class="logo-sup">+</sup> Career Buddy College Training & Placement Career Centres LLP ("Career Buddy College") is NOT a university, college, higher education institution, or degree-granting body within the meaning of the UGC Act, 1956. CBC is NOT an Allied and Healthcare Institution within the meaning of the NCAHP Act, 2021.
+CBC does not award any degree or higher education qualification, and offers no degree-granting programme of its own.
+CBC does not operate any off-campus centre, study centre, extension centre, or franchisee campus of any university.
+Where a university or a programme is listed on CBC website, CBC acts as the industry partner appointed by that university/college. These services are rendered directly to the university/college; the academic relationship — admission, curriculum, examinations, and award of the credential — is solely between the university/college and the student.</p>
+<p>What CBC provides is the industry-facing layer: industry-aligned content development, skill laboratory infrastructure support, clinical and hospitality internships through our network of employer partners, career counselling, and placement support. Admissions, academic records, curriculum, and examinations are administered solely by the university/college. CBC supports the career-readiness components delivered to, and on behalf of, that university/college. CBC has no authority or influence over, and cannot give any guarantee as to, the validity or approval status of any university/college or any programme. Always refer to the official website of the University/college, the UGC, or the relevant council for verification.</p>
             </div>
         </div>
     </footer>
