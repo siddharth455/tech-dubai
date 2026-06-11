@@ -502,10 +502,7 @@
                 <div class="reveal-up">
                     <div class="trend-card">
                         <div class="chart-placeholder">
-                            <canvas id="chart3" style="display: block;
-    box-sizing: border-box;
-    width: 554.8px;
-    height: 188.2px;"></canvas>
+                            <canvas id="chart3"></canvas>
                         </div>
                         <h4>Global Healthcare Vacancies</h4>
                         <p>Japan and Germany are facing acute shortages of healthcare professionals. <span class="text-green-400">International pathways → Guaranteed Global Career</span></p>
