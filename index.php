@@ -931,21 +931,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span>📧</span>
                 <div>
                   <strong>Email</strong>
-                  <span>admissions@careerbuddy.tech</span>
+                  <span>admissions@careerbuddycollege.com</span>
                 </div>
               </div>
               <div class="cta-contact-item">
                 <span>📞</span>
                 <div>
                   <strong>Phone</strong>
-                  <span>+91 98765 43210</span>
+                  <span>+91 7300900900</span>
                 </div>
               </div>
               <div class="cta-contact-item">
                 <span>📍</span>
                 <div>
                   <strong>Campus</strong>
-                  <span>Tech Park, Bangalore, India</span>
+                  <span>Chakrata Road, Jhajra, Dehradun, Uttarakhand, 248007</span>
                 </div>
               </div>
             </div>
