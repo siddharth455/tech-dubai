@@ -17,6 +17,31 @@
 </head>
 <body>
   
+  <!-- Announcement Ticker -->
+  <div class="ticker-bar">
+    <div class="ticker-track">
+      <span>Curriculum by Top Industry Experts</span>
+      <span class="ticker-dot"></span>
+      <span>Up to 100% Scholarships Available</span>
+      <span class="ticker-dot"></span>
+      <span>NAAC A Grade University Partner</span>
+      <span class="ticker-dot"></span>
+      <span>Next Intake Closes June 30</span>
+      <span class="ticker-dot"></span>
+      <span>Only 30 Seats for 2026 Batch</span>
+      <span class="ticker-dot"></span>
+      <span>Curriculum by Top Industry Experts</span>
+      <span class="ticker-dot"></span>
+      <span>Up to 100% Scholarships Available</span>
+      <span class="ticker-dot"></span>
+      <span>NAAC A Grade University Partner</span>
+      <span class="ticker-dot"></span>
+      <span>Next Intake Closes June 30</span>
+      <span class="ticker-dot"></span>
+      <span>Only 30 Seats for 2026 Batch</span>
+    </div>
+  </div>
+
   <!-- Header / Navbar -->
   <header class="navbar" id="navbar">
     <div class="container nav-container">
@@ -180,7 +205,7 @@
     }
 
     .section {
-      padding: 72px 0;
+      padding:40px 0;
       background: #ffffff;
     }
     .section-header { margin-bottom: 56px; text-align: center; }
@@ -914,6 +939,66 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     </section>
 
+
+  <!-- Why Choose Us -->
+  <section class="section why-section" id="why-us">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-label reveal-up">Why Career Buddy College</span>
+        <h2 class="section-title reveal-up" style="color:#000;">Education <span class="text-accent">Reimagined for the Digital Age</span></h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal-up">
+          <div class="why-num">01</div>
+          <h3>Industry-Curated Curriculum</h3>
+          <p>Programs designed with input from 50+ top tech companies ensuring you learn what employers need.</p>
+        </div>
+        <div class="why-card reveal-up">
+          <div class="why-num">02</div>
+          <h3>Live Project Experience</h3>
+          <p>Work on real-world projects from day one. Build a portfolio that speaks louder than any degree.</p>
+        </div>
+        <div class="why-card reveal-up">
+          <div class="why-num">03</div>
+          <h3>1:1 Mentor Support</h3>
+          <p>Personal mentors from Google, Amazon, Microsoft guide your journey with weekly sessions.</p>
+        </div>
+        <div class="why-card reveal-up">
+          <div class="why-num">04</div>
+          <h3>Guaranteed Placements</h3>
+          <p>98% placement rate with dedicated career services, mock interviews, and direct referrals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq-section" id="faq" >
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-label reveal-up">FAQ</span>
+        <h2 class="section-title reveal-up">Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-list reveal-up">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false"><span>What are the eligibility criteria for BSc Nursing?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>10+2 (12th) pass with Physics, Chemistry, Biology & English, minimum 50% aggregate marks in PCB. Age: 17–35 years as on 31 December of the admission year.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false"><span>What is the Global Track in BSc Nursing?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>The Global Track includes real practice in Dubai, China, Japan, Germany hospitals, AI in Healthcare practice in China, German language classes, IELTS preparation, and international clinical practice.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false"><span>Are scholarships available?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Yes — merit-based scholarships up to 100% tuition waiver, need-based aid, and special scholarships for women in healthcare and first-generation learners.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false"><span>What international placements are available?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>We have 100+ global hiring partners with placements in Germany, Japan, Dubai, and other countries, with average packages ranging from ₹18–35 LPA.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Contact Form -->
     <main class="cta-page-shell">

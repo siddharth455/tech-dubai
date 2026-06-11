@@ -72,6 +72,30 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.12 });
 
   revealItems.forEach((item) => revealObserver.observe(item));
+
+  // FAQ Accordion
+  const faqQuestions = document.querySelectorAll('.faq-question');
+  faqQuestions.forEach((question) => {
+    question.addEventListener('click', () => {
+      const faqItem = question.parentElement;
+      const isActive = faqItem.classList.contains('active');
+
+      // Close all other FAQ items
+      document.querySelectorAll('.faq-item').forEach((item) => {
+        item.classList.remove('active');
+        const qBtn = item.querySelector('.faq-question');
+        if (qBtn) {
+          qBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Open clicked item if it wasn't active
+      if (!isActive) {
+        faqItem.classList.add('active');
+        question.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
 });
 
 

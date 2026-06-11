@@ -42,6 +42,241 @@ img { display: block; max-width: 100%; }
 a { text-decoration: none; color: inherit; }
 
 .container { width: min(1200px, calc(100% - 32px)); margin: 0 auto; }
+
+/* --- Announcement Ticker --- */
+.ticker-bar {
+  width: 100%;
+  background: linear-gradient(90deg, rgba(36, 144, 56, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+  padding: 10px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.ticker-track {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  white-space: nowrap;
+  animation: ticker 30s linear infinite;
+}
+
+.ticker-track span {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+}
+
+.ticker-dot {
+  width: 6px;
+  height: 6px;
+  background: #000;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive Ticker */
+@media (max-width: 767.98px) {
+  .ticker-track span {
+    font-size: 12px;
+  }
+  .ticker-track {
+    gap: 30px;
+  }
+}
+
+/* --- Why Choose Us Section --- */
+.why-section {
+  padding: 80px 0;
+  background: var(--bg-2);
+}
+
+.why-section .section-header {
+  margin-bottom: 56px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.why-card {
+  background: rgba(15, 23, 42, 0.97);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 28px 24px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(237, 221, 83, 0.4);
+  box-shadow: 0 20px 40px rgba(237, 221, 83, 0.1);
+}
+
+.why-num {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent);
+  background: rgba(237, 221, 83, 0.1);
+  padding: 6px 14px;
+  border-radius: 100px;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.why-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.why-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Responsive Why Choose Us */
+@media (max-width: 1024px) {
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .why-section {
+    padding: 56px 0;
+  }
+  .why-grid {
+    gap: 18px;
+  }
+  .why-card {
+    padding: 24px 20px;
+  }
+  .why-card h3 {
+    font-size: 1.15rem;
+  }
+  .why-card p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- FAQ Section --- */
+.faq-section {
+  padding: 0;
+  background: #0b1120 !important;
+}
+
+.faq-section .section-header {
+  margin-bottom: 48px;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background: rgba(15, 23, 42, 0.97);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+  color: var(--accent);
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-answer p {
+  padding: 0 24px 20px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.faq-item.active {
+  border-color: rgba(237, 221, 83, 0.4);
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+}
+
+/* Responsive FAQ */
+@media (max-width: 767.98px) {
+  .faq-section {
+    padding: 0;
+  }
+  .faq-question {
+    padding: 18px 20px;
+    font-size: 0.98rem;
+  }
+  .faq-answer p {
+    padding: 0 20px 18px;
+    font-size: 0.9rem;
+  }
+}
+
 /* --- Footer --- */
 .footer { background: var(--bg); padding: 64px 0 28px; border-top: 1px solid var(--border); }
 .footer-grid { display: grid; grid-template-columns: 2fr 3fr; gap: 40px; margin-bottom: 40px; }
