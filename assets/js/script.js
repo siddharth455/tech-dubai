@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
       spaceBetween: 24,
       loop: true,
       autoplay: {
-        delay: 3000,
+        delay: 9000,
         disableOnInteraction: false,
       },
       pagination: {
@@ -42,8 +42,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Campus Gallery carousel
+  const campusSwiperEl = document.querySelector('.campus-swiper');
+  if (campusSwiperEl && typeof Swiper !== 'undefined') {
+    new Swiper('.campus-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.campus-swiper .swiper-pagination',
+        clickable: true,
+      },
+    });
+  }
+
+  // Reveal animations for all reveal-up elements
+  const revealItems = document.querySelectorAll('.reveal-up, .cta-reveal-up');
+  const revealObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  revealItems.forEach((item) => revealObserver.observe(item));
 });
 
-
-// Curriculum Section
 
