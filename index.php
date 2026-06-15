@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Career Buddy College+</title>
   
@@ -121,7 +121,7 @@
         <a href="#curriculum" class="anchor-pill">Curriculum</a>
         <a href="#experience" class="anchor-pill">Industry Integration</a>
         <a href="#mentors" class="anchor-pill">Mentors</a>
-        <a href="#apply" class="anchor-pill">Admission Process</a>
+        <a href="#admission" class="anchor-pill">Admission Process</a>
       </div>
     </div>
   </section>
@@ -776,8 +776,9 @@ document.addEventListener('DOMContentLoaded', () => {
               <p class="section-desc reveal-up text-center">Three Global Healthcare-aligned undergraduated programs designed to make you Global Healthcare job-ready from day one.</p>
           </div>
 
-          <div class="swiper programs-swiper" style="padding-bottom: 50px;">
-              <div class="swiper-wrapper">
+          <div class="programs-slider-wrap" style="position: relative;">
+              <div class="swiper programs-swiper" style="padding-bottom: 50px;">
+                  <div class="swiper-wrapper">
                   <article class="program-card swiper-slide reveal-up" data-tilt>
                       <div class="program-ribbon">Most Popular</div>
 
@@ -883,7 +884,7 @@ document.addEventListener('DOMContentLoaded', () => {
                       <ul class="program-tags">
                           <li>Dubai Clinical Exposure Pathway</li>
                           <li>China AI & Smart Rehabilitation</li>
-                          <li>Japan Advanced Rehabilitation</li>
+                          <li>Australia Career Track Preparation</li>
                           <li>German Language Training (A1, A2, B1 & B2)</li>
                       </ul>
                       <div class="program-eligibility">
@@ -900,7 +901,12 @@ document.addEventListener('DOMContentLoaded', () => {
                       </div>
                   </article>
               </div>
-              <div class="swiper-pagination"></div>
+                  <div class="swiper-pagination"></div>
+              </div>
+              
+              <!-- Swiper Navigation Arrows (Desktop) -->
+              <div class="swiper-button-prev programs-button-prev"></div>
+              <div class="swiper-button-next programs-button-next"></div>
           </div>
       </div>
   </section>
@@ -913,23 +919,29 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="campus-grid">
                 <div class="campus-info reveal-up">
                     <span class="section-label">Your degree is awarded by</span>
-                    <h2 class="section-title">Partner Institution<br><span class="text-muted">NAAC Grade · UGC Recognized</span></h2>
+                    <h2 class="section-title">Partner Institution<br><span class="text-muted">NAAC Grade</span></h2>
                     <p class="section-desc">A recognized university with modern infrastructure. Don't miss out on the full college experience.</p>
                     <div class="campus-stats">
-                        <div class="campus-stat"><strong>5</strong><span>Acres Campus</span></div>
+                        <div class="campus-stat"><strong>YES</strong><span>IAP</span></div>|
+                        <div class="campus-stat"><strong>Yes</strong><span>INC</span></div>|
+                        <div class="campus-stat"><strong>Yes</strong><span>State Govt Approved</span></div>|
+                        <div class="campus-stat"><strong>Yes</strong><span>Govt Degree</span></div>
                         
-                        <div class="campus-stat"><strong>Yes</strong><span>UGC Recognized</span></div>
                     </div>
                 </div>
                 <div class="campus-gallery reveal-up">
                     <div class="swiper campus-swiper">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="assets/images/1.webp" alt="Campus" loading="lazy"></div>
-                            <div class="swiper-slide"><img src="assets/images/2.webp" alt="Campus building" loading="lazy"></div>
-                            <div class="swiper-slide"><img src="assets/images/3.webp" alt="Campus interior" loading="lazy"></div>
-                            <div class="swiper-slide"><img src="assets/images/4.webp" alt="Campus library" loading="lazy"></div>
-                            <div class="swiper-slide"><img src="assets/images/5.webp" alt="Campus interior" loading="lazy"></div>
-                            <div class="swiper-slide"><img src="assets/images/6.webp" alt="Campus library" loading="lazy"></div>
+                             <div class="swiper-slide"><img src="assets/images/7.webp" alt="Campus-Lab" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="assets/images/lab-2.jpg" alt="Campus-Lab" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="assets/images/1.webp" alt="Campus-Lab" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="assets/images/lab-3.jpg" alt="Campus-Lab" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="assets/images/lab-4.jpg" alt="Campus-Lab" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="assets/images/4.webp" alt="Campus-Lab" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="assets/images/lab-8.jpg" alt="Campus-Lab" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="assets/images/lab-6.jpg" alt="Campus-Lab" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="assets/images/lab-13.jpg" alt="Campus-Lab" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="assets/images/lab-15.jpg" alt="Campus-Lab" loading="lazy"></div>
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
@@ -975,6 +987,10 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     </div>
   </section>
+
+  <!-- Admission Process -->
+ <?php require 'admission.php'; ?>
+  
 
   <!-- FAQ -->
   <section class="section faq-section" id="faq" >
@@ -1022,7 +1038,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span>📞</span>
                 <div>
                   <strong>Phone</strong>
-                  <span>+91 7300900100</span>
+                  <span>+91 7456000100</span>
                 </div>
               </div>
               <div class="cta-contact-item">

@@ -39,6 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
         el: '.programs-swiper .swiper-pagination',
         clickable: true,
       },
+      navigation: {
+        nextEl: '.programs-button-next',
+        prevEl: '.programs-button-prev',
+      },
     });
   }
 
