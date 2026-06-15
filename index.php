@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <!-- External CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" type="image/x-icon" href="assets/images/cbc.logo.png">
 </head>
 <body>
   
