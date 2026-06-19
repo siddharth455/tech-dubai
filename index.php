@@ -25,7 +25,7 @@
       <span class="ticker-dot"></span>
       <span>NAAC  Graded Institution Partner</span>
       <span class="ticker-dot"></span>
-      <span>Next Intake Closes 15 July</span>
+      <span>Next Intake Closes 30 July</span>
       <span class="ticker-dot"></span>
       <span>Only 30 Seats for 2026 Batch</span>
       <span class="ticker-dot"></span>
@@ -33,7 +33,7 @@
       <span class="ticker-dot"></span>
       <span>NAAC  Graded Institution Partner</span>
       <span class="ticker-dot"></span>
-     <span>Next Intake Closes 15 July</span>
+     <span>Next Intake Closes 30 July</span>
       <span class="ticker-dot"></span>
       <span>Only 30 Seats for 2026 Batch</span>
       <span class="ticker-dot"></span>
@@ -47,7 +47,7 @@
     <div class="container nav-container">
       <a href="#" class="logo">
         <span class="logo-img"><img src="assets/images/cbc.logo.png" alt="Career Buddy Tech Logo" /></span>
-        <span style=" font-size:1.5rem; color:yellow " class="logo-text-accent">Career Buddy College<sup class="logo-sup">+</sup></span>
+        <span style=" font-size:1.5rem; "class="text-accent">Career Buddy College<span class="logo-sup" style="color: red !important;">+</span></span>
       </a>
       
       <nav class="nav-links" id="navLinks">
@@ -66,18 +66,29 @@
   <!-- Hero Section -->
   <section class="hero" id="hero">
     <canvas id="heroCanvas" class="hero-canvas"></canvas>
-    
-    <div class="container hero-grid">
+    <div class="container hero-grid" style="max-width: 1400px;">
       
       <!-- Hero Left Content -->
       <div class="hero-left">
         <p class="hero-eyebrow">Built and delivered with industry leaders</p>
-        <h1 class="hero-title">
-          Bsc in <span class="text-accent-yellow" style="color: #e8e008;">Nursing</span> +<br>
-          <span class="text-accent-yellow" style="color: #e8e008;">German Career Track</span>
-        </h1>
+        <div class="hero-title-slider-container">
+          <div class="hero-title-slider">
+            <h1 class="hero-title slide">
+              Bsc in <span class="text-accent">Nursing</span> <span style="color:red";>+</span><br>
+              <span class="text-accent">German/Japan Career Track</span>
+            </h1>
+            <h1 class="hero-title slide">
+              Bachelor in <span class="text-accent" >Physiotherapy</span> <span style="color:red";>+</span><br>
+              <span class="text-accent">Australia/Germany Career track</span>
+            </h1>
+             <h1 class="hero-title slide">
+              General Nursing and Midwifery <span class="text-accent"> (GNM) </span><span style="color:red";>+</span><br>
+              <span class="text-accent">Japan/Germany Career track</span>
+            </h1>
+          </div>
+        </div>
         <p class="hero-sub">
-          4-year nursing degree programs. Learn, lead, and care with the expertise needed to thrive in modern healthcare.
+          Full time Global degree programs. Learn, lead, and care with the expertise needed to thrive in modern healthcare.
         </p>
 
 
@@ -87,7 +98,16 @@
           <a href="#programs" class="btn btn-outline-hero">Explore Programs</a>
         </div>
 
-        <span class="seats-badge">Only 30 seats — 2026 Batch</span>
+        <span class="seats-badge">30 seats — 2026 Batch</span>
+        <div class="countdown-box reveal-up"> 
+                     <p class="countdown-label">NEXT INTAKE CLOSES IN:</p> 
+                     <div class="countdown" id="countdown"> 
+                         <div class="countdown-item"><span class="count-num" id="cdDays">00</span><span class="count-unit">D</span></div> 
+                         <div class="countdown-item"><span class="count-num" id="cdHours">00</span><span class="count-unit">H</span></div> 
+                         <div class="countdown-item"><span class="count-num" id="cdMins">00</span><span class="count-unit">M</span></div> 
+                         <div class="countdown-item"><span class="count-num" id="cdSecs">00</span><span class="count-unit">S</span></div> 
+                     </div> 
+                 </div>
       </div>
 
       <!-- Hero Right Image & Badges -->
@@ -120,8 +140,6 @@
         <a href="#placement" class="anchor-pill">Placement</a>
         <a href="#programs" class="anchor-pill">Programs</a>
         <a href="#curriculum" class="anchor-pill">Curriculum</a>
-        <a href="#experience" class="anchor-pill">Industry Integration</a>
-        <a href="#mentors" class="anchor-pill">Mentors</a>
         <a href="#admission" class="anchor-pill">Admission Process</a>
       </div>
     </div>
@@ -130,41 +148,38 @@
   <!-- Healthcare Partners Section -->
   <section class="partners-marquee-section">
     <div class="partners-header">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px; position: relative; top: 2px;">
-        <path d="M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1v2H9V7zm0 4h1v2H9v-2zm0 4h1v2H9v-2zm4-8h1v2h-1V7zm0 4h1v2h-1v-2zm0 4h1v2h-1v-2z"></path>
-      </svg>
       HEALTHCARE PARTNERS
     </div>
     <div class="marquee-container">
       <div class="marquee-content">
-        <div class="marquee-item"><img src="assets/images/accord.svg" alt="Accord"></div>
-        <div class="marquee-item"><img src="assets/images/fortis.svg" alt="Fortis"></div>
-        <div class="marquee-item"><img src="assets/images/lifecare.svg" alt="Life Care"></div>
-        <div class="marquee-item"><img src="assets/images/metro.svg" alt="Metro Hospital"></div>
-        <div class="marquee-item"><img src="assets/images/apollo.svg" alt="Apollo"></div>
-        <div class="marquee-item"><img src="assets/images/max.svg" alt="Max Healthcare"></div>
+        <div class="marquee-item"><img src="assets/images/accord-logo.webp" alt="Accord"></div>
+        <div class="marquee-item"><img src="assets/images/fortis-logo.webp" alt="Fortis"></div>
+        <div class="marquee-item"><img src="assets/images/lif-care-logo.webp" alt="Life Care"></div>
+        <div class="marquee-item"><img src="assets/images/metro-logo.webp" alt="Metro Hospital"></div>
+        <div class="marquee-item"><img src="assets/images/apollo-logo.webp" alt="Apollo"></div>
+        <div class="marquee-item"><img src="assets/images/max-logo.webp" alt="Max Healthcare"></div>
         
         <!-- Duplicates for seamless loop -->
-        <div class="marquee-item"><img src="assets/images/accord.svg" alt="Accord"></div>
-        <div class="marquee-item"><img src="assets/images/fortis.svg" alt="Fortis"></div>
-        <div class="marquee-item"><img src="assets/images/lifecare.svg" alt="Life Care"></div>
-        <div class="marquee-item"><img src="assets/images/metro.svg" alt="Metro Hospital"></div>
-        <div class="marquee-item"><img src="assets/images/apollo.svg" alt="Apollo"></div>
-        <div class="marquee-item"><img src="assets/images/max.svg" alt="Max Healthcare"></div>
+        <div class="marquee-item"><img src="assets/images/accord-logo.webp" alt="Accord"></div>
+        <div class="marquee-item"><img src="assets/images/fortis-logo.webp" alt="Fortis"></div>
+        <div class="marquee-item"><img src="assets/images/lif-care-logo.webp" alt="Life Care"></div>
+        <div class="marquee-item"><img src="assets/images/metro-logo.webp" alt="Metro Hospital"></div>
+        <div class="marquee-item"><img src="assets/images/apollo-logo.webp" alt="Apollo"></div>
+        <div class="marquee-item"><img src="assets/images/max-logo.webp" alt="Max Healthcare"></div>
 
-        <div class="marquee-item"><img src="assets/images/accord.svg" alt="Accord"></div>
-        <div class="marquee-item"><img src="assets/images/fortis.svg" alt="Fortis"></div>
-        <div class="marquee-item"><img src="assets/images/lifecare.svg" alt="Life Care"></div>
-        <div class="marquee-item"><img src="assets/images/metro.svg" alt="Metro Hospital"></div>
-        <div class="marquee-item"><img src="assets/images/apollo.svg" alt="Apollo"></div>
-        <div class="marquee-item"><img src="assets/images/max.svg" alt="Max Healthcare"></div>
+        <div class="marquee-item"><img src="assets/images/accord-logo.webp" alt="Accord"></div>
+        <div class="marquee-item"><img src="assets/images/fortis-logo.webp" alt="Fortis"></div>
+        <div class="marquee-item"><img src="assets/images/lif-care-logo.webp" alt="Life Care"></div>
+        <div class="marquee-item"><img src="assets/images/metro-logo.webp" alt="Metro Hospital"></div>
+        <div class="marquee-item"><img src="assets/images/apollo-logo.webp" alt="Apollo"></div>
+        <div class="marquee-item"><img src="assets/images/max-logo.webp" alt="Max Healthcare"></div>
 
-        <div class="marquee-item"><img src="assets/images/accord.svg" alt="Accord"></div>
-        <div class="marquee-item"><img src="assets/images/fortis.svg" alt="Fortis"></div>
-        <div class="marquee-item"><img src="assets/images/lifecare.svg" alt="Life Care"></div>
-        <div class="marquee-item"><img src="assets/images/metro.svg" alt="Metro Hospital"></div>
-        <div class="marquee-item"><img src="assets/images/apollo.svg" alt="Apollo"></div>
-        <div class="marquee-item"><img src="assets/images/max.svg" alt="Max Healthcare"></div>
+        <div class="marquee-item"><img src="assets/images/accord-logo.webp" alt="Accord"></div>
+        <div class="marquee-item"><img src="assets/images/fortis-logo.webp" alt="Fortis"></div>
+        <div class="marquee-item"><img src="assets/images/lif-care-logo.webp" alt="Life Care"></div>
+        <div class="marquee-item"><img src="assets/images/metro-logo.webp" alt="Metro Hospital"></div>
+        <div class="marquee-item"><img src="assets/images/apollo-logo.webp" alt="Apollo"></div>
+        <div class="marquee-item"><img src="assets/images/max-logo.webp" alt="Max Healthcare"></div>
       </div>
     </div>
   </section>
@@ -632,8 +647,8 @@ function initAITrendsCharts() {
                 datasets: [{
                     label: 'Avg. Monthly Salary (INR)',
                     data: [28000, 260000, 320000],
-                    backgroundColor: ['rgba(255, 255, 255, 0.2)', '#22d3ee', '#a78bfa'],
-                    borderColor: ['rgba(255, 255, 255, 0.5)', '#22d3ee', '#a78bfa'],
+                    backgroundColor: ['rgba(0, 0, 0, 0.1)', '#0369a1', '#6d28d9'],
+                    borderColor: ['rgba(0, 0, 0, 0.3)', '#0369a1', '#6d28d9'],
                     borderWidth: 1,
                     borderRadius: 8
                 }]
@@ -644,8 +659,8 @@ function initAITrendsCharts() {
                 animation: { duration: 2000, easing: 'easeOutQuart' },
                 plugins: { legend: { display: false } },
                 scales: {
-                    x: { grid: { display: false }, ticks: { color: 'rgba(255,255,255,0.7)' } },
-                    y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: 'rgba(255,255,255,0.5)' } }
+                    x: { grid: { display: false }, ticks: { color: 'rgba(0,0,0,0.6)' } },
+                    y: { grid: { color: 'rgba(0,0,0,0.1)' }, ticks: { color: 'rgba(0,0,0,0.6)' } }
                 }
             }
         });
@@ -661,12 +676,12 @@ function initAITrendsCharts() {
                 datasets: [{
                     label: 'Nursing Vacancies',
                     data: [180000, 260000, 340000, 420000, 500000],
-                    borderColor: '#fbbf24',
-                    backgroundColor: 'rgba(251, 191, 36, 0.1)',
+                    borderColor: '#b45309',
+                    backgroundColor: 'rgba(180, 83, 9, 0.1)',
                     borderWidth: 3,
                     fill: true,
                     tension: 0.4,
-                    pointBackgroundColor: '#fbbf24'
+                    pointBackgroundColor: '#b45309'
                 }]
             },
             options: {
@@ -675,8 +690,8 @@ function initAITrendsCharts() {
                 animation: { duration: 2000, easing: 'easeOutQuart' },
                 plugins: { legend: { display: false } },
                 scales: {
-                    x: { grid: { display: false }, ticks: { color: 'rgba(255,255,255,0.7)' } },
-                    y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: 'rgba(255,255,255,0.5)' } }
+                    x: { grid: { display: false }, ticks: { color: 'rgba(0,0,0,0.6)' } },
+                    y: { grid: { color: 'rgba(0,0,0,0.1)' }, ticks: { color: 'rgba(0,0,0,0.6)' } }
                 }
             }
         });
@@ -691,7 +706,7 @@ function initAITrendsCharts() {
                 labels: ['Germany', 'Japan', 'Other EU'],
                 datasets: [{
                     data: [45, 35, 20],
-                    backgroundColor: ['#a78bfa', '#22d3ee', 'rgba(255, 255, 255, 0.1)'],
+                    backgroundColor: ['#6d28d9', '#0369a1', 'rgba(0, 0, 0, 0.1)'],
                     borderWidth: 0,
                     hoverOffset: 15
                 }]
@@ -703,7 +718,7 @@ function initAITrendsCharts() {
                 plugins: { 
                     legend: { 
                         position: 'bottom',
-                        labels: { color: 'rgba(255,255,255,0.8)', padding: 12, font: { size: 10 } } 
+                        labels: { color: 'rgba(0,0,0,0.8)', padding: 12, font: { size: 10 } } 
                     } 
                 }
             }
@@ -729,7 +744,7 @@ function initAITrendsCharts() {
                     { 
                         label: 'Local Track (Savings)', 
                         data: [1, 2.5, 4.5, 7, 10], 
-                        borderColor: 'rgba(255,255,255,0.3)', 
+                        borderColor: 'rgba(0,0,0,0.3)', 
                         borderWidth: 2, 
                         borderDash: [5, 5], 
                         fill: false 
@@ -742,12 +757,12 @@ function initAITrendsCharts() {
                 plugins: { 
                     legend: { 
                         position: 'top',
-                        labels: { color: 'rgba(255,255,255,0.7)', font: { size: 9 }, padding: 8 } 
+                        labels: { color: 'rgba(0,0,0,0.7)', font: { size: 9 }, padding: 8 } 
                     } 
                 },
                 scales: {
-                    x: { grid: { display: false }, ticks: { color: 'rgba(255,255,255,0.5)' } },
-                    y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: 'rgba(255,255,255,0.5)' } }
+                    x: { grid: { display: false }, ticks: { color: 'rgba(0,0,0,0.6)' } },
+                    y: { grid: { color: 'rgba(0,0,0,0.1)' }, ticks: { color: 'rgba(0,0,0,0.6)' } }
                 }
             }
         });
@@ -800,7 +815,7 @@ document.addEventListener('DOMContentLoaded', () => {
                           <div class="metric-divider"></div>
                           <div class="metric-item"><strong>100+</strong><span>Global Hiring Partners</span></div>
                           <div class="metric-divider"></div>
-                          <div class="metric-item"><strong>₹18–35 LPA</strong><span>Avg. Package</span></div>
+                          <div class="metric-item"><strong>₹18–35 LPA</strong><span>Avg. Salary Package</span></div>
                       </div>
                       <ul class="program-tags">
                           <li>AI in Health Care Practice in China</li>
@@ -838,10 +853,10 @@ document.addEventListener('DOMContentLoaded', () => {
                       <div class="program-metrics">
                           <div class="metric-item"><strong>₹11.50 Lakhs</strong><span>Fees</span></div>
                           <div class="metric-divider"></div>
-                          <div class="metric-item"><strong>₹15-30 LPA</strong><span>Avg. Package</span></div>
-                          <div class="metric-divider"></div>
                           <div class="metric-item"><strong>100+</strong><span>Global Hiring Partners</span></div>
-                      </div>
+                          <div class="metric-divider"></div>
+                          <div class="metric-item"><strong>₹15-30 LPA</strong><span>Avg. Salary Package</span></div>
+                          </div>
                       <ul class="program-tags">
                           <li>International General Nursing Practices</li>
                           <li>Global Practice Exposure</li>
@@ -878,9 +893,11 @@ document.addEventListener('DOMContentLoaded', () => {
                       <div class="program-metrics">
                           <div class="metric-item"><strong>₹12.50 Lakhs</strong><span>Fees</span></div>
                           <div class="metric-divider"></div>
-                          <div class="metric-item"><strong>₹20-40 LPA</strong><span>Avg. Package</span></div>
-                          <div class="metric-divider"></div>
+                          
                           <div class="metric-item"><strong>80+</strong><span>Global Hiring Partners</span></div>
+                          <div class="metric-divider"></div>
+                          <div class="metric-item"><strong>₹20-40 LPA</strong><span>Avg. Salary Package</span></div>
+                          
                       </div>
                       <ul class="program-tags">
                           <li>Dubai Clinical Exposure Pathway</li>
@@ -923,11 +940,28 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h2 class="section-title">Partner Institution<br><span class="text-muted">NAAC Grade</span></h2>
                     <p class="section-desc">A recognized university with modern infrastructure. Don't miss out on the full college experience.</p>
                     <div class="campus-stats">
-                        <div class="campus-stat"><strong>YES</strong><span>IAP</span></div>|
-                        <div class="campus-stat"><strong>Yes</strong><span>INC</span></div>|
-                        <div class="campus-stat"><strong>Yes</strong><span>State Govt Approved</span></div>|
-                        <div class="campus-stat"><strong>Yes</strong><span>Govt Degree</span></div>
-                        
+                       
+                        <div class="campus-stat">
+                            <span class="stat-icon" style="display: flex; align-items: center;"><img src="assets/images/INC.png" alt="INC" style="height: 44px; width: 44px; object-fit: contain;"></span>
+                            <div class="stat-content">
+                                <strong>Indian Nursing Council</strong>
+                                <span>Recognized and quality-assured education</span>
+                            </div>
+                        </div>
+                        <div class="campus-stat">
+                            <span class="stat-icon">⚕️</span>
+                            <div class="stat-content">
+                                <strong>Indian Association of Physiotherapists (IAP) </strong>
+                                <span>Government-recognized qualifications</span>
+                            </div>
+                        </div>
+                        <div class="campus-stat">
+                            <span class="stat-icon">🎓</span>
+                            <div class="stat-content">
+                                <strong>Government Recognized Degree</strong>
+                                <span>Valid for higher studies and employment</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="campus-gallery reveal-up">
@@ -951,6 +985,8 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     </section>
 
+    <!-- Placement Section  -->
+  <?php require 'placement.php'; ?>
 
   <!-- Why Choose Us -->
   <section class="section why-section" id="why-us">
@@ -1071,7 +1107,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="#" class="logo"><span class="logo-mark"><img src="assets/images/cbc.logo.png" alt="Career Buddy College Logo"></span><span class="logo-text" style="color: #e8e008;">Career Buddy College<sup class="logo-sup">+</sup></span></a>
-                    <p>Empowering the next generation of tech innovators with premium, industry-ready education.</p>
+                    <p>Empowering the next generation of healthcare professionals with premium, global healthcare industry ready education.</p>
                     
                 </div>
                 <div class="footer-links-wrapper">

@@ -31,11 +31,11 @@
         font-size: 2.5rem;
         font-weight: 800;
         color: #111827 !important;
-        margin-bottom: 12px;
+        margin-bottom: 16px;
     }
 
     .admsn-section-subtitle {
-        color: #6b7280;
+        color: #475569;
         font-size: 0.95rem;
     }
 
@@ -230,6 +230,67 @@
     .admsn-step-content span.admsn-cyan { color: #0ea5e9; }
     .admsn-step-content span.admsn-green { color: #22c55e; }
     .admsn-step-content span.admsn-orange { color: #ea580c; }
+    
+    /* Modal Styles */
+    .modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 9999;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .modal-overlay.active {
+        display: flex;
+    }
+    
+    .modal-content {
+        background: white;
+        border-radius: 16px;
+        max-width: 800px;
+        width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+        position: relative;
+    }
+    
+    .modal-close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background: #f3f4f6;
+        border: none;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        font-size: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        transition: background 0.2s;
+    }
+    
+    .modal-close:hover {
+        background: #e5e7eb;
+    }
+    
+    .admsn-apply-btn {
+        cursor: pointer;
+        text-decoration: underline;
+        transition: color 0.2s;
+    }
+    
+    .admsn-apply-btn:hover {
+        color: #5b21b6;
+    }
 
     @media (max-width: 768px) {
         .admsn-hero-card {
@@ -249,7 +310,7 @@
 <div class="admsn-wrapper" id="admission">
     <div class="admsn-container">
         <div class="admsn-section-header">
-            <div class="admsn-section-label">Your Path to <span class="logo-text" style="color: #e8e008;">Career Buddy College</span><sup class="logo-sup">+<sup></div>
+            <div class="admsn-section-label">Your Path to <span class="text-accent">Career Buddy College</span><sup class="logo-sup">+<sup></div>
             <h1 class="admsn-section-title">Admission Process</h1>
             <p class="admsn-section-subtitle">A simple 4-step journey from application to enrollment.</p>
         </div>
@@ -259,7 +320,7 @@
                 <div class="admsn-zapt-badge">
                    CBC <span></span> CBC Aptitude Test
                 </div>
-                <h2>We Don't Care About Your NEET Rank</h2>
+                <h2>Don't Worry About Your NEET Rank</h2>
                 <p>The CBCAT  isn't just another entrance test. It's designed to identify students with the aptitude and mindset for Healthcare Studies.</p>
                 <div class="admsn-hero-metrics">
                     <div class="admsn-metric-item">
@@ -272,7 +333,7 @@
                     </div>
                 </div>
                  <p>
-    <strong>Note:</strong> Students who have secured <strong>75% or above</strong> in their qualifying academic examination are eligible for <strong>direct admission</strong>. Students scoring below 75% are required to appear for the <strong>CBCAT</strong>. Final admission for these candidates will be based on their CBCAT performance followed by a personal interview.
+    <strong>Note:</strong> Students who have secured <strong>75% or above</strong> in their qualifying academic examination are eligible. Students scoring below 75% are required to appear for the <strong>CBCAT</strong>. Final admission for these candidates will be based on their CBCAT performance followed by a personal interview as per the norms of Indian Nursing Council (INC).
 </p> 
             </div>
 
@@ -317,7 +378,7 @@
                 <div class="admsn-step-content">
                     <h4>Apply Online</h4>
                     <p>Fill out the application form with your details. Takes less than 5 minutes.</p>
-                    <span class="admsn-purple">Applications Open</span>
+                    <span class="admsn-purple admsn-apply-btn" id="openApplyModal">Applications Open</span>
                 </div>
             </div>
             <div class="admsn-step-card">
@@ -346,6 +407,76 @@
             </div>
         </div>
     </div>
-  
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="applyModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <div class="cta-contact-form cta-reveal-up" style="padding: 40px;">
+                <span id="ee-form-36-modal">
+                    <!-- Widget will be initialized here manually -->
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const openBtn = document.getElementById('openApplyModal');
+            const closeBtn = document.getElementById('closeModal');
+            const modal = document.getElementById('applyModal');
+            let modalWidgetInitialized = false;
+
+            const initializeModalWidget = async () => {
+                if (modalWidgetInitialized) return;
+                if (window._eeFormWidget) {
+                    await window._eeFormWidget.init("applycbc", "form-36", "ee-form-36-modal");
+                    modalWidgetInitialized = true;
+                } else {
+                    // Wait for _eeFormWidget to be available
+                    const checkWidget = setInterval(async () => {
+                        if (window._eeFormWidget) {
+                            clearInterval(checkWidget);
+                            await window._eeFormWidget.init("applycbc", "form-36", "ee-form-36-modal");
+                            modalWidgetInitialized = true;
+                        }
+                    }, 100);
+                }
+            };
+
+            if (openBtn && modal) {
+                openBtn.addEventListener('click', () => {
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                    initializeModalWidget();
+                });
+            }
+
+            if (closeBtn && modal) {
+                closeBtn.addEventListener('click', () => {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            }
+
+            if (modal) {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+
+            // Close modal on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>
 </div>
 

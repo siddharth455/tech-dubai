@@ -100,6 +100,36 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Countdown Timer
+  const countdown = () => {
+    const targetDate = new Date('July 15, 2026 00:00:00').getTime();
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    if (distance < 0) {
+      document.getElementById('cdDays').textContent = '00';
+      document.getElementById('cdHours').textContent = '00';
+      document.getElementById('cdMins').textContent = '00';
+      document.getElementById('cdSecs').textContent = '00';
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    const formatNum = (num) => num.toString().padStart(2, '0');
+
+    document.getElementById('cdDays').textContent = formatNum(days);
+    document.getElementById('cdHours').textContent = formatNum(hours);
+    document.getElementById('cdMins').textContent = formatNum(minutes);
+    document.getElementById('cdSecs').textContent = formatNum(seconds);
+  };
+
+  countdown();
+  setInterval(countdown, 1000);
 });
 
 
