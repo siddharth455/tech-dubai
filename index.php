@@ -934,14 +934,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   <section class="section campus-section" id="campus">
         <div class="container">
-            <div class="campus-grid">
+        <div class="campus-grid">
                 <div class="campus-info reveal-up">
                     <span class="section-label">Your degree is awarded by</span>
                     <h2 class="section-title">Partner Institution<br><span class="text-muted">NAAC Grade</span></h2>
                     <p class="section-desc">A recognized university with modern infrastructure. Don't miss out on the full college experience.</p>
                     <div class="campus-stats">
-                       
-                        <div class="campus-stat">
+                       <div class="campus-stat">
                             <span class="stat-icon" style="display: flex; align-items: center;"><img src="assets/images/INC.png" alt="INC" style="height: 44px; width: 44px; object-fit: contain;"></span>
                             <div class="stat-content">
                                 <strong>Indian Nursing Council</strong>

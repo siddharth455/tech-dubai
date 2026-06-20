@@ -456,7 +456,6 @@ a { text-decoration: none; color: inherit; }
   overflow: hidden;
   width: calc(100% + 16px);
   margin-left: -8px;
-  min-height: 120px;
 }
 
 .hero-title-slider {
@@ -464,7 +463,6 @@ a { text-decoration: none; color: inherit; }
   width: 300%;
   animation: slideLeftTitle 15s ease-in-out infinite;
   align-items: flex-start;
-  padding-left: 8px;
 }
 
 .hero-title.slide {
@@ -472,7 +470,9 @@ a { text-decoration: none; color: inherit; }
   flex-shrink: 0;
   padding-top: 4px;
   padding-bottom: 4px;
+  padding-left: 8px;
   padding-right: 8px;
+  box-sizing: border-box;
 }
 
 @keyframes slideLeftTitle {
@@ -1024,7 +1024,6 @@ a { text-decoration: none; color: inherit; }
   .hero-actions { justify-content: center; }
   .hero-right { margin-top: 20px; }
   .countdown { justify-content: center; }
-  .hero-title-slider-container { min-height: 110px; }
 }
 
 @media (max-width: 640px) {
@@ -1051,7 +1050,6 @@ a { text-decoration: none; color: inherit; }
 @media (max-width: 640px) {
   .logo { font-size: .95rem; }
   .hero-title { font-size: clamp(1.4rem, 5.5vw, 2rem); }
-  .hero-title-slider-container { min-height: 100px; }
   .hero-actions .btn { width: 100%; }
   .hero-image-wrapper { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
   .hero-person-img { width: 100%; }
