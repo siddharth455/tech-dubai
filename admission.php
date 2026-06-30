@@ -333,8 +333,7 @@
                     </div>
                 </div>
                  <p>
-    <strong>Note:</strong> Students who have secured <strong>75% or above</strong> in their qualifying academic examination are eligible. Students scoring below 75% are required to appear for the <strong>CBCAT</strong>. Final admission for these candidates will be based on their CBCAT performance followed by a personal interview as per the norms of Indian Nursing Council (INC).
-</p> 
+    <strong>Note:</strong> Students who have secured <strong>75% or above</strong> in their qualifying academic examination are eligible. Students scoring below 75% are required to appear for the <strong>CBCAT</strong>. Final admission for these candidates will be based on their CBCAT performance followed by a personal interview as per the norms of Indian Nursing Council (INC)/Paramedical Council and State Government.</p> 
             </div>
 
             <div class="admsn-hero-right">

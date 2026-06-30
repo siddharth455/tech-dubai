@@ -174,19 +174,19 @@
         </div>
         <div class="track-grid reveal-up">
             <div class="track-card">
-                <span class="track-num text-accent"><span data-count="500" class="text-accent">0</span>+</span>
+                <span class="track-num text-accent"><span data-count="500" class="text-accent">500</span>+</span>
                 <span class="track-label">Students Trained</span>
             </div>
             <div class="track-card">
-                <span class="track-num text-accent">₹<span data-count="22" class="text-accent">0</span>L+</span>
+                <span class="track-num text-accent">₹<span data-count="22" class="text-accent">22</span>L+</span>
                 <span class="track-label">Avg. Salary Package</span>
             </div>
             <div class="track-card">
-                <span class="track-num text-accent">₹<span data-count="45" class="text-accent">0</span>L</span>
+                <span class="track-num text-accent">₹<span data-count="45" class="text-accent">45</span>L</span>
                 <span class="track-label">Highest Salary Package</span>
             </div>
             <div class="track-card">
-                <span class="track-num text-accent"><span data-count="96" class="text-accent">0</span>%</span>
+                <span class="track-num text-accent"><span data-count="96" class="text-accent">96</span>%</span>
                 <span class="track-label">Placement Rate</span>
             </div>
         </div>
@@ -234,6 +234,9 @@
     const placementSection = document.getElementById('placement');
 
     function animateCounter(el, target) {
+        // First set to 0 for animation
+        el.textContent = '0';
+        
         if (hasGSAP) {
             const obj = { val: 0 };
             gsap.to(obj, {

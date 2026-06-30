@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Career Buddy College+</title>
+  <title>Career Buddy College+ | BSc Nursing, GNM & Physiotherapy Dehradun</title>
+ <meta name="description" content="Career Buddy College+ offers BSc Nursing, GNM & 
+  Bachelor in Physiotherapy with global career tracks in Germany, Japan & Dubai. 
+  NAAC Graded Institution. Admissions open 2026. Dehradun, Uttarakhand." /> 
+<meta name="keywords" content="BSc Nursing College Dehradun, GNM College Uttarakhand, 
+  Physiotherapy College Dehradun, Nursing College with Germany placement, career buddy college"/>
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,10 +16,103 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   
   <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
   <!-- External CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="icon" type="image/x-icon" href="assets/images/cbc.logo.png">
+
+  <!-- Canonical --> 
+<link rel="canonical" href="https://careerbuddycollege.com/" /> 
+ 
+<!-- Open Graph --> 
+<meta property="og:type"        content="website" /> 
+<meta property="og:url"         content="https://careerbuddycollege.com/" /> 
+<meta property="og:title"       content="Career Buddy College+ | Global Nursing & 
+Physiotherapy" /> 
+<meta property="og:description" content="BSc Nursing, GNM & Physiotherapy with Germany/Japan career tracks. NAAC Graded. Admissions 2026 open. Dehradun." /> 
+<meta property="og:image"              content="https://careerbuddycollege.com/assets/images/hero.png"/> 
+<meta property="og:image:width"        content="1200" />
+<meta property="og:image:height" content="630" /> 
+<meta property="og:site_name"   content="Career Buddy College+" /> 
+ 
+<!-- Twitter Card --> 
+<meta name="twitter:card"        content="summary_large_image" /> 
+<meta name="twitter:title"       content="Career Buddy College+ | Global Nursing Programs" /> 
+<meta name="twitter:description" content="BSc Nursing, GNM & Physiotherapy with Germany/Japan 
+career tracks. Dehradun." /> 
+<meta name="twitter:image"       content="https://careerbuddycollege.com/assets/images/hero.png" /> 
+
+<script type="application/ld+json"> 
+
+{ 
+  "@context": "https://schema.org", 
+  "@graph": [ 
+    { 
+      "@type": "CollegeOrUniversity", 
+      "name": "Career Buddy College+", 
+      "url": "https://careerbuddycollege.com/", 
+      "logo": "https://careerbuddycollege.com/assets/images/cbc.logo.png", 
+      "description": "Career Buddy College+ offers BSc Nursing, GNM, and Bachelor in 
+Physiotherapy with global career tracks in Germany, Japan, Dubai, China, and Singapore. NAAC 
+Graded Institution Partner. Dehradun, Uttarakhand.", 
+      "address": { 
+        "@type": "PostalAddress", 
+        "streetAddress": "Chakrata Road, Jhajra", 
+        "addressLocality": "Dehradun", 
+        "addressRegion": "Uttarakhand", 
+        "postalCode": "248007", 
+        "addressCountry": "IN" 
+      }, 
+      "telephone": "+917456000100", 
+      "email": "admissions@careerbuddycollege.com", 
+      "sameAs": [ 
+        "https://careerbuddycollege.com/" 
+      ] 
+    }, 
+    { 
+      "@type": "Course", 
+      "name": "BSc Nursing (Global Track)", 
+      "url": "https://careerbuddycollege.com/#programs", 
+      "description": "4-year BSc Nursing program with global healthcare exposure in Dubai, 
+China, Singapore, Germany and Japan. Includes German language training, IELTS preparation, 
+and international clinical practice.", 
+      "provider": { "@type": "CollegeOrUniversity", "name": "Career Buddy College+", "url": 
+"https://careerbuddycollege.com/" }, 
+      "educationalLevel": "Bachelor", 
+      "hasCourseInstance": { "@type": "CourseInstance", "courseMode": "Onsite", "location": { 
+"@type": "Place", "name": "Career Buddy College Campus, Jhajra, Dehradun" } } 
+    }, 
+    { 
+      "@type": "Course", 
+      "name": "General Nursing and Midwifery — GNM (Global Track)", 
+      "url": "https://careerbuddycollege.com/#programs", 
+      "description": "3-year GNM program with global healthcare exposure in Dubai, China, 
+Japan and Germany. Includes German language training and IELTS preparation.", 
+      "provider": { "@type": "CollegeOrUniversity", "name": "Career Buddy College+", "url": 
+"https://careerbuddycollege.com/" }, 
+      "educationalLevel": "Diploma", 
+      "hasCourseInstance": { "@type": "CourseInstance", "courseMode": "Onsite", "location": { 
+"@type": "Place", "name": "Career Buddy College Campus, Jhajra, Dehradun" } } 
+    }, 
+                                                                                                    
+ 
+    { 
+      "@type": "Course", 
+      "name": "Bachelor in Physiotherapy (Global Track)", 
+      "url": "https://careerbuddycollege.com/#programs", 
+      "description": "4-year Physiotherapy program with clinical exposure in Dubai, China, 
+Japan and Germany. Includes Australia career track preparation and German language training 
+A1 to B2.", 
+      "provider": { "@type": "CollegeOrUniversity", "name": "Career Buddy College+", "url": 
+"https://careerbuddycollege.com/" }, 
+      "educationalLevel": "Bachelor", 
+      "hasCourseInstance": { "@type": "CourseInstance", "courseMode": "Onsite", "location": { 
+"@type": "Place", "name": "Career Buddy College Campus, Jhajra, Dehradun" } } 
+    } 
+  ] 
+} 
+</script>
+
 </head>
 <body>
   
@@ -122,7 +220,7 @@
             <span>Students Placed</span>
           </div>
           <div class="hero-float-badge badge-mid-left">
-            <strong>₹<span data-count="18">22</span>L+</strong>
+            <strong>₹<span data-count="22">22</span>L+</strong>
             <span>Avg Placement</span>
           </div>
           <div class="hero-float-badge badge-bottom-right">
@@ -808,7 +906,7 @@ document.addEventListener('DOMContentLoaded', () => {
                           </span>
                           <span class="program-duration">4 Years · Full Time</span>
                       </div>
-                      <h3 class="program-name">Bsc in Nursing (Global Track)</h3>
+                      <h2 class="program-name">Bsc in Nursing (Global Track)</h2>
                       <p class="program-desc">Master Global Healthcare practices, Real practice in Dubai, China, Japan, Germany Hospitals, International certifications built for top global healthcare roles.</p>
                       <div class="program-metrics">
                           <div class="metric-item"><strong>18.50 Lakhs</strong><span>Fees</span></div>
@@ -848,7 +946,7 @@ document.addEventListener('DOMContentLoaded', () => {
                           </span>
                           <span class="program-duration">3 Years · Full Time</span>
                       </div>
-                      <h3 class="program-name">General Nursing and Midwifery (GNM) <br>(Global Track)</h3>
+                      <h2 class="program-name">General Nursing and Midwifery (GNM) <br>(Global Track)</h2>
                       <p class="program-desc">Master Global Healthcare practices, Real practice in Dubai, China, Japan/Germany Hospitals, International certifications built for top global healthcare roles.</p>
                       <div class="program-metrics">
                           <div class="metric-item"><strong>₹11.50 Lakhs</strong><span>Fees</span></div>
@@ -888,7 +986,7 @@ document.addEventListener('DOMContentLoaded', () => {
                           </span>
                           <span class="program-duration">4 Years · Full Time</span>
                       </div>
-                      <h3 class="program-name">Bachelor in Physiotherapy <br>(Global Track)</h3>
+                      <h2 class="program-name">Bachelor in Physiotherapy <br>(Global Track)</h2>
                       <p class="program-desc">Master in Global Physiotherapy practices, practice in Dubai, China, Japan/Germany hospitals and Australian global entrance examination preparation built for global standard physiotherapy roles.</p>
                       <div class="program-metrics">
                           <div class="metric-item"><strong>₹12.50 Lakhs</strong><span>Fees</span></div>
