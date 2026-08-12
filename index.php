@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- UTM capture & website lead-source tagging: must load before the ee-form-widget scripts -->
+  <script src="assets/js/utm-tracker.js"></script>
   <title>Career Buddy College+ | BSc Nursing, GNM & Physiotherapy Dehradun</title>
  <meta name="description" content="Career Buddy College+ offers BSc Nursing, GNM & 
   Bachelor in Physiotherapy with global career tracks in Germany, Japan & Dubai. 
@@ -152,6 +154,7 @@ A1 to B2.",
         <a href="#programs" class="nav-link">Programs</a>
         <a href="#curriculum" class="nav-link">Curriculum</a>
         <a href="#faq" class="nav-link">FAQ</a>
+        <a href="https://ai.careerbuddycollege.com/" class="nav-link">AI Buddy</a>
       </nav>
       
       <a href="#apply" class="btn btn-primary btn-nav">Apply Now</a>
