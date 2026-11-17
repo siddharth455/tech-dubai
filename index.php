@@ -13,8 +13,8 @@
   Physiotherapy College Dehradun, Nursing College with Germany placement, career buddy college"/>
   
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   
   <!-- Swiper CSS -->
@@ -27,22 +27,22 @@
 <link rel="canonical" href="https://careerbuddycollege.com/" /> 
  
 <!-- Open Graph --> 
-<meta property="og:type"        content="website" /> 
-<meta property="og:url"         content="https://careerbuddycollege.com/" /> 
-<meta property="og:title"       content="Career Buddy College+ | Global Nursing & 
+<meta property="og:type"content="website" /> 
+<meta property="og:url"content="https://careerbuddycollege.com/" /> 
+<meta property="og:title"content="Career Buddy College+ | Global Nursing & 
 Physiotherapy" /> 
 <meta property="og:description" content="BSc Nursing, GNM & Physiotherapy with Germany/Japan career tracks. NAAC Graded. Admissions 2026 open. Dehradun." /> 
-<meta property="og:image"              content="https://careerbuddycollege.com/assets/images/hero.png"/> 
-<meta property="og:image:width"        content="1200" />
-<meta property="og:image:height" content="630" /> 
-<meta property="og:site_name"   content="Career Buddy College+" /> 
+<meta property="og:image"content="https://careerbuddycollege.com/assets/images/hero.png"/> 
+<meta property="og:image:width"content="1200" />
+<meta property="og:image:height"content="630" /> 
+<meta property="og:site_name"content="Career Buddy College+" /> 
  
 <!-- Twitter Card --> 
-<meta name="twitter:card"        content="summary_large_image" /> 
-<meta name="twitter:title"       content="Career Buddy College+ | Global Nursing Programs" /> 
-<meta name="twitter:description" content="BSc Nursing, GNM & Physiotherapy with Germany/Japan 
-career tracks. Dehradun." /> 
-<meta name="twitter:image"       content="https://careerbuddycollege.com/assets/images/hero.png" /> 
+<meta name="twitter:card"content="summary_large_image" /> 
+<meta name="twitter:title"content="Career Buddy College+ | Global Nursing Programs" /> 
+<meta name="twitter:description"content="BSc Nursing, GNM & Physiotherapy with Germany/Japan 
+career tracks. Dehradun."/> 
+<meta name="twitter:image" content="https://careerbuddycollege.com/assets/images/hero.png"/> 
 
 <script type="application/ld+json"> 
 
@@ -125,17 +125,9 @@ A1 to B2.",
       <span class="ticker-dot"></span>
       <span>NAAC  Graded Institution Partner</span>
       <span class="ticker-dot"></span>
-      <span>Next Intake Closes 30 July</span>
-      <span class="ticker-dot"></span>
-      <span>Only 30 Seats for 2026 Batch</span>
-      <span class="ticker-dot"></span>
       <span>Curriculum by Top Healthcre Experts</span>
       <span class="ticker-dot"></span>
       <span>NAAC  Graded Institution Partner</span>
-      <span class="ticker-dot"></span>
-     <span>Next Intake Closes 30 July</span>
-      <span class="ticker-dot"></span>
-      <span>Only 30 Seats for 2026 Batch</span>
       <span class="ticker-dot"></span>
       <span>Admissions Open 2026 Cohort</span>
       <span class="ticker-dot"></span>
@@ -153,6 +145,7 @@ A1 to B2.",
       <nav class="nav-links" id="navLinks">
         <a href="#programs" class="nav-link">Programs</a>
         <a href="#curriculum" class="nav-link">Curriculum</a>
+        <!-- <a href="mentors.php" class="nav-link">Mentors</a> --><!-- hidden for now -->
         <a href="#faq" class="nav-link">FAQ</a>
         <a href="https://ai.careerbuddycollege.com/" class="nav-link">AI Buddy</a>
       </nav>
@@ -166,7 +159,6 @@ A1 to B2.",
 
   <!-- Hero Section -->
   <section class="hero" id="hero">
-    <canvas id="heroCanvas" class="hero-canvas"></canvas>
     <div class="container hero-grid" style="max-width: 1400px;">
       
       <!-- Hero Left Content -->
@@ -175,15 +167,15 @@ A1 to B2.",
         <div class="hero-title-slider-container">
           <div class="hero-title-slider">
             <h1 class="hero-title slide">
-              Bsc in <span class="text-accent">Nursing</span> <span style="color:red";>+</span><br>
+              Bsc in <span class="text-accent">Nursing</span> <span class="plus">+</span><br>
               <span class="text-accent">German/Japan Career Track</span>
             </h1>
             <h1 class="hero-title slide">
-              Bachelor in <span class="text-accent" >Physiotherapy</span> <span style="color:red";>+</span><br>
+              Bachelor in <span class="text-accent">Physiotherapy</span> <span class="plus">+</span><br>
               <span class="text-accent">Australia/Germany Career track</span>
             </h1>
              <h1 class="hero-title slide">
-              General Nursing and Midwifery <span class="text-accent"> (GNM) </span><span style="color:red";>+</span><br>
+              General Nursing and Midwifery <span class="text-accent"> (GNM) </span><span class="plus">+</span><br>
               <span class="text-accent">Japan/Germany Career track</span>
             </h1>
           </div>
@@ -192,23 +184,18 @@ A1 to B2.",
           Full time Global degree programs. Learn, lead, and care with the expertise needed to thrive in modern healthcare.
         </p>
 
-
-
         <div class="hero-actions">
           <a href="#apply" class="btn btn-primary">Apply for the 2026 cohort</a>
           <a href="#programs" class="btn btn-outline-hero">Explore Programs</a>
         </div>
 
-        <span class="seats-badge">30 seats — 2026 Batch</span>
-        <div class="countdown-box reveal-up"> 
-                     <p class="countdown-label">NEXT INTAKE CLOSES IN:</p> 
-                     <div class="countdown" id="countdown"> 
-                         <div class="countdown-item"><span class="count-num" id="cdDays">00</span><span class="count-unit">D</span></div> 
-                         <div class="countdown-item"><span class="count-num" id="cdHours">00</span><span class="count-unit">H</span></div> 
-                         <div class="countdown-item"><span class="count-num" id="cdMins">00</span><span class="count-unit">M</span></div> 
-                         <div class="countdown-item"><span class="count-num" id="cdSecs">00</span><span class="count-unit">S</span></div> 
-                     </div> 
-                 </div>
+        <!-- Anchor Pills -->
+        <nav class="anchor-pills" aria-label="Jump to section">
+          <a href="#placement" class="anchor-pill">Placement</a>
+          <a href="#programs" class="anchor-pill">Programs</a>
+          <a href="#curriculum" class="anchor-pill">Curriculum</a>
+          <a href="#admission" class="anchor-pill">Admission Process</a>
+        </nav>
       </div>
 
       <!-- Hero Right Image & Badges -->
@@ -235,15 +222,6 @@ A1 to B2.",
       
     </div>
 
-    <!-- Anchor Pills -->
-    <div class="anchor-pills">
-      <div class="container anchor-pills-inner">
-        <a href="#placement" class="anchor-pill">Placement</a>
-        <a href="#programs" class="anchor-pill">Programs</a>
-        <a href="#curriculum" class="anchor-pill">Curriculum</a>
-        <a href="#admission" class="anchor-pill">Admission Process</a>
-      </div>
-    </div>
   </section>
 
   <!-- Healthcare Partners Section -->
@@ -296,316 +274,240 @@ A1 to B2.",
   ?>
 
   <!-- Curriculum Section -->
-  
-  <style>
-    
-
-    * { box-sizing: border-box; }
-    /* html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: var(--font);
-      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
-    } */
-    a { text-decoration: none; color: inherit; }
-    img { display: block; max-width: 100%; }
-    ul { list-style: none; margin: 0; padding: 0; }
-
-    .container {
-      width: min(1300px, calc(100% - 32px));
-      margin: 0 auto;
-    }
-
-    .section {
-      padding:40px 0;
-      background: #ffffff;
-    }
-    .section-header { margin-bottom: 56px; text-align: center; }
-    .section-label {
-      display: inline-block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #4ade80; margin-bottom: 14px;
-    }
-    .section-title {
-      font-family: var(--font-display); font-size: clamp(1.85rem, 4vw, 3rem); font-weight: 800; line-height: 1.1; color: var(--white); margin-bottom: 16px;
-    }
-    .gradient-text {
-      background: linear-gradient(90deg, rgba(36,144,56,1) 0%, rgba(87,199,133,1) 50%, rgba(237,221,83,1) 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
-
-    .curriculum-section {
-      --cur-ease-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      --cur-white-05: rgba(15, 23, 42, 0.05);
-      --cur-white-10: rgba(15, 23, 42, 0.1);
-      --cur-white-40: rgba(15, 23, 42, 0.4);
-      --cur-white-50: rgba(15, 23, 42, 0.5);
-      --cur-white-75: rgba(15, 23, 42, 0.75);
-      --cur-white-80: rgba(15, 23, 42, 0.8);
-      --cur-white-85: rgba(15, 23, 42, 0.85);
-      --cur-sticky-top: calc(var(--nav-h) + var(--ticker-h));
-      --cur-stack-base: 16px;
-      --cur-stack-step: 24px;
-      background: #ffffff;
-      color: #111827;
-      padding: 72px 0;
-    }
-
-    .cur-nav-list li:nth-child(1), .card-purple, .metric-purple, .semester-purple, .bullet-purple { --t-accent: #a78bfa; --t-accent-sem: #c4b5fd; --t-rgb: 139, 92, 246; --t-nav-rgb: 167, 139, 250; --t-pill-rgb: 167, 139, 250; --t-card-border: rgba(167, 139, 250, 0.25); --t-card-from: rgba(20, 15, 35, 0.97); --t-card-to: rgba(12, 8, 25, 0.97); --t-card-shadow: rgba(167, 139, 250, 0.06); }
-    .cur-nav-list li:nth-child(2), .card-cyan, .metric-cyan, .semester-cyan, .bullet-cyan { --t-accent: #22d3ee; --t-accent-sem: #67e8f9; --t-rgb: 6, 182, 212; --t-nav-rgb: 34, 211, 238; --t-pill-rgb: 6, 182, 212; --t-card-border: rgba(34, 211, 238, 0.25); --t-card-from: rgba(8, 25, 35, 0.97); --t-card-to: rgba(5, 15, 22, 0.97); --t-card-shadow: rgba(34, 211, 238, 0.06); }
-    .cur-nav-list li:nth-child(3), .card-green, .metric-green, .semester-green, .bullet-green { --t-accent: #4ade80; --t-accent-sem: #86efac; --t-rgb: 34, 197, 94; --t-nav-rgb: 74, 222, 128; --t-pill-rgb: 34, 197, 94; --t-card-border: rgba(74, 222, 128, 0.25); --t-card-from: rgba(8, 35, 18, 0.97); --t-card-to: rgba(5, 22, 10, 0.97); --t-card-shadow: rgba(74, 222, 128, 0.06); }
-    .cur-nav-list li:nth-child(4), .card-orange, .metric-orange, .semester-orange, .bullet-orange { --t-accent: #fb923c; --t-accent-sem: #fdba74; --t-rgb: 249, 115, 22; --t-nav-rgb: 251, 146, 60; --t-pill-rgb: 249, 115, 22; --t-card-border: rgba(251, 146, 60, 0.25); --t-card-from: rgba(35, 20, 8, 0.97); --t-card-to: rgba(22, 12, 5, 0.97); --t-card-shadow: rgba(251, 146, 60, 0.06); }
-
-    .container--curriculum { max-width: 1450px; }
-    .curriculum-layout { display: grid; grid-template-columns: 280px 1fr; gap: 60px; align-items: start; }
-    .curriculum-cards-stack { position: relative; padding-bottom: 10vh; }
-    .curriculum-header { margin-bottom: 48px; }
-    .curriculum-path-badge {
-      display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: 0.35em; text-transform: uppercase; color: #475569; padding: 8px 16px; background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 100px; margin-bottom: 18px;
-    }
-
-    .curriculum-sidebar { position: sticky; top: 100px; padding: 24px 0; z-index: 10; }
-    .cur-nav-list { display: flex; flex-direction: column; gap: 20px; }
-    .curriculum-section .cur-nav-link { display: flex; flex-direction: column; padding: 16px 20px 16px 50px; color: var(--cur-white-40); font-weight: 700; border-radius: 12px; transition: all 0.3s var(--cur-ease-bounce); position: relative; cursor: pointer; }
-    .curriculum-section .cur-nav-link::before { content: ''; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); width: 12px; height: 12px; border-radius: 50%; background: var(--cur-white-10); transition: all 0.3s ease; }
-    .cur-nav-num { display: inline-flex; align-items: center; justify-content: center; width: auto; min-width: 86px; height: auto; padding: 8px 10px; border-radius: 999px; font-size: 12px; font-weight: 800; background: var(--cur-white-10); color: var(--cur-white-50); margin-bottom: 8px; flex-shrink: 0; white-space: nowrap; }
-    .cur-nav-title { font-size: 18px; color: inherit; line-height: 1.2;display: flex; justify-content:flex-start;gap: 10px; }
-    .curriculum-section .cur-nav-link:hover { color: #111827; background: #f8fafc; transform: translateX(10px); }
-    .curriculum-section .cur-nav-link.active { color: #111827; background: #f1f5f9; }
-    .cur-nav-list li .cur-nav-num { background: rgba(var(--t-nav-rgb), 0.2); color: #000; }
-    .curriculum-section .cur-nav-link.active .cur-nav-title { color: #0f766e; }
-    .cur-nav-list li .cur-nav-link.active::before { background: #10b981; box-shadow: 0 0 15px rgba(16, 185, 129, 0.35); }
-
-    .curriculum-card { position: sticky; top: calc(100px + var(--cur-stack-base) + var(--cur-stack-step) * var(--stack-index)); z-index: 1; background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border-radius: 20px; padding: 28px; margin-bottom: 20px; border: 1px solid rgba(148, 163, 184, 0.25); box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08); color: #0f172a; transition: transform 0.4s var(--cur-ease-bounce), border-color 0.4s ease, box-shadow 0.4s ease; will-change: transform; }
-    .curriculum-card:hover { transform: translateY(-5px); }
-    .curriculum-card.card-purple, .curriculum-card.card-cyan, .curriculum-card.card-green, .curriculum-card.card-orange, .curriculum-card.card-white { border-color: rgba(148, 163, 184, 0.35); background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08); color: #0f172a; }
-    .curriculum-card .curriculum-year-num { color: #0a0a0a; opacity: 1; }
-    .curriculum-card .curriculum-card-header h3 { color: #0f172a; }
-    .curriculum-card .curriculum-card-subtitle { color: #475569; }
-    .curriculum-card .curriculum-course-item { color: #334155; }
-    .curriculum-card .curriculum-bottom-tag { background: #f1f5f9; color: #334155; border: 1px solid #e2e8f0; }
-    .curriculum-card .curriculum-semester-box { background: #ffffff; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
-
-    #curriculum #year1 { --stack-index: 0; }
-    #curriculum #year2 { --stack-index: 1; }
-    #curriculum #year3 { --stack-index: 2; }
-    #curriculum #year4 { --stack-index: 3; }
-
-    .curriculum-card-body { display: block; max-height: 440px; overflow-y: auto; padding-right: 10px; }
-    .curriculum-card-body::-webkit-scrollbar { width: 5px; }
-    .curriculum-card-body::-webkit-scrollbar-track { background: var(--cur-white-05); }
-    .curriculum-card-body::-webkit-scrollbar-thumb { background: var(--cur-white-10); border-radius: 10px; }
-
-    .curriculum-card-header { display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto auto; gap: 16px; margin-bottom: 32px; align-items: start; position: relative; }
-    .curriculum-title-row { grid-column: 1 / 2; grid-row: 1 / 2; display: flex; align-items: center; gap: 16px; }
-    .curriculum-country-flag { position: absolute; top: 0; right: 0; width: 60px; height: auto; object-fit: contain; }
-    .curriculum-card-subtitle { grid-column: 1 / -1; grid-row: 2 / 3; font-size: 15px; color: var(--cur-white-75); line-height: 1.6; margin: 0; }
-    .curriculum-card-header h3 { font-family: var(--font-display); font-size: 32px; font-weight: 800; margin: 0; color: #111827; }
-    .card-purple h3, .card-cyan h3, .card-green h3, .card-orange h3 { text-shadow: 0 0 30px rgba(var(--t-rgb), 0.4); }
-    .curriculum-year-num { width: auto; min-width: 96px; height: auto; padding: 10px 14px; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 22px; font-weight: 800; border-radius: 12px; flex-shrink: 0; transition: transform 0.3s var(--cur-ease-bounce); white-space: nowrap; }
-    .curriculum-card:hover .curriculum-year-num { transform: scale(1.1); }
-    .curriculum-card .curriculum-year-num { background: linear-gradient(135deg, #eef2ff, #f8fafc); color: #111827; text-shadow: none; border: 1px solid #e5e7eb; }
-
-    .curriculum-semesters { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 24px; align-items: stretch; }
-    .curriculum-semester-box { background: #ffffff; border-radius: 14px; padding: 16px; transition: background 0.3s ease, transform 0.3s ease; display: flex; flex-direction: column; border: 1px solid #eef2f7; }
-    .curriculum-semester-box .curriculum-course-list { flex: 1; }
-    .curriculum-semester-box img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; margin-top: auto; }
-    .curriculum-semester-box:hover { background: #f8fafc; transform: translateY(-2px); }
-    .curriculum-semester-tag { display: inline-flex; align-items: center; padding: 6px 16px; border-radius: 20px; font-size: 14px; font-weight: 700; margin-bottom: 14px; margin-right: 8px; }
-    .semester-purple, .semester-cyan, .semester-green, .semester-orange { background: #f1f5f9; color: #334155; text-shadow: none; border: 1px solid #e5e7eb; }
-    .semester-dark { background: #1e293b; color: #ffffff; border: 1px solid #334155; }
-    .curriculum-course-list { display: flex; flex-direction: column; gap: 10px; }
-    .curriculum-course-item { padding: 6px 0; font-size: 13.5px; color: #334155; display: flex; align-items: flex-start; gap: 10px; transition: transform 0.2s ease, color 0.2s ease; }
-    .curriculum-course-item:hover { transform: translateX(6px); color: #111827; }
-    .curriculum-section [class^="bullet-"] { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
-    .bullet-purple, .bullet-cyan, .bullet-green, .bullet-orange { background: #10b981; box-shadow: none; }
-    .bullet-yellow { background: #fbbf24; box-shadow: 0 0 10px rgba(251,191,36,0.8); }
-    .bullet-pink { background: #f472b6; box-shadow: 0 0 10px rgba(244,114,182,0.8); }
-
-    .curriculum-bottom-tags { display: flex; gap: 20px; flex-wrap: wrap; padding: 16px 32px; background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 16px; justify-content: center; margin-top: 24px; }
-    .curriculum-bottom-tag { display: flex; align-items: center; gap: 8px; font-size: 15px; color: #334155; transition: transform 0.2s ease, color 0.2s ease; }
-    .curriculum-bottom-tag:hover { transform: translateY(-3px); color: #111827; }
-    .curriculum-tag-dot { width: 8px; height: 8px; border-radius: 50%; }
-    .tag-dot-purple { background: #a855f7; }
-    .tag-dot-cyan { background: #06b6d4; }
-    .tag-dot-emerald { background: #10b981; }
-    .tag-dot-amber { background: #f59e0b; }
-
-    @media (max-width: 991.98px) {
-      .curriculum-layout { grid-template-columns: minmax(0, 1fr); gap: 0; }
-      .curriculum-sidebar { position: sticky; top: 0; padding: 10px 0; background: rgba(6, 6, 16, 0.96); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.07); margin-bottom: 0; }
-      .cur-nav-list { flex-direction: row; gap: 10px; overflow-x: auto; padding: 4px 16px 10px; scrollbar-width: none; }
-      .cur-nav-list::-webkit-scrollbar { display: none; }
-      .curriculum-section .cur-nav-link { flex-shrink: 0; flex-direction: row; gap: 8px; align-items: center; padding: 8px 16px; border-radius: 100px; white-space: nowrap; min-height: 44px; transform: none !important; border: 1px solid var(--cur-white-10); background: rgba(255,255,255,0.04); }
-      .curriculum-section .cur-nav-link::before { position: static; transform: none; width: 8px; height: 8px; }
-      .cur-nav-num { margin-bottom: 0; }
-      .cur-nav-title { font-size: 14px; color:white;}
-      .cur-nav-list li .cur-nav-link.active { background: rgba(var(--t-pill-rgb), 0.2); border-color: rgba(var(--t-pill-rgb), 0.5); color: #ffffff; }
-      .cur-nav-list li .cur-nav-link.active .cur-nav-num { background: rgba(255,255,255,0.25); color: #ffffff; }
-      .cur-nav-list li .cur-nav-link.active .cur-nav-title { color: #ffffff; }
-      .curriculum-card { margin-bottom: 16px; }
-      .curriculum-semesters { display: flex; flex-wrap: nowrap; gap: 16px; overflow-x: auto; padding-bottom: 8px; scrollbar-width: none; }
-      .curriculum-semesters::-webkit-scrollbar { display: none; }
-      .curriculum-semester-box { flex: 0 0 45%; min-width: 300px; }
-    }
-
-    @media (max-width: 767.98px) {
-      .curriculum-card { padding: 20px 16px; margin-bottom: 14px; }
-      .curriculum-card-header { grid-template-columns: 1fr; grid-template-rows: auto auto auto; gap: 12px; margin-bottom: 20px; }
-      .curriculum-title-row { grid-column: 1 / -1; grid-row: 1 / 2; }
-      .curriculum-card-subtitle { grid-row: 2 / 3; font-size: 13px; }
-      .curriculum-year-num { min-width: 84px; padding: 8px 12px; font-size: 18px; border-radius: 10px; }
-      .curriculum-card-header h3 { font-size: 15px; }
-      .curriculum-semesters { gap: 12px; margin-bottom: 16px; }
-      .curriculum-semester-box { padding: 14px; border-radius: 12px; flex: 0 0 88%; min-width: 88%; max-width: 88%; width: 88%; }
-      .curriculum-semester-tag { font-size: 13px; padding: 6px 14px; margin-bottom: 12px; }
-      .curriculum-course-item { font-size: 13px; padding: 4px 0; }
-      .curriculum-bottom-tags { padding: 14px 16px; gap: 12px; margin-top: 18px; border-radius: 14px; }
-      .curriculum-bottom-tag { font-size: 13px; }
-      .year-4-flg{display: none;}
-      .curriculum-sidebar{display:none;}
-    }
-  </style>
-
-   <main class="section curriculum-section" id="curriculum">
+  <section class="section curriculum-section" id="curriculum" aria-labelledby="curriculum-title">
     <div class="container container--curriculum">
       <div class="section-header">
         <span class="curriculum-path-badge">Curriculum Path</span>
-        <h2 class="section-title">Your Global<span class="gradient-text"> Learning Journey</span></h2>
+        <h2 class="section-title" id="curriculum-title">Your Global <span class="gradient-text">Learning Journey</span></h2>
       </div>
 
       <div class="curriculum-layout">
-        <nav class="curriculum-sidebar" aria-label="Curriculum years">
+        <nav class="curriculum-nav" aria-label="Curriculum years">
           <ul class="cur-nav-list">
-            <li><a href="#year1" data-target="year1" class="cur-nav-link active"><span class="cur-nav-num">1st Year</span><span class="cur-nav-title">Dubai Track <img src="assets/images/flag-ae.svg" alt="UAE flag" style="width: 20px;"/></span></a></li>
-            <li><a href="#year2" data-target="year2" class="cur-nav-link"><span class="cur-nav-num">2nd Year</span><span class="cur-nav-title">China Track <img src="assets/images/flag-cn.svg" alt="UAE flag" style="width: 20px; height:15px; margin-top:3px"/></span></a></li>
-            <li><a href="#year3" data-target="year3" class="cur-nav-link"><span class="cur-nav-num">3rd Year</span><span class="cur-nav-title">Singapore Track <img src="assets/images/singapore-flag.jpeg" alt="UAE flag" style="width: 20px;height:15px; margin-top:3px"/></span></a></li>
-            <li><a href="#year4" data-target="year4" class="cur-nav-link"><span class="cur-nav-num">4th Year</span><span class="cur-nav-title">Japan/Germany Career Track <img src="assets/images/jp-flag.jpg" alt="UAE flag" style="width: 20px;height:15px; margin-top:3px"/> <img src="assets/images/flag-de.svg" alt="UAE flag" style="width: 20px;height:15px; margin-top:3px"/></span></a></li>
+            <li><a href="#year1" class="cur-nav-link is-active" aria-current="true"><span class="cur-nav-num">1st Year</span><span class="cur-nav-title">Dubai Track <img src="assets/images/flag-ae.svg" alt="" width="20" height="14"></span></a></li>
+            <li><a href="#year2" class="cur-nav-link"><span class="cur-nav-num">2nd Year</span><span class="cur-nav-title">China Track <img src="assets/images/flag-cn.svg" alt="" width="20" height="14"></span></a></li>
+            <li><a href="#year3" class="cur-nav-link"><span class="cur-nav-num">3rd Year</span><span class="cur-nav-title">Singapore Track <img src="assets/images/singapore-flag.jpeg" alt="" width="20" height="14"></span></a></li>
+            <li><a href="#year4" class="cur-nav-link"><span class="cur-nav-num">4th Year</span><span class="cur-nav-title">Japan/Germany Career Track <img src="assets/images/jp-flag.jpg" alt="" width="20" height="14"><img src="assets/images/flag-de.svg" alt="" width="20" height="14"></span></a></li>
           </ul>
         </nav>
 
-        <div class="curriculum-cards-stack">
-          <section id="year1" class="curriculum-card card-purple">
-            <div class="curriculum-card-header">
-              <img class="curriculum-country-flag" src="assets/images/flag-ae.svg" alt="UAE flag" />
-              <div class="curriculum-title-row"><span class="curriculum-year-num" aria-hidden="true">1st Year</span><h3>Dubai Track</h3></div>
-              <p class="curriculum-card-subtitle">Dubai track is the specially designed health care study & practice tour for Nursing & Physiotherpay students offering a unique opportunity to explore Dubai's world-class health care eco-system, Modern medical facilities & International health care practices.</p>
-            </div>
-            <div class="curriculum-card-body">
-              <div class="curriculum-semesters">
-                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-purple">Program Outcome</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-purple" aria-hidden="true"></span>Hospital & healthcare facility visits</li><li class="curriculum-course-item"><span class="bullet-cyan" aria-hidden="true"></span>Understanding International health care standards & patient care practices</li><li class="curriculum-course-item"><span class="bullet-pink" aria-hidden="true"></span>Professional learning sessions</li>
-              <li class="curriculum-course-item"><span class="bullet-pink" aria-hidden="true"></span>Guidance on health care licensing pathways in the UAE</li>
-            </ul></div>
-                <div class="curriculum-semester-box"><img src="assets/images/dubai-design.jpeg"></div>
+        <div class="curriculum-cards">
+          <article id="year1" class="curriculum-card">
+            <header class="curriculum-card-header">
+              <div class="curriculum-title-row">
+                <span class="curriculum-year-num">1st Year</span>
+                <h3>Dubai Track</h3>
+                <span class="curriculum-flags"><img src="assets/images/flag-ae.svg" alt="UAE flag" width="60" height="40"></span>
               </div>
-              <div class="curriculum-bottom-tags"><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-purple"></span>International Exposure</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-cyan"></span>Multi-cultural health care environment</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-emerald"></span>Interaction with UAE health care professionals</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-amber"></span>Certifications</span></div>
+              <p class="curriculum-card-subtitle">The Dubai track is a specially designed healthcare study &amp; practice tour for Nursing &amp; Physiotherapy students, offering a unique opportunity to explore Dubai's world-class healthcare ecosystem, modern medical facilities &amp; international healthcare practices.</p>
+            </header>
+            <div class="curriculum-card-body">
+              <div class="curriculum-outcome">
+                <h4 class="curriculum-semester-tag">Program Outcome</h4>
+                <ul class="curriculum-course-list">
+                  <li>Hospital &amp; healthcare facility visits</li>
+                  <li>Understanding international healthcare standards &amp; patient care practices</li>
+                  <li>Professional learning sessions</li>
+                  <li>Guidance on healthcare licensing pathways in the UAE</li>
+                </ul>
+              </div>
+              <figure class="curriculum-media"><img src="assets/images/dubai-design.jpeg" alt="Dubai Healthcare City" loading="lazy" decoding="async"></figure>
             </div>
-          </section>
+            <ul class="curriculum-bottom-tags">
+              <li><span class="curriculum-tag-dot tag-dot-purple"></span>International exposure</li>
+              <li><span class="curriculum-tag-dot tag-dot-cyan"></span>Multi-cultural healthcare environment</li>
+              <li><span class="curriculum-tag-dot tag-dot-emerald"></span>Interaction with UAE healthcare professionals</li>
+              <li><span class="curriculum-tag-dot tag-dot-amber"></span>Certifications</li>
+            </ul>
+          </article>
 
-          <section id="year2" class="curriculum-card card-cyan">
-            <div class="curriculum-card-header">
-              <img class="curriculum-country-flag" src="assets/images/flag-cn.svg" alt="China flag" />
-              <div class="curriculum-title-row"><span class="curriculum-year-num" aria-hidden="true">2nd Year</span><h3>China Track</h3></div>
-              <p class="curriculum-card-subtitle">The China track is a speically designed study & practice tour for Nursing & Physiotherapy students, offering an exciting opportunity to experience how Artificial Intelligence(AI) is transforming health care in one of the world's leading technology & innovation hubs.</p>
-            </div>
-            <div class="curriculum-card-body">
-              <div class="curriculum-semesters">
-                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-cyan">Program Outcome</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-cyan"></span>Learning how AI assist in diagnosis, patient monitoring, & treatment planning</li><li class="curriculum-course-item"><span class="bullet-purple"></span>Visits to advanced health care institutions & innovation centers</li><li class="curriculum-course-item"><span class="bullet-green"></span>Introduction to robotic rehabilitation systems</li><li class="curriculum-course-item"><span class="bullet-pink"></span>Experienced Chinese culture, Education & tehnological advancement</li></ul></div>
-                <div class="curriculum-semester-box"><img src="assets/images/china.jpg"></div>
+          <article id="year2" class="curriculum-card">
+            <header class="curriculum-card-header">
+              <div class="curriculum-title-row">
+                <span class="curriculum-year-num">2nd Year</span>
+                <h3>China Track</h3>
+                <span class="curriculum-flags"><img src="assets/images/flag-cn.svg" alt="China flag" width="60" height="40"></span>
               </div>
-          </section>
+              <p class="curriculum-card-subtitle">The China track is a specially designed study &amp; practice tour for Nursing &amp; Physiotherapy students, offering an exciting opportunity to experience how Artificial Intelligence (AI) is transforming healthcare in one of the world's leading technology &amp; innovation hubs.</p>
+            </header>
+            <div class="curriculum-card-body">
+              <div class="curriculum-outcome">
+                <h4 class="curriculum-semester-tag">Program Outcome</h4>
+                <ul class="curriculum-course-list">
+                  <li>Learning how AI assists in diagnosis, patient monitoring &amp; treatment planning</li>
+                  <li>Visits to advanced healthcare institutions &amp; innovation centres</li>
+                  <li>Introduction to robotic rehabilitation systems</li>
+                  <li>Experience Chinese culture, education &amp; technological advancement</li>
+                </ul>
+              </div>
+              <figure class="curriculum-media"><img src="assets/images/china.jpg" alt="Healthcare professionals with an AI service robot in China" loading="lazy" decoding="async"></figure>
+            </div>
+          </article>
 
-          <section id="year3" class="curriculum-card card-white">
-            <div class="curriculum-card-header">
-              <img class="curriculum-country-flag" src="assets/images/singapore-flag.jpeg" alt="Japan flag" />
-              <div class="curriculum-title-row"><span class="curriculum-year-num" aria-hidden="true">3rd Year</span><h3>Singapore Track</h3></div>
-              <p class="curriculum-card-subtitle">The Singapore track is a specially designed health care study & practice tour for students offering an opportunity to experience a high health care standards, excellent preparation outcomes, advanced medical infrastructure & strong emphasis on preventive care, making it an ideal destination for future health care professionals.</p>  
-            </div>
-            <div class="curriculum-card-body">
-              <div class="curriculum-semesters">
-                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-dark">Program Outcome</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-green"></span>Understanding Singapore's health care delivery model</li><li class="curriculum-course-item"><span class="bullet-pink"></span>Learning evidence-based clinical practices</li><li class="curriculum-course-item"><span class="bullet-purple"></span>Understanding digital health & electronic medical records</li><li class="curriculum-course-item"><span class="bullet-orange"></span>Exposure to community & preventive health care programs</li><li class="curriculum-course-item"><span class="bullet-yellow"></span>Understanding elderly care & rehabilitation services in Singapore</li></ul></div>
-                <div class="curriculum-semester-box"><img src="assets/images/nursing.png"></div>
+          <article id="year3" class="curriculum-card">
+            <header class="curriculum-card-header">
+              <div class="curriculum-title-row">
+                <span class="curriculum-year-num">3rd Year</span>
+                <h3>Singapore Track</h3>
+                <span class="curriculum-flags"><img src="assets/images/singapore-flag.jpeg" alt="Singapore flag" width="60" height="40"></span>
               </div>
-          </section>
+              <p class="curriculum-card-subtitle">The Singapore track is a specially designed healthcare study &amp; practice tour, offering students the opportunity to experience high healthcare standards, excellent patient outcomes, advanced medical infrastructure and a strong emphasis on preventive care &mdash; making it an ideal destination for future healthcare professionals.</p>
+            </header>
+            <div class="curriculum-card-body">
+              <div class="curriculum-outcome">
+                <h4 class="curriculum-semester-tag">Program Outcome</h4>
+                <ul class="curriculum-course-list">
+                  <li>Understanding Singapore's healthcare delivery model</li>
+                  <li>Learning evidence-based clinical practices</li>
+                  <li>Understanding digital health &amp; electronic medical records</li>
+                  <li>Exposure to community &amp; preventive healthcare programs</li>
+                  <li>Understanding elderly care &amp; rehabilitation services in Singapore</li>
+                </ul>
+              </div>
+              <figure class="curriculum-media"><img src="assets/images/nursing.png" alt="Hospital building in Singapore" loading="lazy" decoding="async"></figure>
+            </div>
+          </article>
 
-          <section id="year4" class="curriculum-card card-orange">
-            <div class="curriculum-card-header">
-              <img class="curriculum-country-flag year-4-flg" src="assets/images/jp-flag.jpg" alt="Japan flag" style="right: 80px;" />
-              <img class="curriculum-country-flag year-4-flg" src="assets/images/flag-de.svg" alt="Germany flag" style="right: 10px;"/>
-              <div class="curriculum-title-row"><span class="curriculum-year-num" aria-hidden="true">4th Year</span><h3>Germany/Japan Career Track</h3></div>
-              <p class="curriculum-card-subtitle">The Japan/Germany career track is a specialised placement-driven program designed for nursing & physiotherapy students who aspire to build succedful careers in Germany or Japan.<br>
-            Unlike a study tour, this is long-term career development pathway that prepares students through language training, International health care orientation, interview preparation, certification support, & placement assistance.</p>
-            </div>
-            <div class="curriculum-card-body">
-              <div class="curriculum-semesters">
-                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-orange">Program Details</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-orange"></span>International career planning</li><li class="curriculum-course-item"><span class="bullet-yellow"></span>German language training</li>
-              <li class="curriculum-course-item"><span class="bullet-orange"></span>Japanese language training</li>
-              <li class="curriculum-course-item"><span class="bullet-yellow"></span>English & IELTS preparation</li>
-              <li class="curriculum-course-item"><span class="bullet-orange"></span>AR/VR classes for advanced health care training purpose</li>
-              <li class="curriculum-course-item"><span class="bullet-yellow"></span>Mock examinations & practice sessions</li>
-            </ul></div>
-                <div class="curriculum-semester-box"><img src="assets/images/germany.webp"></div>
+          <article id="year4" class="curriculum-card">
+            <header class="curriculum-card-header">
+              <div class="curriculum-title-row">
+                <span class="curriculum-year-num">4th Year</span>
+                <h3>Japan/Germany Career Track</h3>
+                <span class="curriculum-flags"><img src="assets/images/jp-flag.jpg" alt="Japan flag" width="60" height="40"><img src="assets/images/flag-de.svg" alt="Germany flag" width="60" height="40"></span>
               </div>
-              <div class="curriculum-bottom-tags"><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-amber"></span>Global placement assistance</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-emerald"></span>Health care workforce preparation</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-cyan"></span>language training & certification supports</span>
+              <p class="curriculum-card-subtitle">The Japan/Germany career track is a specialised, placement-driven program designed for Nursing &amp; Physiotherapy students who aspire to build successful careers in Germany or Japan.</p>
+              <p class="curriculum-card-subtitle">Unlike a study tour, this is a long-term career development pathway that prepares students through language training, international healthcare orientation, interview preparation, certification support &amp; placement assistance.</p>
+            </header>
+            <div class="curriculum-card-body">
+              <div class="curriculum-outcome">
+                <h4 class="curriculum-semester-tag">Program Details</h4>
+                <ul class="curriculum-course-list">
+                  <li>International career planning</li>
+                  <li>German language training</li>
+                  <li>Japanese language training</li>
+                  <li>English &amp; IELTS preparation</li>
+                  <li>AR/VR classes for advanced healthcare training</li>
+                  <li>Mock examinations &amp; practice sessions</li>
+                </ul>
+              </div>
+              <figure class="curriculum-media"><img src="assets/images/germany.webp" alt="Nurses caring for an elderly patient" loading="lazy" decoding="async"></figure>
             </div>
-          </section>
+            <ul class="curriculum-bottom-tags">
+              <li><span class="curriculum-tag-dot tag-dot-amber"></span>Global placement assistance</li>
+              <li><span class="curriculum-tag-dot tag-dot-emerald"></span>Healthcare workforce preparation</li>
+              <li><span class="curriculum-tag-dot tag-dot-cyan"></span>Language training &amp; certification support</li>
+            </ul>
+          </article>
         </div>
       </div>
     </div>
-  </main>
+  </section>
 
   <script>
+    /* Curriculum: sticky stacking cards + synced year tabs */
     (function () {
       const section = document.getElementById('curriculum');
       if (!section) return;
+      const nav = section.querySelector('.curriculum-nav');
+      const stack = section.querySelector('.curriculum-cards');
+      const links = Array.from(nav.querySelectorAll('.cur-nav-link'));
+      const cards = Array.from(stack.querySelectorAll('.curriculum-card'));
+      const navbar = document.getElementById('navbar');
+      const mobileMq = window.matchMedia('(max-width: 991.98px)');
+            
+      let tops = [];
+      let activeId = null;
+      let ticking = false;
 
-      const navLinks = section.querySelectorAll('.cur-nav-link');
-      const cards = section.querySelectorAll('.curriculum-card');
+      // Where each card should stick. A card taller than the viewport sticks with a
+      // negative offset so its bottom is reached before the next card covers it.
+      function layout() {
+        const vh = window.innerHeight;
+        const mobile = mobileMq.matches;
+        const barH = mobile && getComputedStyle(nav).position === 'sticky' ? nav.offsetHeight : 0;
+        const base = (navbar ? navbar.offsetHeight : 77) + barH + (mobile ? 10 : 16);
+        // equal heights keep the stack tidy: a shorter card can never peek out from under a taller one
+        cards.forEach((card) => { card.style.minHeight = ''; });
+        const maxH = Math.max.apply(null, cards.map((card) => card.offsetHeight));
+        cards.forEach((card) => { card.style.minHeight = maxH + 'px'; });
+        // px each stacked card peeks out below the previous one (shrinks on short screens so the last card still fits)
+        const room = vh - base - maxH - 12;
+        const step = Math.max(0, Math.min(mobile ? 8 : 16, room / Math.max(1, cards.length - 1)));
+        tops = cards.map((card, i) => {
+          const top = Math.min(base + i * step, vh - card.offsetHeight - 12);
+          card.style.setProperty('--stick-top', top + 'px');
+          return top;
+        });
+        update();
+      }
 
-      function setActive(cardId) {
-        navLinks.forEach((link) => {
-          link.classList.toggle('active', link.dataset.target === cardId);
+      function setActive(id) {
+        if (id === activeId) return;
+        activeId = id;
+        links.forEach((link) => {
+          const on = link.getAttribute('href') === '#' + id;
+          link.classList.toggle('is-active', on);
+          if (on) {
+            link.setAttribute('aria-current', 'true');
+            const list = link.closest('.cur-nav-list');
+            if (list.scrollWidth > list.clientWidth) {
+              // centre the active pill in the horizontal bar (clamped at both ends, so first/last pills are fully visible)
+              const item = link.parentElement.getBoundingClientRect();
+              const box = list.getBoundingClientRect();
+              const left = list.scrollLeft + item.left - box.left - (box.width - item.width) / 2;
+              list.scrollTo({ left: Math.max(0, Math.min(left, list.scrollWidth - list.clientWidth)), behavior: 'smooth' });
+            }
+          } else {
+            link.removeAttribute('aria-current');
+          }
         });
       }
 
-      function updateActiveFromScroll() {
-        const trigger = window.innerHeight * 0.35;
-        let activeId = cards[0]?.id || null;
+      function update() {
+        ticking = false;
+        const vh = window.innerHeight;
+        const rects = cards.map((c) => c.getBoundingClientRect());
 
-        for (let i = cards.length - 1; i >= 0; i--) {
-          const card = cards[i];
-          const rect = card.getBoundingClientRect();
-          if (rect.top <= trigger) {
-            activeId = card.id;
-            break;
+        // depth effect: the card being covered shrinks and dims as the next one slides over it
+        cards.forEach((card, i) => {
+          let cover = 0;
+          const next = cards[i + 1];
+          if (next) {
+            const start = rects[i].top + card.offsetHeight;   // next card starts covering at this card's bottom
+            const end = tops[i + 1];                         // fully stacked once next card is stuck
+            cover = Math.min(1, Math.max(0, (start - rects[i + 1].top) / Math.max(1, start - end)));
           }
-        }
+          card.style.setProperty('--cover', cover.toFixed(3));
+        });
 
-        setActive(activeId);
+        // active tab = last card whose top has risen past the middle of the viewport
+        let current = cards[0].id;
+        rects.forEach((r, i) => { if (r.top <= vh * 0.5) current = cards[i].id; });
+        setActive(current);
       }
 
-      navLinks.forEach((link) => {
+      function onScroll() {
+        if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
+      }
+
+      // Tab click: scroll to the exact position where that card has just stacked on top
+      links.forEach((link, i) => {
         link.addEventListener('click', (e) => {
           e.preventDefault();
-          const target = document.getElementById(link.dataset.target);
-          if (!target) return;
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          setActive(target.id);
+          const stackTop = stack.getBoundingClientRect().top + window.scrollY;
+          let offset = 0;
+          const gap = parseFloat(getComputedStyle(stack).rowGap) || 0;
+          for (let j = 0; j < i; j++) offset += cards[j].offsetHeight + gap;
+          window.scrollTo({ top: stackTop + offset - tops[i] + 1, behavior: 'smooth' });
+          setActive(cards[i].id);
         });
       });
 
-      cards.forEach((card) => {
-        card.addEventListener('click', (e) => {
-          if (e.target.closest('a, button')) return;
-          setActive(card.id);
-        });
-      });
-
-      updateActiveFromScroll();
-      window.addEventListener('scroll', updateActiveFromScroll, { passive: true });
-      window.addEventListener('resize', updateActiveFromScroll, { passive: true });
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', layout);
+      window.addEventListener('load', layout);
+      if ('ResizeObserver' in window) new ResizeObserver(layout).observe(stack);
+      layout();
     })();
   </script>
 <!-- AI Trends vs Traditional Education -->
@@ -912,7 +814,7 @@ document.addEventListener('DOMContentLoaded', () => {
                       <h2 class="program-name">Bsc in Nursing (Global Track)</h2>
                       <p class="program-desc">Master Global Healthcare practices, Real practice in Dubai, China, Japan, Germany Hospitals, International certifications built for top global healthcare roles.</p>
                       <div class="program-metrics">
-                          <div class="metric-item"><strong>18.50 Lakhs</strong><span>Fees</span></div>
+                          <div class="metric-item"><strong>₹18.50 Lakhs</strong><span>Fees</span></div>
                           <div class="metric-divider"></div>
                           <div class="metric-item"><strong>100+</strong><span>Global Hiring Partners</span></div>
                           <div class="metric-divider"></div>
@@ -1125,6 +1027,8 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
   </section>
 
+  <!-- Mentors Section (hidden for now — remove the comment markers to bring it back) -->
+  <?php /* require 'mentors-section.php'; */ ?>
   <!-- Admission Process -->
  <?php require 'admission.php'; ?>
   
