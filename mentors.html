@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mentors & 1:1 Sessions — Career Buddy College+</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+
+<style>
+/* ---------- Mentors page (prefixed mnt- to avoid clashing with site-wide classes) ---------- */
+:root {
+    --mnt-violet: #7c3aed;
+    --mnt-violet-dark: #6d28d9;
+    --mnt-ink: #111827;
+    --mnt-body: #475569;
+    --mnt-navy: #0f172a;
+    --mnt-teal: #0ea5a4;
+    --mnt-green: #16a34a;
+    --mnt-orange: #f97316;
+}
+
+.mnt-section-label {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--mnt-violet);
+}
+.mnt-section-label::before { content: ''; width: 14px; height: 3px; border-radius: 2px; background: var(--mnt-violet); display: inline-block; }
+.mnt-section-label.on-dark { color: #4ade80; }
+.mnt-section-label.on-dark::before { background: #4ade80; }
+
+/* Fallback in case the site-wide stylesheet doesn't define an outline button variant */
+.btn-outline {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 11px 22px; border-radius: 10px; border: 1.5px solid var(--mnt-ink);
+    background: transparent; color: var(--mnt-ink); font-weight: 700; font-size: 0.9rem;
+    text-decoration: none; transition: all 0.2s ease;
+}
+.btn-outline:hover { background: var(--mnt-ink); color: #fff; }
+
+/* ---------- Hero ---------- */
+.mnt-hero {
+    background: linear-gradient(135deg, #f3e8ff 0%, #e0f2fe 100%);
+    padding: 56px 0 40px;
+}
+.mnt-hero-top { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 40px; align-items: center; }
+.mnt-hero-content { text-align: left; }
+.mnt-hero-badge {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 700;
+    color: var(--mnt-violet); background: rgba(124,58,237,0.08); padding: 6px 14px; border-radius: 999px;
+    margin-bottom: 16px;
+}
+.mnt-hero h1 {
+    font-family: 'Sora', sans-serif; font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800; color: #111827; margin: 0 0 14px; line-height: 1.1;
+}
+.mnt-hero p.mnt-hero-sub { color: #475569; font-size: 1rem; max-width: 520px; margin: 0 0 24px; }
+.mnt-hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.mnt-trust-row {
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 36px;
+    margin: 40px auto 0; max-width: 780px;
+}
+.mnt-trust-item { text-align: center; min-width: 100px; }
+.mnt-trust-item strong { display: block; font-family: 'Sora', sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--mnt-ink); }
+.mnt-trust-item span { font-size: 0.75rem; color: var(--mnt-body); font-weight: 600; }
+
+/* ---------- Hero visual collage ---------- */
+.mnt-hero-visual { position: relative; height: 320px; }
+.mnt-hv-shape {
+    position: absolute; border-radius: 32px; background: var(--mnt-violet); opacity: 0.9;
+}
+.mnt-hv-shape.a { width: 190px; height: 240px; top: 6px; left: 30px; background: linear-gradient(160deg, #7c3aed, #a78bfa); transform: rotate(-4deg); }
+.mnt-hv-shape.b { width: 170px; height: 210px; top: 40px; right: 10px; background: linear-gradient(160deg, #0ea5a4, #5eead4); transform: rotate(5deg); }
+.mnt-hv-photo {
+    position: absolute; object-fit: cover; border-radius: 24px; border: 4px solid #fff;
+    box-shadow: 0 16px 34px rgba(15,23,42,0.18);
+}
+.mnt-hv-photo.p1 { width: 170px; height: 210px; top: 0; left: 40px; }
+.mnt-hv-photo.p2 { width: 140px; height: 170px; top: 30px; right: 20px; }
+.mnt-hv-photo.p3 { width: 130px; height: 130px; bottom: 0; left: 130px; }
+.mnt-hv-badge {
+    position: absolute; display: flex; align-items: center; gap: 5px;
+    background: #fff; border-radius: 999px; padding: 6px 12px; font-size: 0.78rem; font-weight: 800;
+    color: var(--mnt-ink); box-shadow: 0 10px 24px rgba(15,23,42,0.14);
+}
+.mnt-hv-badge.rating1 { top: 12px; left: 14px; color: #d97706; }
+.mnt-hv-badge.rating2 { top: 130px; right: 0; color: #d97706; }
+.mnt-hv-card {
+    position: absolute; bottom: 18px; right: 30px; background: #fff; border-radius: 16px;
+    padding: 10px 14px; box-shadow: 0 14px 30px rgba(15,23,42,0.18);
+    display: flex; align-items: center; gap: 10px; text-decoration: none;
+}
+.mnt-hv-card-date { background: var(--mnt-navy); color: #fff; border-radius: 8px; padding: 4px 8px; text-align: center; font-size: 0.65rem; font-weight: 800; line-height: 1.1; }
+.mnt-hv-card-text { font-size: 0.72rem; color: var(--mnt-body); font-weight: 600; }
+.mnt-hv-card-text strong { display: block; font-size: 0.8rem; color: var(--mnt-ink); }
+
+/* ---------- Hero quick-topic icon cards ---------- */
+.mnt-quicktopics { margin-top: 44px; }
+.mnt-quicktopics-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+.mnt-quicktopics-head span { font-size: 0.85rem; font-weight: 700; color: var(--mnt-ink); }
+.mnt-quicktopic-row {
+    display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory;
+    padding-bottom: 6px; scrollbar-width: none;
+}
+.mnt-quicktopic-row::-webkit-scrollbar { display: none; }
+.mnt-quicktopic-card {
+    scroll-snap-align: start; flex: 0 0 128px; border: none; cursor: pointer;
+    border-radius: 16px; padding: 18px 14px; text-align: left; transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.mnt-quicktopic-card:hover { transform: translateY(-3px); box-shadow: 0 10px 22px rgba(15,23,42,0.1); }
+.mnt-quicktopic-card.active { outline: 2px solid var(--mnt-violet); outline-offset: 2px; }
+.mnt-quicktopic-icon {
+    width: 36px; height: 36px; border-radius: 10px; background: rgba(255,255,255,0.6);
+    display: flex; align-items: center; justify-content: center; margin-bottom: 22px;
+}
+.mnt-quicktopic-icon svg { width: 18px; height: 18px; }
+.mnt-quicktopic-card span { display: block; font-size: 0.8rem; font-weight: 700; line-height: 1.3; }
+
+/* ---------- Topic chips (derived from real mentor tags) ---------- */
+.mnt-topics { padding: 28px 16px 4px; text-align: center; }
+.mnt-topics-label { font-size: 0.8rem; color: var(--mnt-body); margin-bottom: 12px; }
+.mnt-topic-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 900px; margin: 0 auto; }
+.mnt-topic-chip {
+    font-size: 0.78rem; font-weight: 600; padding: 7px 14px; border-radius: 999px;
+    border: 1px solid #e5e7eb; background: #fff; color: #475569; cursor: pointer;
+    transition: all 0.2s ease;
+}
+.mnt-topic-chip:hover { border-color: #a78bfa; color: #111827; }
+.mnt-topic-chip.active { background: rgba(124,58,237,0.1); border-color: var(--mnt-violet); color: var(--mnt-violet); }
+
+/* ---------- Top rated strip ---------- */
+.mnt-top-rated { padding: 48px 0 8px; background: #fff; }
+.mnt-top-rated-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+.mnt-top-rated-head h2 { font-family: 'Sora', sans-serif; font-size: 1.5rem; font-weight: 800; color: var(--mnt-ink); margin: 6px 0 0; }
+.mnt-carousel-nav { display: flex; gap: 8px; }
+.mnt-nav-btn {
+    width: 36px; height: 36px; border-radius: 50%; border: 1px solid #e5e7eb; background: #fff;
+    color: #475569; cursor: pointer; font-size: 1rem; display: flex; align-items: center; justify-content: center;
+    transition: all 0.2s ease;
+}
+.mnt-nav-btn:hover { border-color: var(--mnt-violet); color: var(--mnt-violet); }
+
+.mnt-toprated-track {
+    display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory;
+    padding-bottom: 8px; scrollbar-width: none;
+}
+.mnt-toprated-track::-webkit-scrollbar { display: none; }
+.mnt-toprated-card {
+    scroll-snap-align: start; flex: 0 0 260px;
+    border: 1px solid rgba(148,163,184,0.25); border-radius: 16px; padding: 20px;
+    background: #f8fafc;
+}
+.mnt-toprated-card img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; margin-bottom: 12px; }
+.mnt-toprated-card h4 { font-family: 'Sora', sans-serif; font-size: 1rem; font-weight: 800; color: var(--mnt-ink); margin: 0 0 2px; }
+.mnt-toprated-card p { font-size: 0.75rem; color: var(--mnt-body); margin: 0 0 10px; }
+.mnt-toprated-rating { font-size: 0.8rem; font-weight: 700; color: #d97706; }
+
+/* ---------- Filters + grid ---------- */
+.mnt-filters {
+    display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;
+    padding: 28px 16px; position: sticky; top: 0; z-index: 20;
+    background: rgba(255,255,255,0.92); backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e5e7eb;
+}
+.mnt-filter-btn {
+    font-size: 0.85rem; font-weight: 700; padding: 8px 18px; border-radius: 999px;
+    border: 1px solid #e5e7eb; background: #fff; color: #475569; cursor: pointer;
+    transition: all 0.2s ease;
+}
+.mnt-filter-btn:hover { border-color: #a78bfa; color: #111827; }
+.mnt-filter-btn.active { background: #111827; color: #fff; border-color: #111827; }
+
+.mnt-grid-section { padding: 40px 0 56px; background: #ffffff; }
+.mnt-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+}
+.mnt-empty-state { display: none; text-align: center; padding: 48px 16px; color: var(--mnt-body); }
+.mnt-empty-state.visible { display: block; }
+
+.mnt-card {
+    border-radius: 20px; padding: 28px; background: #ffffff;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+    display: flex; flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.mnt-card:hover { transform: translateY(-5px); box-shadow: 0 18px 40px rgba(15,23,42,0.1); }
+
+.mnt-card[data-track="dubai"]         { border-top: 4px solid #a78bfa; }
+.mnt-card[data-track="china"]         { border-top: 4px solid #22d3ee; }
+.mnt-card[data-track="singapore"]     { border-top: 4px solid #4ade80; }
+.mnt-card[data-track="japan-germany"] { border-top: 4px solid #fb923c; }
+
+.mnt-card-top { display: flex; gap: 16px; align-items: center; margin-bottom: 16px; }
+.mnt-card-photo { width: 68px; height: 68px; border-radius: 50%; object-fit: cover; border: 3px solid #f1f5f9; flex-shrink: 0; }
+.mnt-card-name { font-family: 'Sora', sans-serif; font-size: 1.15rem; font-weight: 800; color: #111827; margin: 0 0 2px; }
+.mnt-card-role { font-size: 0.8rem; color: #6b7280; margin: 0; }
+.mnt-card-track-tag {
+    display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.05em;
+    text-transform: uppercase; color: #7c3aed; background: rgba(124,58,237,0.08);
+    padding: 3px 10px; border-radius: 999px; margin-bottom: 10px;
+}
+.mnt-card-bio { font-size: 0.85rem; color: #334155; line-height: 1.6; margin-bottom: 12px; }
+.mnt-card-quote {
+    font-size: 0.8rem; font-style: italic; color: #475569;
+    border-left: 3px solid #e5e7eb; padding-left: 12px; margin-bottom: 16px;
+}
+.mnt-card-stats { display: flex; gap: 14px; margin-bottom: 16px; }
+.mnt-card-stat { flex: 1; text-align: center; background: #f8fafc; border-radius: 10px; padding: 8px 4px; }
+.mnt-card-stat strong { display: block; font-size: 1rem; font-weight: 800; color: #111827; }
+.mnt-card-stat span { font-size: 0.65rem; color: #6b7280; }
+.mnt-card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+.mnt-card-tag { font-size: 0.68rem; font-weight: 600; color: #334155; background: #f1f5f9; border: 1px solid #e2e8f0; padding: 4px 10px; border-radius: 999px; }
+.mnt-card-cta { margin-top: auto; width: 100%; text-align: center; }
+
+/* ---------- Featured / promo carousel ---------- */
+.mnt-featured { padding: 56px 0; background: #f8fafc; }
+.mnt-featured-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+.mnt-featured-head h2 { font-family: 'Sora', sans-serif; font-size: 1.5rem; font-weight: 800; color: var(--mnt-ink); margin: 6px 0 0; }
+.mnt-featured-track {
+    display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory;
+    padding-bottom: 8px; scrollbar-width: none;
+}
+.mnt-featured-track::-webkit-scrollbar { display: none; }
+.mnt-featured-card {
+    scroll-snap-align: start; flex: 0 0 280px; border-radius: 18px; padding: 26px;
+    color: #fff; display: flex; flex-direction: column; justify-content: space-between; min-height: 180px;
+}
+.mnt-featured-card .eyebrow { font-size: 0.68rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.85; }
+.mnt-featured-card h3 { font-family: 'Sora', sans-serif; font-size: 1.2rem; font-weight: 800; margin: 10px 0 8px; }
+.mnt-featured-card p { font-size: 0.82rem; opacity: 0.9; line-height: 1.5; margin: 0; }
+
+/* ---------- Testimonials ---------- */
+.mnt-testimonials { padding: 56px 0; background: #ffffff; }
+.mnt-testimonials-head h2 { font-family: 'Sora', sans-serif; font-size: 1.5rem; font-weight: 800; color: var(--mnt-ink); margin: 6px 0 20px; }
+.mnt-testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.mnt-testimonial-card { border: 1px solid #e5e7eb; border-radius: 16px; padding: 22px; background: #f8fafc; }
+.mnt-testimonial-quote { font-size: 0.88rem; color: #334155; line-height: 1.6; margin: 0 0 16px; }
+.mnt-testimonial-person { display: flex; align-items: center; gap: 10px; }
+.mnt-testimonial-avatar {
+    width: 38px; height: 38px; border-radius: 50%; background: var(--mnt-violet); color: #fff;
+    display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800; flex-shrink: 0;
+}
+.mnt-testimonial-person strong { display: block; font-size: 0.85rem; color: var(--mnt-ink); }
+.mnt-testimonial-person span { font-size: 0.72rem; color: var(--mnt-body); }
+
+/* ---------- Stats band ---------- */
+.mnt-stats-band { padding: 48px 0; background: linear-gradient(135deg, #ede9fe 0%, #cffafe 100%); }
+.mnt-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center; }
+.mnt-stat-block strong { display: block; font-family: 'Sora', sans-serif; font-size: 2rem; font-weight: 800; color: var(--mnt-ink); }
+.mnt-stat-block span { font-size: 0.78rem; color: var(--mnt-body); font-weight: 600; }
+
+/* ---------- Big number CTA ---------- */
+.mnt-bignum { padding: 64px 0; background: var(--mnt-navy); text-align: center; }
+.mnt-bignum .mnt-section-label { justify-content: center; }
+.mnt-bignum h2 {
+    font-family: 'Sora', sans-serif; font-weight: 800; color: #fff; margin: 14px 0 10px;
+    font-size: clamp(2.4rem, 7vw, 4.2rem); line-height: 1;
+}
+.mnt-bignum p { color: #94a3b8; font-size: 0.95rem; max-width: 480px; margin: 0 auto 24px; }
+
+/* ---------- Value promo cards ---------- */
+.mnt-promo-section { padding: 56px 0; background: #ffffff; }
+.mnt-promo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.mnt-promo-card { border-radius: 18px; padding: 30px; }
+.mnt-promo-card.free { background: #fdf2f8; border: 1px solid #fbcfe8; }
+.mnt-promo-card.flex { background: #f3e8ff; border: 1px solid #ddd6fe; }
+.mnt-promo-card h3 { font-family: 'Sora', sans-serif; font-size: 1.3rem; font-weight: 800; color: var(--mnt-ink); margin: 0 0 8px; }
+.mnt-promo-card p { font-size: 0.85rem; color: var(--mnt-body); margin: 0 0 18px; line-height: 1.6; }
+
+/* ---------- Become a mentor CTA ---------- */
+.mnt-become { padding: 56px 0; background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); }
+.mnt-become-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.mnt-become h2 { font-family: 'Sora', sans-serif; font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 800; color: #fff; margin: 8px 0 8px; }
+.mnt-become p { color: #cbd5e1; font-size: 0.88rem; max-width: 460px; margin: 0; }
+
+/* ---------- FAQ ---------- */
+.mnt-faq { padding: 56px 0 64px; background: #f8fafc; }
+.mnt-faq-head h2 { font-family: 'Sora', sans-serif; font-size: 1.5rem; font-weight: 800; color: var(--mnt-ink); margin: 6px 0 24px; }
+.mnt-faq-item { border: 1px solid #e5e7eb; border-radius: 12px; background: #fff; margin-bottom: 12px; overflow: hidden; }
+.mnt-faq-question {
+    width: 100%; text-align: left; background: none; border: none; cursor: pointer;
+    padding: 16px 20px; font-size: 0.9rem; font-weight: 700; color: var(--mnt-ink);
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.mnt-faq-question .mnt-faq-icon { font-size: 1.1rem; color: var(--mnt-violet); flex-shrink: 0; transition: transform 0.2s ease; }
+.mnt-faq-item.open .mnt-faq-icon { transform: rotate(45deg); }
+.mnt-faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.25s ease; }
+.mnt-faq-answer p { margin: 0; padding: 0 20px 18px; font-size: 0.85rem; color: var(--mnt-body); line-height: 1.6; }
+
+/* ---------- Booking section ---------- */
+.mnt-booking { background: #0f172a; padding: 72px 0; }
+.mnt-booking-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.mnt-booking-left .section-label { color: #4ade80; }
+.mnt-booking-left h2 { font-family: 'Sora', sans-serif; font-size: clamp(1.6rem, 3vw, 2.3rem); font-weight: 800; color: #ffffff; margin: 8px 0 16px; }
+.mnt-booking-left p { color: #94a3b8; font-size: 0.9rem; line-height: 1.7; margin-bottom: 24px; }
+.mnt-benefit-list { display: flex; flex-direction: column; gap: 14px; }
+.mnt-benefit-item { display: flex; gap: 12px; align-items: flex-start; color: #e2e8f0; font-size: 0.85rem; }
+.mnt-benefit-icon { color: #4ade80; font-weight: 800; flex-shrink: 0; }
+
+.mnt-booking-form {
+    background: #ffffff; border-radius: 20px; padding: 32px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+.mnt-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+.mnt-form-group { display: flex; flex-direction: column; margin-bottom: 14px; }
+.mnt-form-group label { font-size: 0.78rem; font-weight: 700; color: #334155; margin-bottom: 6px; }
+.mnt-form-group input,
+.mnt-form-group select,
+.mnt-form-group textarea {
+    font-family: inherit; font-size: 0.88rem; padding: 11px 14px;
+    border: 1px solid #d1d5db; border-radius: 10px; color: #111827; background: #fff;
+}
+.mnt-form-group input:focus,
+.mnt-form-group select:focus,
+.mnt-form-group textarea:focus { outline: 2px solid #7c3aed; outline-offset: 1px; border-color: #7c3aed; }
+.mnt-form-group textarea { resize: vertical; min-height: 90px; }
+.mnt-submit-btn {
+    width: 100%; padding: 13px; border: none; border-radius: 10px;
+    background: #7c3aed; color: #fff; font-weight: 700; font-size: 0.95rem;
+    cursor: pointer; transition: background 0.2s ease;
+}
+.mnt-submit-btn:hover { background: #6d28d9; }
+.mnt-submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.mnt-form-status { margin-top: 14px; font-size: 0.85rem; font-weight: 600; text-align: center; display: none; }
+.mnt-form-status.success { color: #16a34a; display: block; }
+.mnt-form-status.error { color: #dc2626; display: block; }
+
+/* ---------- Footer ---------- */
+.mnt-footer { background: #0b1220; padding: 44px 0 24px; }
+.mnt-footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+.mnt-footer-brand { font-family: 'Sora', sans-serif; font-weight: 800; color: #fff; font-size: 1.1rem; }
+.mnt-footer-tag { font-size: 0.78rem; color: #64748b; margin-top: 4px; }
+.mnt-footer-links { display: flex; gap: 22px; flex-wrap: wrap; }
+.mnt-footer-links a { font-size: 0.82rem; color: #cbd5e1; text-decoration: none; }
+.mnt-footer-links a:hover { color: #fff; }
+.mnt-footer-bottom { margin-top: 28px; padding-top: 20px; border-top: 1px solid #1e293b; text-align: center; font-size: 0.75rem; color: #475569; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .mnt-card, .mnt-faq-icon, .mnt-faq-answer { transition: none !important; }
+}
+
+@media (max-width: 991.98px) {
+    .mnt-grid { grid-template-columns: repeat(2, 1fr); }
+    .mnt-booking-inner { grid-template-columns: 1fr; }
+    .mnt-testimonial-grid { grid-template-columns: 1fr; }
+    .mnt-stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .mnt-promo-grid { grid-template-columns: 1fr; }
+    .mnt-hero-top { grid-template-columns: 1fr; }
+    .mnt-hero-content { text-align: center; }
+    .mnt-hero p.mnt-hero-sub { margin-left: auto; margin-right: auto; }
+    .mnt-hero-cta { justify-content: center; }
+    .mnt-hero-visual { max-width: 420px; margin: 0 auto; }
+}
+@media (max-width: 575.98px) {
+    .mnt-grid { grid-template-columns: 1fr; }
+    .mnt-form-row { grid-template-columns: 1fr; }
+    .mnt-trust-row { gap: 22px; }
+    .mnt-hero-visual { height: 260px; }
+    .mnt-quicktopic-card { flex-basis: 108px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Reuse the site's existing navbar markup/include here -->
+
+<!-- ============ HERO ============ -->
+<section class="mnt-hero">
+    <div class="container">
+        <div class="mnt-hero-top">
+            <div class="mnt-hero-content">
+                <span class="mnt-hero-badge">🩺 #WalkThePath</span>
+                <h1>Mentors Who've <span class="gradient-text">Walked the Path</span></h1>
+                <p class="mnt-hero-sub">Every mentor here has worked in the hospitals and systems you're training for — in Dubai, China, Singapore, Germany, and Japan. Book a free 1:1 session and ask them anything.</p>
+                <div class="mnt-hero-cta">
+                    <a href="#mntGrid" class="btn btn-primary">Explore Mentors</a>
+                    <a href="#booking" class="btn btn-outline">Book a Free Session</a>
+                </div>
+            </div>
+
+            <!-- Visual collage — reuses the same mentor photos already referenced below, no stock imagery -->
+            <div class="mnt-hero-visual" aria-hidden="true">
+                <div class="mnt-hv-shape a"></div>
+                <div class="mnt-hv-shape b"></div>
+                <img class="mnt-hv-photo p1" src="assets/images/mentors/lukas-hoffmann.jpg" alt="" loading="lazy" />
+                <img class="mnt-hv-photo p2" src="assets/images/mentors/anjali-menon.jpg" alt="" loading="lazy" />
+                <img class="mnt-hv-photo p3" src="assets/images/mentors/wei-zhang.jpg" alt="" loading="lazy" />
+                <span class="mnt-hv-badge rating1">★ 5.0</span>
+                <span class="mnt-hv-badge rating2">★ 4.9</span>
+                <a href="#booking" class="mnt-hv-card">
+                    <span class="mnt-hv-card-date">1:1<br>Call</span>
+                    <span class="mnt-hv-card-text">Lukas Hoffmann<strong>Book now →</strong></span>
+                </a>
+            </div>
+        </div>
+
+        <div class="mnt-trust-row">
+            <div class="mnt-trust-item"><strong>6</strong><span>Mentors</span></div>
+            <div class="mnt-trust-item"><strong>4</strong><span>Countries</span></div>
+            <div class="mnt-trust-item"><strong>905+</strong><span>Students Guided</span></div>
+            <div class="mnt-trust-item"><strong>4.9</strong><span>Avg. Rating</span></div>
+        </div>
+
+
+        <div class="mnt-quicktopics">
+            <div class="mnt-quicktopics-head">
+                <span>Get help with</span>
+                <div class="mnt-carousel-nav">
+                    <button type="button" class="mnt-nav-btn" data-scroll-target="mntQuickTopicRow" data-dir="-1" aria-label="Scroll left">‹</button>
+                    <button type="button" class="mnt-nav-btn" data-scroll-target="mntQuickTopicRow" data-dir="1" aria-label="Scroll right">›</button>
+                </div>
+            </div>
+            <div class="mnt-quicktopic-row" id="mntQuickTopicRow">
+                <button type="button" class="mnt-quicktopic-card" data-tag="Clinical Practice" style="background: #dbeafe; color: #1d4ed8;">
+                    <span class="mnt-quicktopic-icon" style="color: #1d4ed8;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 3v6a4.5 4.5 0 0 0 9 0V3"/><path d="M9 3H4.5M13.5 3H9M17 13a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm0 0v-3.5a4 4 0 0 0-4-4"/></svg>
+                    </span>
+                    <span>Clinical Practice</span>
+                </button>
+                <button type="button" class="mnt-quicktopic-card" data-tag="Licensing Pathways" style="background: #ede9fe; color: #6d28d9;">
+                    <span class="mnt-quicktopic-icon" style="color: #6d28d9;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M7 8h10M7 11h6"/></svg>
+                    </span>
+                    <span>Licensing Help</span>
+                </button>
+                <button type="button" class="mnt-quicktopic-card" data-tag="Interview Coaching" style="background: #fef3c7; color: #b45309;">
+                    <span class="mnt-quicktopic-icon" style="color: #b45309;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 19v3"/></svg>
+                    </span>
+                    <span>Interview Prep</span>
+                </button>
+                <button type="button" class="mnt-quicktopic-card" data-tag="Career Building" style="background: #ffe4d5; color: #c2410c;">
+                    <span class="mnt-quicktopic-icon" style="color: #c2410c;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="7" width="19" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M2.5 12h19"/></svg>
+                    </span>
+                    <span>Career Guidance</span>
+                </button>
+                <button type="button" class="mnt-quicktopic-card" data-tag="Language Training" style="background: #dbeafe; color: #1d4ed8;">
+                    <span class="mnt-quicktopic-icon" style="color: #1d4ed8;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18Z"/></svg>
+                    </span>
+                    <span>Language Prep</span>
+                </button>
+                <button type="button" class="mnt-quicktopic-card" data-tag="AI in Healthcare" style="background: #ede9fe; color: #6d28d9;">
+                    <span class="mnt-quicktopic-icon" style="color: #6d28d9;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/></svg>
+                    </span>
+                    <span>AI in Healthcare</span>
+                </button>
+                <button type="button" class="mnt-quicktopic-card" data-tag="Digital Health" style="background: #fef3c7; color: #b45309;">
+                    <span class="mnt-quicktopic-icon" style="color: #b45309;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="13" rx="2"/><path d="M8 21h8M12 17v4M8 10.5l2.5 2.5L13 9l3 3"/></svg>
+                    </span>
+                    <span>Digital Health</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ============ TOP RATED STRIP ============ -->
+<section class="mnt-top-rated">
+    <div class="container">
+        <div class="mnt-top-rated-head">
+            <div>
+                <span class="mnt-section-label">Highest Rated</span>
+                <h2>Start With Our Top Mentors</h2>
+            </div>
+            <div class="mnt-carousel-nav">
+                <button type="button" class="mnt-nav-btn" data-scroll-target="mntTopRatedTrack" data-dir="-1" aria-label="Scroll left">‹</button>
+                <button type="button" class="mnt-nav-btn" data-scroll-target="mntTopRatedTrack" data-dir="1" aria-label="Scroll right">›</button>
+            </div>
+        </div>
+        <div class="mnt-toprated-track" id="mntTopRatedTrack">
+            <div class="mnt-toprated-card">
+                <img src="assets/images/mentors/lukas-hoffmann.jpg" alt="Lukas Hoffmann" loading="lazy" width="56" height="56" />
+                <h4>Lukas Hoffmann</h4>
+                <p>Germany/Japan Track</p>
+                <span class="mnt-toprated-rating">★ 5.0 · 210+ students</span>
+            </div>
+            <div class="mnt-toprated-card">
+                <img src="assets/images/mentors/anjali-menon.jpg" alt="Dr. Anjali Menon" loading="lazy" width="56" height="56" />
+                <h4>Dr. Anjali Menon</h4>
+                <p>Dubai Track</p>
+                <span class="mnt-toprated-rating">★ 4.9 · 180+ students</span>
+            </div>
+            <div class="mnt-toprated-card">
+                <img src="assets/images/mentors/wei-zhang.jpg" alt="Wei Zhang" loading="lazy" width="56" height="56" />
+                <h4>Wei Zhang</h4>
+                <p>China Track</p>
+                <span class="mnt-toprated-rating">★ 4.9 · 160+ students</span>
+            </div>
+            <div class="mnt-toprated-card">
+                <img src="assets/images/mentors/sarah-lim.jpg" alt="Sarah Lim" loading="lazy" width="56" height="56" />
+                <h4>Sarah Lim</h4>
+                <p>Singapore Track</p>
+                <span class="mnt-toprated-rating">★ 4.9 · 120+ students</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ TRACK FILTERS ============ -->
+<div class="mnt-filters" id="mntFilters">
+    <button type="button" class="mnt-filter-btn active" data-filter="all">All Mentors</button>
+    <button type="button" class="mnt-filter-btn" data-filter="dubai">Dubai Track</button>
+    <button type="button" class="mnt-filter-btn" data-filter="china">China Track</button>
+    <button type="button" class="mnt-filter-btn" data-filter="singapore">Singapore Track</button>
+    <button type="button" class="mnt-filter-btn" data-filter="japan-germany">Germany/Japan Track</button>
+</div>
+
+<!-- ============ FULL MENTOR GRID ============ -->
+<section class="mnt-grid-section">
+    <div class="container">
+        <div class="mnt-grid" id="mntGrid">
+
+            <article class="mnt-card" data-track="dubai" data-tags="Clinical Practice|UAE Healthcare Standards|Patient Care">
+                <div class="mnt-card-top">
+                    <img class="mnt-card-photo" src="assets/images/mentors/anjali-menon.jpg" alt="Dr. Anjali Menon" loading="lazy" width="68" height="68" />
+                    <div>
+                        <h3 class="mnt-card-name">Dr. Anjali Menon</h3>
+                        <p class="mnt-card-role">RN, MSN — Lead Clinical Mentor</p>
+                    </div>
+                </div>
+                <span class="mnt-card-track-tag">Dubai Track</span>
+                <p class="mnt-card-bio">Anjali has spent 12+ years across UAE hospital systems, from bedside nursing to unit leadership. She now mentors students through Dubai clinical placements, helping them understand international patient-care standards before they ever set foot in a ward.</p>
+                <p class="mnt-card-quote">"I don't just want you to pass — I want you ready for a real shift in a Dubai hospital on day one."</p>
+                <div class="mnt-card-stats">
+                    <div class="mnt-card-stat"><strong>12+</strong><span>Years Exp.</span></div>
+                    <div class="mnt-card-stat"><strong>180+</strong><span>Students</span></div>
+                    <div class="mnt-card-stat"><strong>4.9</strong><span>Rating</span></div>
+                </div>
+                <div class="mnt-card-tags">
+                    <span class="mnt-card-tag">Clinical Practice</span>
+                    <span class="mnt-card-tag">UAE Healthcare Standards</span>
+                    <span class="mnt-card-tag">Patient Care</span>
+                </div>
+                <button type="button" class="btn btn-primary mnt-card-cta mnt-book-btn" data-mentor-id="anjali-menon" data-mentor-name="Dr. Anjali Menon">Book 1:1 Session</button>
+            </article>
+
+            <article class="mnt-card" data-track="dubai" data-tags="Licensing Pathways|Exam Prep|Documentation">
+                <div class="mnt-card-top">
+                    <img class="mnt-card-photo" src="assets/images/mentors/rahul-verma.jpg" alt="Rahul Verma" loading="lazy" width="68" height="68" />
+                    <div>
+                        <h3 class="mnt-card-name">Rahul Verma</h3>
+                        <p class="mnt-card-role">RN — Healthcare Licensing Advisor</p>
+                    </div>
+                </div>
+                <span class="mnt-card-track-tag">Dubai Track</span>
+                <p class="mnt-card-bio">Rahul specializes in guiding students through UAE healthcare licensing pathways — from documentation to exam prep — so the paperwork never becomes the blocker to a great career.</p>
+                <p class="mnt-card-quote">"Licensing feels scary until someone walks you through it once. That's my job."</p>
+                <div class="mnt-card-stats">
+                    <div class="mnt-card-stat"><strong>8+</strong><span>Years Exp.</span></div>
+                    <div class="mnt-card-stat"><strong>140+</strong><span>Students</span></div>
+                    <div class="mnt-card-stat"><strong>4.8</strong><span>Rating</span></div>
+                </div>
+                <div class="mnt-card-tags">
+                    <span class="mnt-card-tag">Licensing Pathways</span>
+                    <span class="mnt-card-tag">Exam Prep</span>
+                    <span class="mnt-card-tag">Documentation</span>
+                </div>
+                <button type="button" class="btn btn-primary mnt-card-cta mnt-book-btn" data-mentor-id="rahul-verma" data-mentor-name="Rahul Verma">Book 1:1 Session</button>
+            </article>
+
+            <article class="mnt-card" data-track="china" data-tags="AI in Healthcare|Robotic Rehab|Innovation Labs">
+                <div class="mnt-card-top">
+                    <img class="mnt-card-photo" src="assets/images/mentors/wei-zhang.jpg" alt="Wei Zhang" loading="lazy" width="68" height="68" />
+                    <div>
+                        <h3 class="mnt-card-name">Wei Zhang</h3>
+                        <p class="mnt-card-role">PT, DPT — AI & Rehabilitation Mentor</p>
+                    </div>
+                </div>
+                <span class="mnt-card-track-tag">China Track</span>
+                <p class="mnt-card-bio">Wei works at the intersection of physiotherapy and technology, having trained in robotic rehabilitation systems across leading Chinese innovation centers. He mentors students on how AI is reshaping diagnosis and recovery.</p>
+                <p class="mnt-card-quote">"The future physio doesn't compete with AI — they know exactly how to use it."</p>
+                <div class="mnt-card-stats">
+                    <div class="mnt-card-stat"><strong>10+</strong><span>Years Exp.</span></div>
+                    <div class="mnt-card-stat"><strong>160+</strong><span>Students</span></div>
+                    <div class="mnt-card-stat"><strong>4.9</strong><span>Rating</span></div>
+                </div>
+                <div class="mnt-card-tags">
+                    <span class="mnt-card-tag">AI in Healthcare</span>
+                    <span class="mnt-card-tag">Robotic Rehab</span>
+                    <span class="mnt-card-tag">Innovation Labs</span>
+                </div>
+                <button type="button" class="btn btn-primary mnt-card-cta mnt-book-btn" data-mentor-id="wei-zhang" data-mentor-name="Wei Zhang">Book 1:1 Session</button>
+            </article>
+
+            <article class="mnt-card" data-track="singapore" data-tags="Digital Health|EMR Systems|Preventive Care">
+                <div class="mnt-card-top">
+                    <img class="mnt-card-photo" src="assets/images/mentors/sarah-lim.jpg" alt="Sarah Lim" loading="lazy" width="68" height="68" />
+                    <div>
+                        <h3 class="mnt-card-name">Sarah Lim</h3>
+                        <p class="mnt-card-role">RN, BSN — Digital Health Mentor</p>
+                    </div>
+                </div>
+                <span class="mnt-card-track-tag">Singapore Track</span>
+                <p class="mnt-card-bio">Sarah has led digital health transformation projects in Singapore hospitals, and now helps students get fluent in EMR systems, preventive care models, and evidence-based practice.</p>
+                <p class="mnt-card-quote">"Singapore healthcare runs on data. Once you're comfortable with that, you're ahead of most graduates."</p>
+                <div class="mnt-card-stats">
+                    <div class="mnt-card-stat"><strong>9+</strong><span>Years Exp.</span></div>
+                    <div class="mnt-card-stat"><strong>120+</strong><span>Students</span></div>
+                    <div class="mnt-card-stat"><strong>4.9</strong><span>Rating</span></div>
+                </div>
+                <div class="mnt-card-tags">
+                    <span class="mnt-card-tag">Digital Health</span>
+                    <span class="mnt-card-tag">EMR Systems</span>
+                    <span class="mnt-card-tag">Preventive Care</span>
+                </div>
+                <button type="button" class="btn btn-primary mnt-card-cta mnt-book-btn" data-mentor-id="sarah-lim" data-mentor-name="Sarah Lim">Book 1:1 Session</button>
+            </article>
+
+            <article class="mnt-card" data-track="japan-germany" data-tags="German Language Prep|Interview Coaching|Placement">
+                <div class="mnt-card-top">
+                    <img class="mnt-card-photo" src="assets/images/mentors/lukas-hoffmann.jpg" alt="Lukas Hoffmann" loading="lazy" width="68" height="68" />
+                    <div>
+                        <h3 class="mnt-card-name">Lukas Hoffmann</h3>
+                        <p class="mnt-card-role">Career Coach — Germany Placement Track</p>
+                    </div>
+                </div>
+                <span class="mnt-card-track-tag">Germany/Japan Track</span>
+                <p class="mnt-card-bio">Lukas has placed 200+ nursing and physiotherapy graduates into German hospitals. He mentors on language readiness, interview prep, and what German employers actually screen for.</p>
+                <p class="mnt-card-quote">"A B1 certificate gets you the interview. Knowing what to say in it gets you the job."</p>
+                <div class="mnt-card-stats">
+                    <div class="mnt-card-stat"><strong>11+</strong><span>Years Exp.</span></div>
+                    <div class="mnt-card-stat"><strong>210+</strong><span>Students</span></div>
+                    <div class="mnt-card-stat"><strong>5.0</strong><span>Rating</span></div>
+                </div>
+                <div class="mnt-card-tags">
+                    <span class="mnt-card-tag">German Language Prep</span>
+                    <span class="mnt-card-tag">Interview Coaching</span>
+                    <span class="mnt-card-tag">Placement</span>
+                </div>
+                <button type="button" class="btn btn-primary mnt-card-cta mnt-book-btn" data-mentor-id="lukas-hoffmann" data-mentor-name="Lukas Hoffmann">Book 1:1 Session</button>
+            </article>
+
+            <article class="mnt-card" data-track="japan-germany" data-tags="Japanese Workplace Culture|Language Training|Career Building">
+                <div class="mnt-card-top">
+                    <img class="mnt-card-photo" src="assets/images/mentors/yuki-tanaka.jpg" alt="Yuki Tanaka" loading="lazy" width="68" height="68" />
+                    <div>
+                        <h3 class="mnt-card-name">Yuki Tanaka</h3>
+                        <p class="mnt-card-role">PT — Japan Career Track Mentor</p>
+                    </div>
+                </div>
+                <span class="mnt-card-track-tag">Germany/Japan Track</span>
+                <p class="mnt-card-bio">Yuki bridges Japanese healthcare culture and international students, mentoring on workplace etiquette, language milestones, and long-term career building in Japan.</p>
+                <p class="mnt-card-quote">"Technical skill gets you in the door. Understanding the culture keeps you in the room."</p>
+                <div class="mnt-card-stats">
+                    <div class="mnt-card-stat"><strong>7+</strong><span>Years Exp.</span></div>
+                    <div class="mnt-card-stat"><strong>95+</strong><span>Students</span></div>
+                    <div class="mnt-card-stat"><strong>4.8</strong><span>Rating</span></div>
+                </div>
+                <div class="mnt-card-tags">
+                    <span class="mnt-card-tag">Japanese Workplace Culture</span>
+                    <span class="mnt-card-tag">Language Training</span>
+                    <span class="mnt-card-tag">Career Building</span>
+                </div>
+                <button type="button" class="btn btn-primary mnt-card-cta mnt-book-btn" data-mentor-id="yuki-tanaka" data-mentor-name="Yuki Tanaka">Book 1:1 Session</button>
+            </article>
+
+        </div>
+        <p class="mnt-empty-state" id="mntEmptyState">No mentors match that filter yet. <button type="button" class="mnt-filter-btn" data-filter="all" id="mntResetFilter">Show all mentors</button></p>
+    </div>
+</section>
+
+<!-- ============ FEATURED / PROMO CAROUSEL ============ -->
+<section class="mnt-featured">
+    <div class="container">
+        <div class="mnt-featured-head">
+            <div>
+                <span class="mnt-section-label">Featured</span>
+                <h2>What's Happening This Month</h2>
+            </div>
+            <div class="mnt-carousel-nav">
+                <button type="button" class="mnt-nav-btn" data-scroll-target="mntFeaturedTrack" data-dir="-1" aria-label="Scroll left">‹</button>
+                <button type="button" class="mnt-nav-btn" data-scroll-target="mntFeaturedTrack" data-dir="1" aria-label="Scroll right">›</button>
+            </div>
+        </div>
+        <div class="mnt-featured-track" id="mntFeaturedTrack">
+            <div class="mnt-featured-card" style="background: #7c3aed;">
+                <span class="eyebrow">This Week</span>
+                <div>
+                    <h3>Mentor Match Week</h3>
+                    <p>Get paired with a mentor from your track in under 48 hours.</p>
+                </div>
+            </div>
+            <div class="mnt-featured-card" style="background: #0ea5a4;">
+                <span class="eyebrow">No Sales Pitch</span>
+                <div>
+                    <h3>Ask Anything, Honestly</h3>
+                    <p>Mentors answer fees, placements, and eligibility straight — no scripts.</p>
+                </div>
+            </div>
+            <div class="mnt-featured-card" style="background: #f97316;">
+                <span class="eyebrow">Free Add-on</span>
+                <div>
+                    <h3>CV & Resume Review</h3>
+                    <p>Bring your resume to any session and get it reviewed on the spot.</p>
+                </div>
+            </div>
+            <div class="mnt-featured-card" style="background: #16a34a;">
+                <span class="eyebrow">Guide</span>
+                <div>
+                    <h3>Licensing Roadmap</h3>
+                    <p>A track-by-track breakdown of exams, documents, and timelines.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<!-- Placeholder copy below — replace with real reviews, e.g. from a `testimonials` table -->
+<section class="mnt-testimonials">
+    <div class="container">
+        <div class="mnt-testimonials-head">
+            <span class="mnt-section-label">Mentee Feedback</span>
+            <h2>That's What Mentees Said</h2>
+        </div>
+        <div class="mnt-testimonial-grid">
+            <div class="mnt-testimonial-card">
+                <p class="mnt-testimonial-quote">"My call with Anjali cleared up more in thirty minutes than three weeks of googling did."</p>
+                <div class="mnt-testimonial-person">
+                    <span class="mnt-testimonial-avatar">AK</span>
+                    <div>
+                        <strong>Aisha K.</strong>
+                        <span>Applicant — Dubai Track</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mnt-testimonial-card">
+                <p class="mnt-testimonial-quote">"Lukas was direct about what German hospitals actually look for. No fluff, just useful."</p>
+                <div class="mnt-testimonial-person">
+                    <span class="mnt-testimonial-avatar">RS</span>
+                    <div>
+                        <strong>Rohit S.</strong>
+                        <span>Applicant — Germany Track</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mnt-testimonial-card">
+                <p class="mnt-testimonial-quote">"I didn't expect a physiotherapy mentor to know this much about AI tools, honestly."</p>
+                <div class="mnt-testimonial-person">
+                    <span class="mnt-testimonial-avatar">MT</span>
+                    <div>
+                        <strong>Meiling T.</strong>
+                        <span>Applicant — China Track</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ STATS BAND (computed from mentor data, not hardcoded in original PHP) ============ -->
+<section class="mnt-stats-band">
+    <div class="container">
+        <div class="mnt-stats-grid">
+            <div class="mnt-stat-block"><strong>6</strong><span>Active Mentors</span></div>
+            <div class="mnt-stat-block"><strong>905+</strong><span>Students Guided</span></div>
+            <div class="mnt-stat-block"><strong>4</strong><span>Countries Covered</span></div>
+            <div class="mnt-stat-block"><strong>100%</strong><span>Free 1:1 Sessions</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ BIG NUMBER CTA ============ -->
+<section class="mnt-bignum">
+    <div class="container">
+        <span class="mnt-section-label on-dark">Combined Frontline Experience</span>
+        <h2>57+ Years</h2>
+        <p>That's how much real hospital and clinic experience is sitting behind these six mentors — not classroom theory.</p>
+        <a href="#mntGrid" class="btn btn-primary">Meet the Mentors</a>
+    </div>
+</section>
+
+<!-- ============ VALUE PROMO CARDS ============ -->
+<section class="mnt-promo-section">
+    <div class="container">
+        <div class="mnt-promo-grid">
+            <div class="mnt-promo-card free">
+                <h3>Always Free</h3>
+                <p>Every 1:1 session on this page is free for applicants, with zero obligation to enroll afterward.</p>
+                <a href="#booking" class="btn btn-primary">Book a Free Session</a>
+            </div>
+            <div class="mnt-promo-card flex">
+                <h3>Flexible Slots, 7 Days a Week</h3>
+                <p>Morning, afternoon, or evening — pick whatever works around your existing schedule.</p>
+                <a href="#booking" class="btn btn-primary">Check Available Slots</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ BECOME A MENTOR CTA ============ -->
+<section class="mnt-become">
+    <div class="container mnt-become-inner">
+        <div>
+            <span class="mnt-section-label on-dark">For Healthcare Professionals</span>
+            <h2>Working Abroad? Help the Next Applicant Get There.</h2>
+            <p>If you're a nurse, physiotherapist, or care coordinator working in one of these tracks, we're always looking for mentors to add to the roster.</p>
+        </div>
+        <a href="mailto:mentors@careerbuddyclub.example?subject=Mentor%20Application" class="btn btn-primary">Apply to Mentor</a>
+    </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="mnt-faq">
+    <div class="container">
+        <div class="mnt-faq-head">
+            <span class="mnt-section-label">FAQs</span>
+            <h2>Frequently Asked Questions</h2>
+        </div>
+        <div id="mntFaqList">
+            <div class="mnt-faq-item">
+                <button type="button" class="mnt-faq-question" aria-expanded="false">
+                    <span>What is a 1:1 mentorship session?</span>
+                    <span class="mnt-faq-icon">+</span>
+                </button>
+                <div class="mnt-faq-answer">
+                    <p>A free, 30-minute video call with a mentor already working in your track of interest — Dubai, China, Singapore, Germany, or Japan. It's a space to ask honest questions about the program, placements, and whether it fits your goals.</p>
+                </div>
+            </div>
+            <div class="mnt-faq-item">
+                <button type="button" class="mnt-faq-question" aria-expanded="false">
+                    <span>Is the session really free?</span>
+                    <span class="mnt-faq-icon">+</span>
+                </button>
+                <div class="mnt-faq-answer">
+                    <p>Yes. Every 1:1 session booked through this page is free for all applicants, with no obligation to enroll afterward.</p>
+                </div>
+            </div>
+            <div class="mnt-faq-item">
+                <button type="button" class="mnt-faq-question" aria-expanded="false">
+                    <span>How do I choose the right mentor?</span>
+                    <span class="mnt-faq-icon">+</span>
+                </button>
+                <div class="mnt-faq-answer">
+                    <p>Filter mentors by track or by topic tag above, then check their bio and focus areas. If you're unsure, pick the mentor on your target track — they can always point you to a colleague.</p>
+                </div>
+            </div>
+            <div class="mnt-faq-item">
+                <button type="button" class="mnt-faq-question" aria-expanded="false">
+                    <span>What if I need to reschedule?</span>
+                    <span class="mnt-faq-icon">+</span>
+                </button>
+                <div class="mnt-faq-answer">
+                    <p>You'll get a confirmation email with a reschedule link once your request is approved. Just reply to that email or use the link at least 24 hours before your slot.</p>
+                </div>
+            </div>
+            <div class="mnt-faq-item">
+                <button type="button" class="mnt-faq-question" aria-expanded="false">
+                    <span>Can I book more than one mentor?</span>
+                    <span class="mnt-faq-icon">+</span>
+                </button>
+                <div class="mnt-faq-answer">
+                    <p>Yes — there's no limit. Many applicants book a clinical mentor first, then a licensing or language mentor once they've narrowed down a track.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ BOOKING FORM ============ -->
+<section class="mnt-booking" id="booking">
+    <div class="container mnt-booking-inner">
+        <div class="mnt-booking-left">
+            <span class="section-label">Book 1:1 Live Session</span>
+            <h2>Talk to a Mentor Before You Decide</h2>
+            <p>A free 30-minute video call with a mentor from your track of interest — no sales pitch, just honest answers about the program, placements, and whether it's right for you.</p>
+            <div class="mnt-benefit-list">
+                <div class="mnt-benefit-item"><span class="mnt-benefit-icon">✓</span> Free for all applicants — no cost, no obligation</div>
+                <div class="mnt-benefit-item"><span class="mnt-benefit-icon">✓</span> Choose the mentor closest to your track of interest</div>
+                <div class="mnt-benefit-item"><span class="mnt-benefit-icon">✓</span> Flexible time slots, 7 days a week</div>
+                <div class="mnt-benefit-item"><span class="mnt-benefit-icon">✓</span> Confirmation & reminder sent to your email</div>
+            </div>
+        </div>
+
+        <div class="mnt-booking-form">
+            <form id="mntBookingForm" novalidate>
+                <div class="mnt-form-row">
+                    <div class="mnt-form-group">
+                        <label for="mntName">Full Name *</label>
+                        <input type="text" id="mntName" name="full_name" required autocomplete="name" />
+                    </div>
+                    <div class="mnt-form-group">
+                        <label for="mntPhone">Phone *</label>
+                        <input type="tel" id="mntPhone" name="phone" required autocomplete="tel" />
+                    </div>
+                </div>
+
+                <div class="mnt-form-group">
+                    <label for="mntEmail">Email *</label>
+                    <input type="email" id="mntEmail" name="email" required autocomplete="email" />
+                </div>
+
+                <div class="mnt-form-group">
+                    <label for="mntMentor">Select Mentor *</label>
+                    <select id="mntMentor" name="mentor_id" required>
+                        <option value="" disabled selected>Choose a mentor</option>
+                        <option value="anjali-menon">Dr. Anjali Menon — Dubai Track</option>
+                        <option value="rahul-verma">Rahul Verma — Dubai Track</option>
+                        <option value="wei-zhang">Wei Zhang — China Track</option>
+                        <option value="sarah-lim">Sarah Lim — Singapore Track</option>
+                        <option value="lukas-hoffmann">Lukas Hoffmann — Germany/Japan Track</option>
+                        <option value="yuki-tanaka">Yuki Tanaka — Germany/Japan Track</option>
+                    </select>
+                </div>
+
+                <div class="mnt-form-row">
+                    <div class="mnt-form-group">
+                        <label for="mntDate">Preferred Date *</label>
+                        <input type="date" id="mntDate" name="preferred_date" required />
+                    </div>
+                    <div class="mnt-form-group">
+                        <label for="mntSlot">Preferred Time Slot *</label>
+                        <select id="mntSlot" name="time_slot" required>
+                            <option value="" disabled selected>Select a slot</option>
+                            <option value="morning">Morning (9 AM – 12 PM)</option>
+                            <option value="afternoon">Afternoon (12 PM – 4 PM)</option>
+                            <option value="evening">Evening (4 PM – 8 PM)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mnt-form-group">
+                    <label for="mntMessage">What would you like to discuss? (optional)</label>
+                    <textarea id="mntMessage" name="message" placeholder="E.g. eligibility, fees, placement details..."></textarea>
+                </div>
+
+                <!-- Honeypot field for basic bot protection — kept hidden via CSS, real users never fill it -->
+                <div style="position:absolute; left:-9999px;" aria-hidden="true">
+                    <label for="mntWebsite">Website</label>
+                    <input type="text" id="mntWebsite" name="website" tabindex="-1" autocomplete="off" />
+                </div>
+
+                <button type="submit" class="mnt-submit-btn" id="mntSubmitBtn">Request My Session</button>
+                <p class="mnt-form-status" id="mntFormStatus"></p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="mnt-footer">
+    <div class="container">
+        <div class="mnt-footer-inner">
+            <div>
+                <div class="mnt-footer-brand">Career Buddy College+</div>
+                <div class="mnt-footer-tag">Mentorship for global healthcare careers.</div>
+            </div>
+            <nav class="mnt-footer-links" aria-label="Footer">
+                <a href="#mntGrid">Mentors</a>
+                <a href="#booking">Book a Session</a>
+                <a href="mailto:mentors@careerbuddyclub.example">Become a Mentor</a>
+                <a href="/contact">Contact</a>
+                <a href="/privacy">Privacy Policy</a>
+            </nav>
+        </div>
+        <div class="mnt-footer-bottom">&copy; 2026 Career Buddy College+. All rights reserved.</div>
+    </div>
+</footer>
+
+<script>
+(function () {
+    // ---- Filter mentors by track ----
+    const filterBtns = document.querySelectorAll('.mnt-filter-btn[data-filter]');
+    const cards = document.querySelectorAll('.mnt-card');
+    // Both the hero quick-topic cards and the lower topic-chip pills share data-tag,
+    // so one click keeps both rows in sync.
+    const tagElements = document.querySelectorAll('[data-tag]');
+    const emptyState = document.getElementById('mntEmptyState');
+    const resetFilterBtn = document.getElementById('mntResetFilter');
+
+    let activeTrack = 'all';
+    let activeTag = null;
+
+    function applyFilters() {
+        let visibleCount = 0;
+        cards.forEach((card) => {
+            const trackMatch = activeTrack === 'all' || card.dataset.track === activeTrack;
+            const tagMatch = !activeTag || (card.dataset.tags || '').split('|').includes(activeTag);
+            const show = trackMatch && tagMatch;
+            card.style.display = show ? '' : 'none';
+            if (show) visibleCount++;
+        });
+        emptyState.classList.toggle('visible', visibleCount === 0);
+    }
+
+    filterBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach((b) => b.classList.remove('active'));
+            btn.classList.add('active');
+            activeTrack = btn.dataset.filter;
+            applyFilters();
+        });
+    });
+
+    if (resetFilterBtn) {
+        resetFilterBtn.addEventListener('click', () => {
+            activeTrack = 'all';
+            activeTag = null;
+            tagElements.forEach((c) => c.classList.remove('active'));
+            filterBtns.forEach((b) => b.classList.toggle('active', b.dataset.filter === 'all'));
+            applyFilters();
+            document.getElementById('mntGrid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    }
+
+    // ---- Topic filter — hero quick-topic cards + lower topic-chip pills (derived from real mentor tags) ----
+    tagElements.forEach((el) => {
+        el.addEventListener('click', () => {
+            const tag = el.dataset.tag;
+            activeTag = activeTag === tag ? null : tag;
+            tagElements.forEach((t) => t.classList.toggle('active', activeTag !== null && t.dataset.tag === activeTag));
+            applyFilters();
+            document.getElementById('mntGrid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+
+    // ---- Prefill mentor + scroll to booking form on "Book 1:1 Session" ----
+    const mentorSelect = document.getElementById('mntMentor');
+    document.querySelectorAll('.mnt-book-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            if (mentorSelect) mentorSelect.value = btn.dataset.mentorId;
+            document.getElementById('booking').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+
+    // Prevent picking a date in the past
+    const dateInput = document.getElementById('mntDate');
+    if (dateInput) {
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.setAttribute('min', today);
+    }
+
+    // ---- Horizontal carousel nav (top-rated strip + featured banners) ----
+    document.querySelectorAll('.mnt-nav-btn[data-scroll-target]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const track = document.getElementById(btn.dataset.scrollTarget);
+            if (!track) return;
+            const dir = parseInt(btn.dataset.dir, 10) || 1;
+            track.scrollBy({ left: dir * (track.clientWidth * 0.8), behavior: 'smooth' });
+        });
+    });
+
+    // ---- FAQ accordion ----
+    document.querySelectorAll('.mnt-faq-item').forEach((item) => {
+        const question = item.querySelector('.mnt-faq-question');
+        const answer = item.querySelector('.mnt-faq-answer');
+        question.addEventListener('click', () => {
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.mnt-faq-item.open').forEach((openItem) => {
+                if (openItem !== item) {
+                    openItem.classList.remove('open');
+                    openItem.querySelector('.mnt-faq-question').setAttribute('aria-expanded', 'false');
+                    openItem.querySelector('.mnt-faq-answer').style.maxHeight = null;
+                }
+            });
+            item.classList.toggle('open', !isOpen);
+            question.setAttribute('aria-expanded', String(!isOpen));
+            answer.style.maxHeight = !isOpen ? answer.scrollHeight + 'px' : null;
+        });
+    });
+
+    // ---- Submit booking form via fetch() to book-session.php ----
+    const form = document.getElementById('mntBookingForm');
+    const submitBtn = document.getElementById('mntSubmitBtn');
+    const statusEl = document.getElementById('mntFormStatus');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        statusEl.className = 'mnt-form-status';
+        statusEl.textContent = '';
+
+        try {
+            const formData = new FormData(form);
+            const response = await fetch('book-session.php', {
+                method: 'POST',
+                body: formData,
+                headers: { 'X-Requested-With': 'XMLHttpRequest' },
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                statusEl.textContent = result.message || 'Session requested! We will confirm by email shortly.';
+                statusEl.className = 'mnt-form-status success';
+                form.reset();
+            } else {
+                statusEl.textContent = result.message || 'Something went wrong. Please try again.';
+                statusEl.className = 'mnt-form-status error';
+            }
+        } catch (err) {
+            statusEl.textContent = 'Network error — please check your connection and try again.';
+            statusEl.className = 'mnt-form-status error';
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Request My Session';
+        }
+    });
+})();
+</script>
+
+</body>
+</html>

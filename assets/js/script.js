@@ -128,8 +128,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('cdSecs').textContent = formatNum(seconds);
   };
 
-  countdown();
-  setInterval(countdown, 1000);
+  if (document.getElementById('countdown')) {
+    countdown();
+    setInterval(countdown, 1000);
+  }
 
   // Hero Counter Animations
   const heroCounters = document.querySelectorAll('.hero-float-badge [data-count]');
