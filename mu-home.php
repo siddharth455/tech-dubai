@@ -18,6 +18,12 @@ $mu = [
     'hero_bg'     => mu_vid('6129925', 'hd_1280_720_30fps'),
     'campus_film' => ['src' => mu_vid('6130037', 'hd_1280_720_30fps'), 'poster' => mu_thumb('6130037', 1280)],
     'graduation'  => ['src' => mu_vid('7945183', 'hd_1280_720_25fps'), 'poster' => mu_thumb('7945191', 1000)],
+    // Campus reel on Cloudinary (public_id GNC/videos/global-website-video). q_auto = lighter preview, so_1 = poster frame
+    'campus_reel' => [
+        'src'    => 'https://res.cloudinary.com/nvouvdja/video/upload/q_auto/v1795156324/GNC/videos/global-website-video.mp4',
+        'full'   => 'https://res.cloudinary.com/nvouvdja/video/upload/v1795156324/GNC/videos/global-website-video.mp4',
+        'poster' => 'https://res.cloudinary.com/nvouvdja/video/upload/so_1,q_auto,w_1280/v1795156324/GNC/videos/global-website-video.jpg',
+    ],
     'classroom'   => ['src' => mu_vid('6129937', 'hd_1280_720_30fps'), 'poster' => mu_thumb('6129937', 1000)],
 ];
 
@@ -206,13 +212,13 @@ function mu_section($name) {
 
 /* =========================================================== 1. HERO */
 case 'hero': ?>
+  <div class="mu-hero-pin" data-hero-pin>
   <section class="mu-hero" id="hero">
     <video class="mu-hero-video" autoplay muted loop playsinline preload="auto" poster="assets/images/hero.png" aria-hidden="true">
       <source src="<?= mu_e($mu['hero_bg']) ?>" type="video/mp4">
     </video>
     <div class="mu-hero-shade"></div>
     <div class="mu-container mu-hero-inner">
-      <a href="#apply" class="mu-hero-eyebrow"><span class="mu-live-dot"></span>Admissions open · 2027 cohort</a>
       <h1 class="mu-hero-title">
         Learn by <br><em class="mu-hero-em">Caring<svg class="mu-squiggle" viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="muSq" x1="0" x2="1"><stop offset="0" stop-color="#249038"/><stop offset=".5" stop-color="#57c785"/><stop offset="1" stop-color="#eddd53"/></linearGradient></defs><path d="M4 18 C 30 2, 50 30, 76 16 S 122 4, 148 16 S 196 30, 222 14 S 270 6, 296 16" fill="none" stroke="url(#muSq)" stroke-width="6" stroke-linecap="round"/></svg></em>
         <span class="mu-sr">— BSc Nursing, GNM &amp; Physiotherapy with Germany, Japan &amp; Australia career tracks</span>
@@ -224,7 +230,6 @@ case 'hero': ?>
       </div>
       <div class="mu-hero-actions">
         <a href="#apply" class="mu-btn mu-btn--white">Apply for the 2027 Cohort <span class="mu-btn-arrow"><?= mu_arrow_svg() ?></span></a>
-        <button type="button" class="mu-btn mu-btn--glass" data-video-modal="<?= mu_e($mu['campus_film']['src']) ?>"><span class="mu-btn-play"><?= mu_play_svg() ?></span> Watch Campus Film</button>
       </div>
       <dl class="mu-hero-stats">
         <div><dt>Students Trained</dt><dd><span data-mu-count="500">500</span>+</dd></div>
@@ -232,21 +237,42 @@ case 'hero': ?>
         <div><dt>Highest Package</dt><dd>₹<span data-mu-count="45">45</span>L</dd></div>
         <div><dt>Placement Rate</dt><dd><span data-mu-count="96">96</span>%</dd></div>
       </dl>
-      <aside class="mu-countdown" data-deadline="2026-12-31T23:59:59+05:30" aria-label="Round 1 admission deadline">
-        <span class="mu-cd-tag"><span class="mu-live-dot"></span>Round 01 Admissions</span>
-        <p class="mu-cd-title">Applications closing soon for <em>CBCAT</em> 2027-28</p>
-        <p class="mu-cd-date">Last date: <b>31st December 2026</b></p>
-        <div class="mu-cd-grid" role="timer" aria-live="off">
-          <div><b data-cd="d">00</b><small>Days</small></div>
-          <div><b data-cd="h">00</b><small>Hours</small></div>
-          <div><b data-cd="m">00</b><small>Minutes</small></div>
-          <div><b data-cd="s">00</b><small>Seconds</small></div>
+      <div class="mu-hero-side">
+        <aside class="mu-countdown mu-countdown--compact" data-deadline="2026-12-31T23:59:59+05:30" aria-label="Round 1 admission deadline">
+          <div class="mu-cd-top">
+            <span class="mu-cd-tag"><span class="mu-live-dot"></span>Round 01 Admissions</span>
+            <span class="mu-cd-date">Till <b>31 Dec 2026</b></span>
+          </div>
+          <p class="mu-cd-title">Applications closing soon for <em>CBCAT</em> 2027-28</p>
+          <div class="mu-cd-row">
+            <div class="mu-cd-grid" role="timer" aria-live="off">
+              <div><b data-cd="d">00</b><small>Days</small></div>
+              <div><b data-cd="h">00</b><small>Hrs</small></div>
+              <div><b data-cd="m">00</b><small>Min</small></div>
+              <div><b data-cd="s">00</b><small>Sec</small></div>
+            </div>
+            <a href="#apply" class="mu-cd-apply" aria-label="Apply before the deadline"><?= mu_arrow_svg() ?></a>
+          </div>
+        </aside>
+        <!-- Campus video: small card here, grows to fill the hero as you scroll (mastersunion.org style) -->
+        <div class="mu-campus-slot">
+          <div class="mu-campus" data-campus>
+            <video class="mu-campus-video" autoplay muted loop playsinline preload="auto" poster="<?= mu_e($mu['campus_reel']['poster']) ?>" aria-label="Campus video">
+              <source src="<?= mu_e($mu['campus_reel']['src']) ?>" type="video/mp4">
+            </video>
+            <span class="mu-campus-shade" aria-hidden="true"></span>
+            <span class="mu-campus-label">Explore our campus</span>
+            <button type="button" class="mu-campus-mute" data-campus-mute aria-label="Unmute video" aria-pressed="false">
+              <svg class="mu-ico-muted" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z" fill="currentColor"/><path d="m23 9-6 6m0-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg class="mu-ico-sound" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z" fill="currentColor"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M19.07 4.93a10 10 0 0 1 0 14.14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
         </div>
-        <a href="#apply" class="mu-btn mu-btn--white mu-cd-btn">Apply Before Deadline <span class="mu-btn-arrow"><?= mu_arrow_svg() ?></span></a>
-      </aside>
+      </div>
     </div>
     
   </section>
+  </div>
 <?php break;
 
 /* =========================================================== 2. BENTO */

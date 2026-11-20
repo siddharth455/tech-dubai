@@ -20,7 +20,7 @@
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
   <!-- External CSS -->
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css?v=<?= filemtime(__DIR__ . '/assets/css/style.css') ?>" />
   <link rel="stylesheet" href="assets/css/mu-home.css?v=<?= filemtime(__DIR__ . '/assets/css/mu-home.css') ?>" />
   <link rel="stylesheet" href="assets/css/mu-home-enhance.css?v=<?= filemtime(__DIR__ . '/assets/css/mu-home-enhance.css') ?>" />
   <?php require_once 'mu-home.php'; ?>

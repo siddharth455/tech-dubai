@@ -566,3 +566,88 @@ button, input, select, textarea { font-family: inherit; }
   .mu-cd-title { font-size: 1.08rem; }
   .mu-cd-grid b { font-size: 1.5rem; }
 }
+
+/* ---------- hero: compact countdown + scroll-expanding campus video (mastersunion.org style) ----------
+   Desktop: .mu-hero-pin is made taller by JS, the hero sticks under the navbar, and scroll progress
+   (--hp, 0 → 1) grows .mu-campus from its corner slot to fill the hero. Tablet/mobile: plain stacked cards. */
+.mu-hero { --hp: 0; }
+.mu-hero-side { position: absolute; right: 0; bottom: 72px; z-index: 3; width: 380px; display: flex; flex-direction: column; gap: 12px; }
+.mu-hero-side .mu-countdown { position: relative; right: auto; bottom: auto; width: auto; max-width: none; margin-top: 0; }
+.mu-countdown--compact { padding: 14px 16px 16px; }
+.mu-countdown--compact .mu-cd-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.mu-countdown--compact .mu-cd-tag { padding: 4px 10px 4px 8px; font-size: .68rem; }
+.mu-countdown--compact .mu-cd-date { margin: 0; font-size: .76rem; white-space: nowrap; }
+.mu-countdown--compact .mu-cd-title { margin: 10px 0 12px; font-size: 1rem; }
+.mu-cd-row { display: flex; align-items: center; gap: 10px; }
+.mu-countdown--compact .mu-cd-grid { flex: 1; gap: 6px; margin: 0; }
+.mu-countdown--compact .mu-cd-grid div { padding: 7px 2px 6px; border-radius: 8px; }
+.mu-countdown--compact .mu-cd-grid b { font-size: 1.15rem; }
+.mu-countdown--compact .mu-cd-grid small { margin-top: 3px; font-size: .58rem; }
+.mu-cd-apply { flex: none; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; background: #fff; color: var(--mu-ink); transition: transform .3s var(--mu-ease), background .3s; }
+.mu-cd-apply:hover { transform: translateX(3px); background: var(--mu-yellow); }
+
+.mu-campus-slot { position: relative; aspect-ratio: 16 / 9; }
+/* start 380x214 like mastersunion.org; JS grows it to a centred 16:9 card (72% width, max 1240px) */
+.mu-campus { position: absolute; left: 0; top: 0; width: 100%; height: 100%; border-radius: 12px; overflow: hidden; background: #000; color: #fff; box-shadow: 0 24px 60px rgba(0, 0, 0, .35); }
+.mu-campus.is-moving { will-change: left, top, width, height; }
+.mu-campus-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scale(calc(1.15 - var(--hp) * .15)); }
+.mu-campus-shade { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(7, 17, 31, .55), rgba(7, 17, 31, 0) 50%); pointer-events: none; }
+.mu-campus-label { position: absolute; left: 14px; bottom: 14px; padding: .6em 1.3em; border-radius: 40px; background: rgba(7, 17, 31, .55); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); font-size: calc(12px + var(--hp) * 3px); font-weight: 600; letter-spacing: .1em; text-transform: uppercase; pointer-events: none; }
+.mu-campus-mute { position: absolute; right: 12px; bottom: 12px; z-index: 2; display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border: 0; border-radius: 50%; background: rgba(0, 0, 0, .5); color: #fff; cursor: pointer; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); transition: background .2s, transform .2s; }
+.mu-campus-mute:hover { background: rgba(0, 0, 0, .75); transform: scale(1.06); }
+.mu-campus-mute:focus-visible { outline: 2px solid var(--mu-yellow); outline-offset: 2px; }
+.mu-campus-mute .mu-ico-sound, .mu-campus-mute.is-on .mu-ico-muted { display: none; }
+.mu-campus-mute.is-on .mu-ico-sound { display: block; }
+
+/* hero copy + countdown fade out; the background clip dims so the card sits on a dark stage */
+.mu-hero-video { opacity: calc(1 - var(--hp) * .85); }
+.mu-hero-inner > :not(.mu-hero-side), .mu-hero-side .mu-countdown { opacity: calc(1 - var(--hp) * 1.8); }
+.mu-hero.is-expanded .mu-hero-inner > :not(.mu-hero-side), .mu-hero.is-expanded .mu-countdown { visibility: hidden; }
+
+/* pinned mode — JS adds .is-pinned only on desktop when motion is allowed */
+.mu-hero-pin.is-pinned > .mu-hero { position: sticky; min-height: calc(100svh - var(--mu-nav, 77px)); top: var(--mu-nav, 77px); }
+
+@media (max-width: 1180px) {
+  .mu-hero-side { position: static; width: auto; max-width: 440px; margin-top: 28px; }
+}
+@media (max-width: 640px) {
+  .mu-hero-side { margin-top: 22px; }
+}
+
+/* ---------- hero: fit exactly in the first screen on desktop ----------
+   First screen = viewport − ticker bar − navbar (JS sets --mu-nav / --mu-ticker).
+   The hero itself is viewport − navbar tall (so it fills the screen once pinned); the extra
+   --mu-ticker bottom padding keeps every element inside the initially visible area.
+   Type & spacing scale with viewport height so short laptop screens stay balanced. */
+@media (min-width: 1181px) {
+  .mu-hero {
+    --mu-pad-t: clamp(24px, 5vh, 64px);
+    --mu-pad-b: calc(clamp(24px, 6vh, 72px) + var(--mu-ticker, 35px));
+    --mu-side-w: clamp(340px, 28vw, 430px);
+    min-height: 0;
+    height: calc(100vh - var(--mu-nav, 77px));
+  }
+  .mu-hero-pin.is-pinned > .mu-hero { min-height: 0; }
+  .mu-hero-inner { padding: var(--mu-pad-t) 0 var(--mu-pad-b); }
+  .mu-hero-eyebrow { margin-bottom: clamp(12px, 2.4vh, 22px); }
+  .mu-hero-title { font-size: clamp(3.4rem, min(8.5vw, 13.5vh), 8rem); }
+  .mu-hero-rotator { margin: clamp(12px, 2.6vh, 34px) 0 clamp(12px, 2.6vh, 30px); }
+  .mu-hero-stats { margin-top: clamp(16px, 3.5vh, 44px); max-width: min(760px, calc(100% - var(--mu-side-w) - 48px)); }
+  .mu-hero-side { width: var(--mu-side-w); bottom: var(--mu-pad-b); }
+}
+@media (min-width: 1181px) and (max-height: 760px) {
+  .mu-hero-stats div { padding-top: 12px; }
+  .mu-hero-stats dd { font-size: 1.35rem; }
+  .mu-countdown--compact { padding: 12px 14px 14px; }
+  .mu-countdown--compact .mu-cd-title { margin: 8px 0 10px; }
+}
+@media (min-width: 1181px) and (max-height: 620px) {
+  .mu-hero-rotator { display: none; }
+}
+
+/* ---------- hero: left column sits a little higher than the video box (desktop) ----------
+   Only the in-flow left content gets the extra bottom padding; the right column keeps --mu-pad-b. */
+@media (min-width: 1181px) {
+  .mu-hero { --mu-lift: clamp(16px, 4.5vh, 52px); }
+  .mu-hero-inner { padding-bottom: calc(var(--mu-pad-b) + var(--mu-lift)); }
+}

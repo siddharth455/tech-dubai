@@ -962,6 +962,13 @@ ul { list-style: none; margin: 0; padding: 0; }
 @media (max-width: 900px) {
   .nav-links { position: absolute; top: 76px; left: 16px; right: 16px; display: none; flex-direction: column; align-items: stretch; background: rgba(7, 17, 31, 0.98); border: 1px solid var(--border); border-radius: 18px; padding: 12px; box-shadow: var(--shadow); }
   .nav-links.open { display: flex; }
+  /* mobile menu: solid brand-ink panel, readable links (overrides the desktop #333 link colour) */
+  .nav-links { z-index: 30; gap: 2px; padding: 10px; overflow: hidden; background: #07111f; border-color: rgba(255, 255, 255, 0.12); box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45); }
+  .nav-links::before { content: ""; position: absolute; inset: 0 0 auto; height: 3px; background: linear-gradient(90deg, #249038 0%, #57c785 50%, #eddd53 100%); }
+  .nav-links .nav-link, .navbar.scrolled .nav-links .nav-link { display: block; padding: 14px 16px; border-radius: 12px; color: rgba(255, 255, 255, 0.92); font-size: 1.05rem; transition: background-color .2s ease, color .2s ease; }
+  .nav-links .nav-link + .nav-link { border-top: 1px solid rgba(255, 255, 255, 0.08); }
+  .nav-links .nav-link:hover, .nav-links .nav-link:focus-visible, .navbar.scrolled .nav-links .nav-link:hover { background: rgba(255, 255, 255, 0.07); color: #e8e008; outline: none; }
+  .nav-links .nav-link:hover + .nav-link, .nav-links .nav-link:focus-visible + .nav-link { border-top-color: transparent; }
   .nav-toggle { display: block; }
   .btn-nav { display: none; }
 }

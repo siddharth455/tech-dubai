@@ -138,6 +138,89 @@
     });
   }
 
+
+  /* ---------------- hero: corner campus video grows to fill the hero on scroll (mastersunion.org style) ---------------- */
+  function initCampusVideo() {
+    var pin = $('[data-hero-pin]');
+    var hero = pin && $('.mu-hero', pin);
+    var card = hero && $('[data-campus]', hero);
+    var slot = card && card.parentNode;
+    if (!card) return;
+    var vid = $('video', card);
+    var bg = $('.mu-hero-video', hero);
+    var nav = $('#navbar');
+    var desk = window.matchMedia('(min-width: 1181px)');
+    var EXTRA = 1.1;          // extra scroll (× viewport height) the hero stays pinned for
+    var on = false, ticking = false, navH = 0;
+
+    function clamp(v) { return v < 0 ? 0 : v > 1 ? 1 : v; }
+    function ease(t) { return t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
+    function reset() {
+      card.style.left = card.style.top = card.style.width = card.style.height = '';
+      card.classList.remove('is-moving');
+      hero.style.setProperty('--hp', 0);
+      hero.classList.remove('is-expanded');
+    }
+    function layout() {
+      on = desk.matches && !reduceMotion;
+      navH = nav ? nav.offsetHeight : 0;
+      // space above the hero that isn't the sticky navbar (the ticker bar) — CSS keeps content above the fold
+      var pageTop = pin.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop);
+      pin.style.setProperty('--mu-nav', navH + 'px');
+      pin.style.setProperty('--mu-ticker', Math.max(0, Math.round(pageTop - navH)) + 'px');
+      pin.classList.toggle('is-pinned', on);
+      if (!on) { pin.style.height = ''; reset(); return; }
+      pin.style.height = (hero.offsetHeight + window.innerHeight * EXTRA) + 'px';
+      update();
+    }
+    function update() {
+      ticking = false;
+      if (!on) return;
+      var travel = pin.offsetHeight - hero.offsetHeight;
+      var raw = clamp((navH - pin.getBoundingClientRect().top) / (travel * .85)); // finish early, then hold full-size
+      var e = ease(raw);
+      var h = hero.getBoundingClientRect(), s = slot.getBoundingClientRect();
+      // end size = mastersunion.org: 16:9, 72% of width (max 1240px), with room above/below
+      var topPad = 24, bottomPad = 80;
+      var endW = Math.min(h.width * .72, 1240);
+      var endH = Math.min(endW / (16 / 9), window.innerHeight - navH - topPad - bottomPad);
+      endW = endH * (16 / 9);
+      var endL = h.left + (h.width - endW) / 2, endT = h.top + topPad;
+      card.style.left = (endL - s.left) * e + 'px';
+      card.style.top = (endT - s.top) * e + 'px';
+      card.style.width = s.width + (endW - s.width) * e + 'px';
+      card.style.height = s.height + (endH - s.height) * e + 'px';
+      card.classList.toggle('is-moving', raw > 0 && raw < 1);
+      hero.style.setProperty('--hp', e.toFixed(4));
+      hero.classList.toggle('is-expanded', e > .98);
+      // background clip is hidden once the reel covers the hero
+      if (bg && !reduceMotion) { if (e > .98) { if (!bg.paused) bg.pause(); } else if (bg.paused) playSafe(bg); }
+    }
+    function onScroll() { if (on && !ticking) { ticking = true; requestAnimationFrame(update); } }
+
+    if (vid && reduceMotion) vid.pause();
+
+    // volume button: mute / unmute; auto-mutes again once the video scrolls out of view
+    var muteBtn = $('[data-campus-mute]', card);
+    function setSound(on) {
+      if (!vid || !muteBtn) return;
+      vid.muted = !on;
+      if (on) playSafe(vid);
+      muteBtn.classList.toggle('is-on', on);
+      muteBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      muteBtn.setAttribute('aria-label', on ? 'Mute video' : 'Unmute video');
+    }
+    if (muteBtn) muteBtn.addEventListener('click', function (e) { e.stopPropagation(); setSound(vid.muted); });
+    if (vid && 'IntersectionObserver' in window) new IntersectionObserver(function (en) {
+      if (!en[0].isIntersecting && !vid.muted) setSound(false);
+    }, { threshold: 0 }).observe(card);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', layout);
+    if (desk.addEventListener) desk.addEventListener('change', layout); else desk.addListener(layout);
+    window.addEventListener('load', layout);
+    layout();
+  }
+
   /* ---------------- learning model: scroll position drives the active step ---------------- */
   function initModel() { $$('.mu-model').forEach(initModelSection); }
   function initModelSection(sec) {
@@ -321,6 +404,7 @@
     }
     initModel();
     initCountdown();
+    initCampusVideo();
     initImpact();
     initCounters();
     initTracks();
