@@ -27,7 +27,7 @@
     }
 
     .admsn-section-title {
-        font-family: 'Sora', sans-serif;
+        font-family: var(--font-display);
         font-size: 2.5rem;
         font-weight: 800;
         color: #111827 !important;
@@ -51,7 +51,7 @@
     }
 
     .admsn-hero-left h2 {
-        font-family: 'Sora', sans-serif;
+        font-family: var(--font-display);
         font-size: 1.8rem;
         font-weight: 800;
         color: #1e293b;

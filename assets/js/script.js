@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Countdown Timer
   const countdown = () => {
-    const targetDate = new Date('July 15, 2026 00:00:00').getTime();
+    const targetDate = new Date('July 15, 2027 00:00:00').getTime();
     const now = new Date().getTime();
     const distance = targetDate - now;
 

@@ -8,8 +8,9 @@
   --accent-2: #86b6ff;
   --border: rgba(255, 255, 255, 0.12);
   --shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
-  --font: 'DM Sans', -apple-system, sans-serif;
-      --font-display: 'Sora', sans-serif;
+  --font: 'Outfit', -apple-system, 'Segoe UI', sans-serif;
+      --font-display: 'Outfit', -apple-system, 'Segoe UI', sans-serif;
+  --font-serif: 'Fraunces', Georgia, serif;
       --ease: cubic-bezier(0.16, 1, 0.3, 1);
       --nav-h: 77px; /* sticky navbar height (76px + 1px border) */
 }
@@ -18,7 +19,7 @@
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font);
   color: var(--text);
   background:
     radial-gradient(circle at top, rgba(71, 130, 255, 0.08), transparent 30%),
@@ -431,7 +432,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   min-width: 0;
 }
 .hero-eyebrow { color: #0c1829; text-transform: uppercase; letter-spacing: .2em; font-size: .75rem; font-weight: 700; }
-.hero-title { font-family: 'Sora', sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.5rem); line-height: 1.2; margin: 8px 0 14px; color: #000; }
+.hero-title { font-family: var(--font-display); font-size: clamp(1.6rem, 3.5vw, 2.5rem); line-height: 1.2; margin: 8px 0 14px; color: #000; }
 
 /* Title rotator: every slide sits in the same grid cell, so each one is laid
    out at the exact left edge of the column (no translate maths, no clipping). */
@@ -713,7 +714,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   margin-bottom: 16px;
 }
 .programs-section .section-title {
-  font-family: 'Sora', sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(2rem, 5vw, 2.6rem);
   color: #111827;
   margin-bottom: 16px;
@@ -810,7 +811,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   border-radius: 999px;
 }
 .program-name {
-  font-family: 'Sora', sans-serif;
+  font-family: var(--font-display);
   font-size: 1.5rem;
   color: #111827;
   line-height: 1.2;
@@ -1035,7 +1036,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 
 .cta-section-title {
-  font-family: 'Sora', Arial, sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 2.8rem);
   line-height: 1.08;
   margin: 0 0 14px;
@@ -1066,7 +1067,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 
 .cta-contact-form h3 {
-  font-family: 'Sora', Arial, sans-serif;
+  font-family: var(--font-display);
   font-size: 1.35rem;
   font-weight: 700;
   color: #0f172a;
@@ -1083,7 +1084,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   border: 1px solid #dbe4f0;
   border-radius: 12px;
   color: #0f172a;
-  font-family: 'DM Sans', Arial, sans-serif;
+  font-family: var(--font);
   font-size: 0.95rem;
   outline: none;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
@@ -1171,7 +1172,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 
 .campus-info .section-title {
-    font-family: 'Sora', sans-serif;
+    font-family: var(--font-display);
     font-size: clamp(2rem, 4vw, 2.75rem);
     font-weight: 800;
     color: #111827;
@@ -1217,7 +1218,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 
 .stat-content strong {
-    font-family: 'Sora', sans-serif;
+    font-family: var(--font-display);
     font-size: 1.15rem;
     font-weight: 700;
     color: #111827;

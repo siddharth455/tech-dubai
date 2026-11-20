@@ -82,7 +82,7 @@ $trackLabel = [
 .mnt-teaser-card[data-track="china"]         { border-top: 3px solid #22d3ee; }
 .mnt-teaser-card[data-track="singapore"]     { border-top: 3px solid #4ade80; }
 .mnt-teaser-card[data-track="japan-germany"] { border-top: 3px solid #fb923c; }
-.mnt-teaser-name { font-family: 'Sora', sans-serif; font-size: 1.05rem; font-weight: 700; color: #111827; margin: 0 0 4px; }
+.mnt-teaser-name { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: #111827; margin: 0 0 4px; }
 .mnt-teaser-role { font-size: 0.78rem; color: #6b7280; margin: 0 0 10px; line-height: 1.4; min-height: 34px; }
 .mnt-teaser-spec { font-size: 0.75rem; color: #475569; margin: 0 0 14px; line-height: 1.4; }
 .mnt-teaser-track-tag {

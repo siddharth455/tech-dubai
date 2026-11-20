@@ -8,19 +8,23 @@
   <title>Career Buddy College+ | BSc Nursing, GNM & Physiotherapy Dehradun</title>
  <meta name="description" content="Career Buddy College+ offers BSc Nursing, GNM & 
   Bachelor in Physiotherapy with global career tracks in Germany, Japan & Dubai. 
-  NAAC Graded Institution. Admissions open 2026. Dehradun, Uttarakhand." /> 
+  NAAC Graded Institution. Admissions open 2027. Dehradun, Uttarakhand." /> 
 <meta name="keywords" content="BSc Nursing College Dehradun, GNM College Uttarakhand, 
   Physiotherapy College Dehradun, Nursing College with Germany placement, career buddy college"/>
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&display=swap" rel="stylesheet" />
   
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
   <!-- External CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/mu-home.css?v=<?= filemtime(__DIR__ . '/assets/css/mu-home.css') ?>" />
+  <link rel="stylesheet" href="assets/css/mu-home-enhance.css?v=<?= filemtime(__DIR__ . '/assets/css/mu-home-enhance.css') ?>" />
+  <?php require_once 'mu-home.php'; ?>
+  <link rel="preload" as="video" href="<?= mu_e($mu['hero_bg']) ?>" type="video/mp4" />
   <link rel="icon" type="image/x-icon" href="assets/images/cbc.logo.png">
 
   <!-- Canonical --> 
@@ -31,7 +35,7 @@
 <meta property="og:url"content="https://careerbuddycollege.com/" /> 
 <meta property="og:title"content="Career Buddy College+ | Global Nursing & 
 Physiotherapy" /> 
-<meta property="og:description" content="BSc Nursing, GNM & Physiotherapy with Germany/Japan career tracks. NAAC Graded. Admissions 2026 open. Dehradun." /> 
+<meta property="og:description" content="BSc Nursing, GNM & Physiotherapy with Germany/Japan career tracks. NAAC Graded. Admissions 2027 open. Dehradun." /> 
 <meta property="og:image"content="https://careerbuddycollege.com/assets/images/hero.png"/> 
 <meta property="og:image:width"content="1200" />
 <meta property="og:image:height"content="630" /> 
@@ -129,7 +133,7 @@ A1 to B2.",
       <span class="ticker-dot"></span>
       <span>NAAC  Graded Institution Partner</span>
       <span class="ticker-dot"></span>
-      <span>Admissions Open 2026 Cohort</span>
+      <span>Admissions Open 2027 Cohort</span>
       <span class="ticker-dot"></span>
     </div>
   </div>
@@ -157,72 +161,8 @@ A1 to B2.",
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="hero">
-    <div class="container hero-grid" style="max-width: 1400px;">
-      
-      <!-- Hero Left Content -->
-      <div class="hero-left">
-        <p class="hero-eyebrow">Built and delivered with industry leaders</p>
-        <div class="hero-title-slider-container">
-          <div class="hero-title-slider">
-            <h1 class="hero-title slide">
-              Bsc in <span class="text-accent">Nursing</span> <span class="plus">+</span><br>
-              <span class="text-accent">German/Japan Career Track</span>
-            </h1>
-            <h1 class="hero-title slide">
-              Bachelor in <span class="text-accent">Physiotherapy</span> <span class="plus">+</span><br>
-              <span class="text-accent">Australia/Germany Career track</span>
-            </h1>
-             <h1 class="hero-title slide">
-              General Nursing and Midwifery <span class="text-accent"> (GNM) </span><span class="plus">+</span><br>
-              <span class="text-accent">Japan/Germany Career track</span>
-            </h1>
-          </div>
-        </div>
-        <p class="hero-sub">
-          Full time Global degree programs. Learn, lead, and care with the expertise needed to thrive in modern healthcare.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#apply" class="btn btn-primary">Apply for the 2026 cohort</a>
-          <a href="#programs" class="btn btn-outline-hero">Explore Programs</a>
-        </div>
-
-        <!-- Anchor Pills -->
-        <nav class="anchor-pills" aria-label="Jump to section">
-          <a href="#placement" class="anchor-pill">Placement</a>
-          <a href="#programs" class="anchor-pill">Programs</a>
-          <a href="#curriculum" class="anchor-pill">Curriculum</a>
-          <a href="#admission" class="anchor-pill">Admission Process</a>
-        </nav>
-      </div>
-
-      <!-- Hero Right Image & Badges -->
-      <div class="hero-right">
-        <div class="hero-image-wrapper">
-          <div class="hero-person-img">
-            <img src="assets/images/hero.png" alt="Students learning technology" />
-          </div>
-          
-          <div class="hero-float-badge badge-top-right">
-            <strong><span data-count="500">500</span>+</strong>
-            <span>Students Placed</span>
-          </div>
-          <div class="hero-float-badge badge-mid-left">
-            <strong>₹<span data-count="22">22</span>L+</strong>
-            <span>Avg Placement</span>
-          </div>
-          <div class="hero-float-badge badge-bottom-right">
-            <strong>₹<span data-count="45">45</span>L</strong>
-            <span>Highest Package</span>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-
-  </section>
+  <!-- Hero: full-screen video -->
+  <?php mu_section('hero'); ?>
 
   <!-- Healthcare Partners Section -->
   <section class="partners-marquee-section">
@@ -263,253 +203,34 @@ A1 to B2.",
     </div>
   </section>
 
-  <?php
-  $programFlags = [
-      ['src' => 'assets/images/flag-ae.svg', 'alt' => 'United Arab Emirates'],
-      ['src' => 'assets/images/flag-cn.svg', 'alt' => 'China'],
-      ['src' => 'assets/images/flag-de.svg', 'alt' => 'Germany'],
-      ['src' => 'assets/images/flag-jp.svg', 'alt' => 'Japan'],
-      ['src' => 'assets/images/singapore-flag.jpeg', 'alt' => 'Singapore'],
-  ];
-  ?>
 
-  <!-- Curriculum Section -->
-  <section class="section curriculum-section" id="curriculum" aria-labelledby="curriculum-title">
-    <div class="container container--curriculum">
-      <div class="section-header">
-        <span class="curriculum-path-badge">Curriculum Path</span>
-        <h2 class="section-title" id="curriculum-title">Your Global <span class="gradient-text">Learning Journey</span></h2>
-      </div>
+  <!-- Why CBC+ — bento stats -->
+  <?php mu_section('bento'); ?>
 
-      <div class="curriculum-layout">
-        <nav class="curriculum-nav" aria-label="Curriculum years">
-          <ul class="cur-nav-list">
-            <li><a href="#year1" class="cur-nav-link is-active" aria-current="true"><span class="cur-nav-num">1st Year</span><span class="cur-nav-title">Dubai Track <img src="assets/images/flag-ae.svg" alt="" width="20" height="14"></span></a></li>
-            <li><a href="#year2" class="cur-nav-link"><span class="cur-nav-num">2nd Year</span><span class="cur-nav-title">China Track <img src="assets/images/flag-cn.svg" alt="" width="20" height="14"></span></a></li>
-            <li><a href="#year3" class="cur-nav-link"><span class="cur-nav-num">3rd Year</span><span class="cur-nav-title">Singapore Track <img src="assets/images/singapore-flag.jpeg" alt="" width="20" height="14"></span></a></li>
-            <li><a href="#year4" class="cur-nav-link"><span class="cur-nav-num">4th Year</span><span class="cur-nav-title">Japan/Germany Career Track <img src="assets/images/jp-flag.jpg" alt="" width="20" height="14"><img src="assets/images/flag-de.svg" alt="" width="20" height="14"></span></a></li>
-          </ul>
-        </nav>
+  <!-- Admissions / Global Tracks / Campus Life tabs -->
+  <?php mu_section('events'); ?>
 
-        <div class="curriculum-cards">
-          <article id="year1" class="curriculum-card">
-            <header class="curriculum-card-header">
-              <div class="curriculum-title-row">
-                <span class="curriculum-year-num">1st Year</span>
-                <h3>Dubai Track</h3>
-                <span class="curriculum-flags"><img src="assets/images/flag-ae.svg" alt="UAE flag" width="60" height="40"></span>
-              </div>
-              <p class="curriculum-card-subtitle">The Dubai track is a specially designed healthcare study &amp; practice tour for Nursing &amp; Physiotherapy students, offering a unique opportunity to explore Dubai's world-class healthcare ecosystem, modern medical facilities &amp; international healthcare practices.</p>
-            </header>
-            <div class="curriculum-card-body">
-              <div class="curriculum-outcome">
-                <h4 class="curriculum-semester-tag">Program Outcome</h4>
-                <ul class="curriculum-course-list">
-                  <li>Hospital &amp; healthcare facility visits</li>
-                  <li>Understanding international healthcare standards &amp; patient care practices</li>
-                  <li>Professional learning sessions</li>
-                  <li>Guidance on healthcare licensing pathways in the UAE</li>
-                </ul>
-              </div>
-              <figure class="curriculum-media"><img src="assets/images/dubai-design.jpeg" alt="Dubai Healthcare City" loading="lazy" decoding="async"></figure>
-            </div>
-            <ul class="curriculum-bottom-tags">
-              <li><span class="curriculum-tag-dot tag-dot-purple"></span>International exposure</li>
-              <li><span class="curriculum-tag-dot tag-dot-cyan"></span>Multi-cultural healthcare environment</li>
-              <li><span class="curriculum-tag-dot tag-dot-emerald"></span>Interaction with UAE healthcare professionals</li>
-              <li><span class="curriculum-tag-dot tag-dot-amber"></span>Certifications</li>
-            </ul>
-          </article>
+  <!-- Our Programmes — tabs + carousel -->
+  <?php mu_section('programs'); ?>
 
-          <article id="year2" class="curriculum-card">
-            <header class="curriculum-card-header">
-              <div class="curriculum-title-row">
-                <span class="curriculum-year-num">2nd Year</span>
-                <h3>China Track</h3>
-                <span class="curriculum-flags"><img src="assets/images/flag-cn.svg" alt="China flag" width="60" height="40"></span>
-              </div>
-              <p class="curriculum-card-subtitle">The China track is a specially designed study &amp; practice tour for Nursing &amp; Physiotherapy students, offering an exciting opportunity to experience how Artificial Intelligence (AI) is transforming healthcare in one of the world's leading technology &amp; innovation hubs.</p>
-            </header>
-            <div class="curriculum-card-body">
-              <div class="curriculum-outcome">
-                <h4 class="curriculum-semester-tag">Program Outcome</h4>
-                <ul class="curriculum-course-list">
-                  <li>Learning how AI assists in diagnosis, patient monitoring &amp; treatment planning</li>
-                  <li>Visits to advanced healthcare institutions &amp; innovation centres</li>
-                  <li>Introduction to robotic rehabilitation systems</li>
-                  <li>Experience Chinese culture, education &amp; technological advancement</li>
-                </ul>
-              </div>
-              <figure class="curriculum-media"><img src="assets/images/china.jpg" alt="Healthcare professionals with an AI service robot in China" loading="lazy" decoding="async"></figure>
-            </div>
-          </article>
+  <!-- Learn 'Globally' — sticky stacking track cards (#curriculum) -->
+  <?php mu_section('tracks'); ?>
 
-          <article id="year3" class="curriculum-card">
-            <header class="curriculum-card-header">
-              <div class="curriculum-title-row">
-                <span class="curriculum-year-num">3rd Year</span>
-                <h3>Singapore Track</h3>
-                <span class="curriculum-flags"><img src="assets/images/singapore-flag.jpeg" alt="Singapore flag" width="60" height="40"></span>
-              </div>
-              <p class="curriculum-card-subtitle">The Singapore track is a specially designed healthcare study &amp; practice tour, offering students the opportunity to experience high healthcare standards, excellent patient outcomes, advanced medical infrastructure and a strong emphasis on preventive care &mdash; making it an ideal destination for future healthcare professionals.</p>
-            </header>
-            <div class="curriculum-card-body">
-              <div class="curriculum-outcome">
-                <h4 class="curriculum-semester-tag">Program Outcome</h4>
-                <ul class="curriculum-course-list">
-                  <li>Understanding Singapore's healthcare delivery model</li>
-                  <li>Learning evidence-based clinical practices</li>
-                  <li>Understanding digital health &amp; electronic medical records</li>
-                  <li>Exposure to community &amp; preventive healthcare programs</li>
-                  <li>Understanding elderly care &amp; rehabilitation services in Singapore</li>
-                </ul>
-              </div>
-              <figure class="curriculum-media"><img src="assets/images/nursing.png" alt="Hospital building in Singapore" loading="lazy" decoding="async"></figure>
-            </div>
-          </article>
+  <!-- Hands-on learning — scroll-synced video -->
+  <?php mu_section('handson'); ?>
 
-          <article id="year4" class="curriculum-card">
-            <header class="curriculum-card-header">
-              <div class="curriculum-title-row">
-                <span class="curriculum-year-num">4th Year</span>
-                <h3>Japan/Germany Career Track</h3>
-                <span class="curriculum-flags"><img src="assets/images/jp-flag.jpg" alt="Japan flag" width="60" height="40"><img src="assets/images/flag-de.svg" alt="Germany flag" width="60" height="40"></span>
-              </div>
-              <p class="curriculum-card-subtitle">The Japan/Germany career track is a specialised, placement-driven program designed for Nursing &amp; Physiotherapy students who aspire to build successful careers in Germany or Japan.</p>
-              <p class="curriculum-card-subtitle">Unlike a study tour, this is a long-term career development pathway that prepares students through language training, international healthcare orientation, interview preparation, certification support &amp; placement assistance.</p>
-            </header>
-            <div class="curriculum-card-body">
-              <div class="curriculum-outcome">
-                <h4 class="curriculum-semester-tag">Program Details</h4>
-                <ul class="curriculum-course-list">
-                  <li>International career planning</li>
-                  <li>German language training</li>
-                  <li>Japanese language training</li>
-                  <li>English &amp; IELTS preparation</li>
-                  <li>AR/VR classes for advanced healthcare training</li>
-                  <li>Mock examinations &amp; practice sessions</li>
-                </ul>
-              </div>
-              <figure class="curriculum-media"><img src="assets/images/germany.webp" alt="Nurses caring for an elderly patient" loading="lazy" decoding="async"></figure>
-            </div>
-            <ul class="curriculum-bottom-tags">
-              <li><span class="curriculum-tag-dot tag-dot-amber"></span>Global placement assistance</li>
-              <li><span class="curriculum-tag-dot tag-dot-emerald"></span>Healthcare workforce preparation</li>
-              <li><span class="curriculum-tag-dot tag-dot-cyan"></span>Language training &amp; certification support</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- Masterclass videos -->
+  <?php mu_section('talks'); ?>
 
-  <script>
-    /* Curriculum: sticky stacking cards + synced year tabs */
-    (function () {
-      const section = document.getElementById('curriculum');
-      if (!section) return;
-      const nav = section.querySelector('.curriculum-nav');
-      const stack = section.querySelector('.curriculum-cards');
-      const links = Array.from(nav.querySelectorAll('.cur-nav-link'));
-      const cards = Array.from(stack.querySelectorAll('.curriculum-card'));
-      const navbar = document.getElementById('navbar');
-      const mobileMq = window.matchMedia('(max-width: 991.98px)');
-            
-      let tops = [];
-      let activeId = null;
-      let ticking = false;
+  <!-- Learning model — scroll-driven steps -->
+  <?php mu_section('model'); ?>
 
-      // Where each card should stick. A card taller than the viewport sticks with a
-      // negative offset so its bottom is reached before the next card covers it.
-      function layout() {
-        const vh = window.innerHeight;
-        const mobile = mobileMq.matches;
-        const barH = mobile && getComputedStyle(nav).position === 'sticky' ? nav.offsetHeight : 0;
-        const base = (navbar ? navbar.offsetHeight : 77) + barH + (mobile ? 10 : 16);
-        // equal heights keep the stack tidy: a shorter card can never peek out from under a taller one
-        cards.forEach((card) => { card.style.minHeight = ''; });
-        const maxH = Math.max.apply(null, cards.map((card) => card.offsetHeight));
-        cards.forEach((card) => { card.style.minHeight = maxH + 'px'; });
-        // px each stacked card peeks out below the previous one (shrinks on short screens so the last card still fits)
-        const room = vh - base - maxH - 12;
-        const step = Math.max(0, Math.min(mobile ? 8 : 16, room / Math.max(1, cards.length - 1)));
-        tops = cards.map((card, i) => {
-          const top = Math.min(base + i * step, vh - card.offsetHeight - 12);
-          card.style.setProperty('--stick-top', top + 'px');
-          return top;
-        });
-        update();
-      }
+  <!-- Faculty model — scroll-driven 40 / 40 / 20 split -->
+  <?php mu_section('faculty'); ?>
 
-      function setActive(id) {
-        if (id === activeId) return;
-        activeId = id;
-        links.forEach((link) => {
-          const on = link.getAttribute('href') === '#' + id;
-          link.classList.toggle('is-active', on);
-          if (on) {
-            link.setAttribute('aria-current', 'true');
-            const list = link.closest('.cur-nav-list');
-            if (list.scrollWidth > list.clientWidth) {
-              // centre the active pill in the horizontal bar (clamped at both ends, so first/last pills are fully visible)
-              const item = link.parentElement.getBoundingClientRect();
-              const box = list.getBoundingClientRect();
-              const left = list.scrollLeft + item.left - box.left - (box.width - item.width) / 2;
-              list.scrollTo({ left: Math.max(0, Math.min(left, list.scrollWidth - list.clientWidth)), behavior: 'smooth' });
-            }
-          } else {
-            link.removeAttribute('aria-current');
-          }
-        });
-      }
+  <!-- Hospitals are your classroom -->
+  <?php mu_section('industry'); ?>
 
-      function update() {
-        ticking = false;
-        const vh = window.innerHeight;
-        const rects = cards.map((c) => c.getBoundingClientRect());
-
-        // depth effect: the card being covered shrinks and dims as the next one slides over it
-        cards.forEach((card, i) => {
-          let cover = 0;
-          const next = cards[i + 1];
-          if (next) {
-            const start = rects[i].top + card.offsetHeight;   // next card starts covering at this card's bottom
-            const end = tops[i + 1];                         // fully stacked once next card is stuck
-            cover = Math.min(1, Math.max(0, (start - rects[i + 1].top) / Math.max(1, start - end)));
-          }
-          card.style.setProperty('--cover', cover.toFixed(3));
-        });
-
-        // active tab = last card whose top has risen past the middle of the viewport
-        let current = cards[0].id;
-        rects.forEach((r, i) => { if (r.top <= vh * 0.5) current = cards[i].id; });
-        setActive(current);
-      }
-
-      function onScroll() {
-        if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
-      }
-
-      // Tab click: scroll to the exact position where that card has just stacked on top
-      links.forEach((link, i) => {
-        link.addEventListener('click', (e) => {
-          e.preventDefault();
-          const stackTop = stack.getBoundingClientRect().top + window.scrollY;
-          let offset = 0;
-          const gap = parseFloat(getComputedStyle(stack).rowGap) || 0;
-          for (let j = 0; j < i; j++) offset += cards[j].offsetHeight + gap;
-          window.scrollTo({ top: stackTop + offset - tops[i] + 1, behavior: 'smooth' });
-          setActive(cards[i].id);
-        });
-      });
-
-      window.addEventListener('scroll', onScroll, { passive: true });
-      window.addEventListener('resize', layout);
-      window.addEventListener('load', layout);
-      if ('ResizeObserver' in window) new ResizeObserver(layout).observe(stack);
-      layout();
-    })();
-  </script>
 <!-- AI Trends vs Traditional Education -->
     <section id="ai-trends" class="section">
         <div class="container" style="max-width: 1600px;">
@@ -786,210 +507,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
       </script>
-  <!-- Featured Programs -->
-  <section class="section programs-section" id="programs">
-      <div class="container">
-          <div class="section-header">
-              <span class="section-label reveal-up">Featured Programs</span>
-              <h2 class="section-title reveal-up">Choose Your Path to the <span class="text-accent">Top 1%</span></h2>
-              <p class="section-desc reveal-up text-center">Three Global Healthcare-aligned undergraduated programs designed to make you Global Healthcare job-ready from day one.</p>
-          </div>
 
-          <div class="programs-slider-wrap" style="position: relative;">
-              <div class="swiper programs-swiper" style="padding-bottom: 50px;">
-                  <div class="swiper-wrapper">
-                  <article class="program-card swiper-slide reveal-up" data-tilt>
-                      <div class="program-ribbon">Most Popular</div>
+  <!-- Full-bleed "Watch Video" -->
+  <?php mu_section('film'); ?>
 
-                      <div class="program-card-shine"></div>
-                      <div class="program-top">
-                          <span class="program-badge">
-                              Global Healthcare Ready
-                              <?php foreach ($programFlags as $flag): ?>
-                              <img class="flag-icon" src="<?= htmlspecialchars($flag['src']) ?>" alt="<?= htmlspecialchars($flag['alt']) ?>" width="20" height="14" loading="lazy" />
-                              <?php endforeach; ?>
-                          </span>
-                          <span class="program-duration">4 Years · Full Time</span>
-                      </div>
-                      <h2 class="program-name">Bsc in Nursing (Global Track)</h2>
-                      <p class="program-desc">Master Global Healthcare practices, Real practice in Dubai, China, Japan, Germany Hospitals, International certifications built for top global healthcare roles.</p>
-                      <div class="program-metrics">
-                          <div class="metric-item"><strong>₹18.50 Lakhs</strong><span>Fees</span></div>
-                          <div class="metric-divider"></div>
-                          <div class="metric-item"><strong>100+</strong><span>Global Hiring Partners</span></div>
-                          <div class="metric-divider"></div>
-                          <div class="metric-item"><strong>₹18–35 LPA</strong><span>Avg. Salary Package</span></div>
-                      </div>
-                      <ul class="program-tags">
-                          <li>AI in Health Care Practice in China</li>
-                          <li>German Language Classes</li>
-                          <li>International Clinical Practice</li>
-                          <li>IELTS Classes</li>
-                      </ul>
-                      <div class="program-eligibility">
-                          <span class="program-eligibility-label">Eligibility</span>
-                          <ul class="program-eligibility-list">
-                              <li>10+2 (12th) pass with Physics, Chemistry, Biology &amp; English</li>
-                              <li>Minimum 50% aggregate marks in PCB</li>
-                              <li>Age: 17–35 years as on 31 December of the admission year</li>
-                          </ul>
-                      </div>
-                      <div class="program-actions">
-                          <a href="#apply" class="btn btn-primary magnetic-btn">Apply Now</a>
-                          <a href="#curriculum" class="btn btn-ghost magnetic-btn">View Curriculum</a>
-                      </div>
-                  </article>
+  <!-- Clinical experiences carousel -->
+  <?php mu_section('experiences'); ?>
 
-                  <article class="program-card program-card--featured swiper-slide reveal-up" data-tilt>
-                      <div class="program-card-shine"></div>
-                      <div class="program-top">
-                          <span class="program-badge">
-                              Global Healthcare Ready
-                              <?php foreach ($programFlags as $flag): ?>
-                              <img class="flag-icon" src="<?= htmlspecialchars($flag['src']) ?>" alt="<?= htmlspecialchars($flag['alt']) ?>" width="20" height="14" loading="lazy" />
-                              <?php endforeach; ?>
-                          </span>
-                          <span class="program-duration">3 Years · Full Time</span>
-                      </div>
-                      <h2 class="program-name">General Nursing and Midwifery (GNM) <br>(Global Track)</h2>
-                      <p class="program-desc">Master Global Healthcare practices, Real practice in Dubai, China, Japan/Germany Hospitals, International certifications built for top global healthcare roles.</p>
-                      <div class="program-metrics">
-                          <div class="metric-item"><strong>₹11.50 Lakhs</strong><span>Fees</span></div>
-                          <div class="metric-divider"></div>
-                          <div class="metric-item"><strong>100+</strong><span>Global Hiring Partners</span></div>
-                          <div class="metric-divider"></div>
-                          <div class="metric-item"><strong>₹15-30 LPA</strong><span>Avg. Salary Package</span></div>
-                          </div>
-                      <ul class="program-tags">
-                          <li>International General Nursing Practices</li>
-                          <li>Global Practice Exposure</li>
-                          <li>German Language Classes</li>
-                          <li>IELTS Classes</li>
-                      </ul>
-                      <div class="program-eligibility">
-                          <span class="program-eligibility-label">Eligibility</span>
-                          <ul class="program-eligibility-list">
-                              <li>10+2 (12th) pass in any stream (Arts, Science or Commerce)</li>
-                              <li>Minimum 50% aggregate marks</li>
-                              <li>Age: 17–35 years as on 31 December of the admission year</li>
-                          </ul>
-                      </div>
-                      <div class="program-actions">
-                          <a href="#apply" class="btn btn-primary magnetic-btn">Apply Now</a>
-                          <a href="#curriculum" class="btn btn-ghost magnetic-btn">View Curriculum</a>
-                      </div>
-                  </article>
+  <!-- What it's really like — vertical marquee -->
+  <?php mu_section('breather'); ?>
 
-                  <article class="program-card swiper-slide reveal-up" data-tilt>
-                      <div class="program-card-shine"></div>
-                      <div class="program-top">
-                          <span class="program-badge">
-                              Global Healthcare Ready
-                              <?php foreach ($programFlags as $flag): ?>
-                              <img class="flag-icon" src="<?= htmlspecialchars($flag['src']) ?>" alt="<?= htmlspecialchars($flag['alt']) ?>" width="20" height="14" loading="lazy" />
-                              <?php endforeach; ?>
-                          </span>
-                          <span class="program-duration">4 Years · Full Time</span>
-                      </div>
-                      <h2 class="program-name">Bachelor in Physiotherapy <br>(Global Track)</h2>
-                      <p class="program-desc">Master in Global Physiotherapy practices, practice in Dubai, China, Japan/Germany hospitals and Australian global entrance examination preparation built for global standard physiotherapy roles.</p>
-                      <div class="program-metrics">
-                          <div class="metric-item"><strong>₹12.50 Lakhs</strong><span>Fees</span></div>
-                          <div class="metric-divider"></div>
-                          
-                          <div class="metric-item"><strong>80+</strong><span>Global Hiring Partners</span></div>
-                          <div class="metric-divider"></div>
-                          <div class="metric-item"><strong>₹20-40 LPA</strong><span>Avg. Salary Package</span></div>
-                          
-                      </div>
-                      <ul class="program-tags">
-                          <li>Dubai Clinical Exposure Pathway</li>
-                          <li>China AI & Smart Rehabilitation</li>
-                          <li>Australia Career Track Preparation</li>
-                          <li>German Language Training (A1, A2, B1 & B2)</li>
-                      </ul>
-                      <div class="program-eligibility">
-                          <span class="program-eligibility-label">Eligibility</span>
-                          <ul class="program-eligibility-list">
-                              <li>10+2 (12th) pass with Physics, Chemistry, Biology &amp; English</li>
-                              <li>Minimum 50% aggregate marks in PCB</li>
-                              <li>Age: 17–25 years as on 31 December of the admission year</li>
-                          </ul>
-                      </div>
-                      <div class="program-actions">
-                          <a href="#apply" class="btn btn-primary magnetic-btn">Apply Now</a>
-                          <a href="#curriculum" class="btn btn-ghost magnetic-btn">View Curriculum</a>
-                      </div>
-                  </article>
-              </div>
-                  <div class="swiper-pagination"></div>
-              </div>
-              
-              <!-- Swiper Navigation Arrows (Desktop) -->
-              <div class="swiper-button-prev programs-button-prev"></div>
-              <div class="swiper-button-next programs-button-next"></div>
-          </div>
-      </div>
-  </section>
+  <!-- Student stories — coverflow -->
+  <?php mu_section('alumni'); ?>
 
-
-  <!-- Campus -->
-
-  <section class="section campus-section" id="campus">
-        <div class="container">
-        <div class="campus-grid">
-                <div class="campus-info reveal-up">
-                    <span class="section-label">Your degree is awarded by</span>
-                    <h2 class="section-title">Partner Institution<br><span class="text-muted">NAAC Grade</span></h2>
-                    <p class="section-desc">A recognized university with modern infrastructure. Don't miss out on the full college experience.</p>
-                    <div class="campus-stats">
-                       <div class="campus-stat">
-                            <span class="stat-icon" style="display: flex; align-items: center;"><img src="assets/images/INC.png" alt="INC" style="height: 44px; width: 44px; object-fit: contain;"></span>
-                            <div class="stat-content">
-                                <strong>Indian Nursing Council</strong>
-                                <span>Recognized and quality-assured education</span>
-                            </div>
-                        </div>
-                        <div class="campus-stat">
-                            <span class="stat-icon">⚕️</span>
-                            <div class="stat-content">
-                                <strong>Indian Association of Physiotherapists (IAP) </strong>
-                                <span>Government-recognized qualifications</span>
-                            </div>
-                        </div>
-                        <div class="campus-stat">
-                            <span class="stat-icon">🎓</span>
-                            <div class="stat-content">
-                                <strong>Government Recognized Degree</strong>
-                                <span>Valid for higher studies and employment</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="campus-gallery reveal-up">
-                    <div class="swiper campus-swiper">
-                        <div class="swiper-wrapper">
-                             <div class="swiper-slide"><img src="assets/images/7.webp" alt="Campus-Lab" loading="lazy"></div>
-                            <div class="swiper-slide"><img src="assets/images/lab-2.jpg" alt="Campus-Lab" loading="lazy"></div>
-                            <div class="swiper-slide"><img src="assets/images/1.webp" alt="Campus-Lab" loading="lazy"></div>
-                            <div class="swiper-slide"><img src="assets/images/lab-3.jpg" alt="Campus-Lab" loading="lazy"></div>
-                            <div class="swiper-slide"><img src="assets/images/lab-4.jpg" alt="Campus-Lab" loading="lazy"></div>
-                            <div class="swiper-slide"><img src="assets/images/4.webp" alt="Campus-Lab" loading="lazy"></div>
-                            <div class="swiper-slide"><img src="assets/images/lab-8.jpg" alt="Campus-Lab" loading="lazy"></div>
-                            <div class="swiper-slide"><img src="assets/images/lab-6.jpg" alt="Campus-Lab" loading="lazy"></div>
-                            <div class="swiper-slide"><img src="assets/images/lab-13.jpg" alt="Campus-Lab" loading="lazy"></div>
-                            <div class="swiper-slide"><img src="assets/images/lab-15.jpg" alt="Campus-Lab" loading="lazy"></div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Placement Section  -->
+  <!-- Placement Section  -->
   <?php require 'placement.php'; ?>
 
+  <!-- Graduation video -->
+  <?php mu_section('convocation'); ?>
+
+  <!-- Campus hub + map (#campus) -->
+  <?php mu_section('campus'); ?>
+
+  <!-- Visit the campus: directions, QR, India map -->
+  <?php mu_section('visit'); ?>
+
+  <!-- Why Choose Us (hidden: its points now live in the bento, hands-on & learning-model sections; change false to true to show it again) -->
+  <?php if (false): ?>
   <!-- Why Choose Us -->
   <section class="section why-section" id="why-us">
     <div class="container">
@@ -1026,6 +570,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     </div>
   </section>
+  <?php endif; ?>
 
   <!-- Mentors Section (hidden for now — remove the comment markers to bring it back) -->
   <?php /* require 'mentors-section.php'; */ ?>
@@ -1064,7 +609,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="cta-contact-grid">
           <article class="cta-contact-info cta-reveal-up">
             <span class="cta-section-label">Get In Touch</span>
-            <h2 class="cta-section-title">Ready to Join the <span class="text-accent">2026 Cohort?</span></h2>
+            <h2 class="cta-section-title">Ready to Join the <span class="text-accent">2027 Cohort?</span></h2>
             <p class="cta-section-desc">Take the first step. Our admissions team is ready to guide you through the process.</p>
 
             <div class="cta-contact-details">
@@ -1136,6 +681,12 @@ Where a university or a programme is listed on CBC website, CBC acts as the indu
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Shared video popup + video section behaviour -->
+    <?php mu_section('modal'); ?>
+    <?php mu_section('mobilecta'); ?>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="assets/js/mu-home.js?v=<?= filemtime(__DIR__ . '/assets/js/mu-home.js') ?>"></script>
 
 </body>
 </html>

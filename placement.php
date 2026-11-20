@@ -37,7 +37,7 @@
 }
 
 .section-title {
-    font-family: 'Sora', sans-serif;
+    font-family: var(--font-display);
     font-size: 2.5rem;
     font-weight: 800;
     color: #0f172a;
@@ -76,7 +76,7 @@
 
 .track-num { 
     display: block; 
-    font-family: 'Sora', sans-serif; 
+    font-family: var(--font-display); 
     font-size: 2.5rem; 
     font-weight: 800; 
     color: #0f172a; 
