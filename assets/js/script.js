@@ -100,6 +100,90 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Countdown Timer
+  const countdown = () => {
+    const targetDate = new Date('July 15, 2027 00:00:00').getTime();
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    if (distance < 0) {
+      document.getElementById('cdDays').textContent = '00';
+      document.getElementById('cdHours').textContent = '00';
+      document.getElementById('cdMins').textContent = '00';
+      document.getElementById('cdSecs').textContent = '00';
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    const formatNum = (num) => num.toString().padStart(2, '0');
+
+    document.getElementById('cdDays').textContent = formatNum(days);
+    document.getElementById('cdHours').textContent = formatNum(hours);
+    document.getElementById('cdMins').textContent = formatNum(minutes);
+    document.getElementById('cdSecs').textContent = formatNum(seconds);
+  };
+
+  if (document.getElementById('countdown')) {
+    countdown();
+    setInterval(countdown, 1000);
+  }
+
+  // Hero Counter Animations
+  const heroCounters = document.querySelectorAll('.hero-float-badge [data-count]');
+  
+  function animateHeroCounter(el, target) {
+    if (typeof gsap !== 'undefined') {
+      const obj = { val: 0 };
+      el.textContent = '0';
+      gsap.to(obj, {
+        val: target,
+        duration: 1.8,
+        ease: 'power2.out',
+        onUpdate: () => { el.textContent = Math.round(obj.val); },
+      });
+    } else {
+      const start = performance.now();
+      const duration = 1800;
+      el.textContent = '0';
+      
+      function step(timestamp) {
+        const progress = Math.min(1, (timestamp - start) / duration);
+        el.textContent = Math.round(progress * target);
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      
+      requestAnimationFrame(step);
+    }
+  }
+  
+  heroCounters.forEach((el) => {
+    const target = parseInt(el.dataset.count, 10) || 0;
+    
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+      ScrollTrigger.create({
+        trigger: el,
+        start: 'top 92%',
+        once: true,
+        onEnter: () => animateHeroCounter(el, target),
+      });
+    } else {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateHeroCounter(el, target);
+            obs.unobserve(el);
+          }
+        });
+      }, { threshold: 0.4 });
+      
+      observer.observe(el);
+    }
+  });
 });
 
 

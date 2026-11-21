@@ -3,17 +3,122 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Career Buddy College+</title>
+  <!-- UTM capture & website lead-source tagging: must load before the ee-form-widget scripts -->
+  <script src="assets/js/utm-tracker.js"></script>
+  <title>Career Buddy College+ | BSc Nursing, GNM & Physiotherapy Dehradun</title>
+ <meta name="description" content="Career Buddy College+ offers BSc Nursing, GNM & 
+  Bachelor in Physiotherapy with global career tracks in Germany, Japan & Dubai. 
+  NAAC Graded Institution. Admissions open 2027. Dehradun, Uttarakhand." /> 
+<meta name="keywords" content="BSc Nursing College Dehradun, GNM College Uttarakhand, 
+  Physiotherapy College Dehradun, Nursing College with Germany placement, career buddy college"/>
   
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&display=swap" rel="stylesheet" />
   
   <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
   <!-- External CSS -->
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css?v=<?= filemtime(__DIR__ . '/assets/css/style.css') ?>" />
+  <link rel="stylesheet" href="assets/css/mu-home.css?v=<?= filemtime(__DIR__ . '/assets/css/mu-home.css') ?>" />
+  <link rel="stylesheet" href="assets/css/mu-home-enhance.css?v=<?= filemtime(__DIR__ . '/assets/css/mu-home-enhance.css') ?>" />
+  <?php require_once 'mu-home.php'; ?>
+  <link rel="preload" as="video" href="<?= mu_e($mu['hero_bg']) ?>" type="video/mp4" />
+  <link rel="icon" type="image/x-icon" href="assets/images/cbc.logo.png">
+
+  <!-- Canonical --> 
+<link rel="canonical" href="https://careerbuddycollege.com/" /> 
+ 
+<!-- Open Graph --> 
+<meta property="og:type"content="website" /> 
+<meta property="og:url"content="https://careerbuddycollege.com/" /> 
+<meta property="og:title"content="Career Buddy College+ | Global Nursing & 
+Physiotherapy" /> 
+<meta property="og:description" content="BSc Nursing, GNM & Physiotherapy with Germany/Japan career tracks. NAAC Graded. Admissions 2027 open. Dehradun." /> 
+<meta property="og:image"content="https://careerbuddycollege.com/assets/images/hero.png"/> 
+<meta property="og:image:width"content="1200" />
+<meta property="og:image:height"content="630" /> 
+<meta property="og:site_name"content="Career Buddy College+" /> 
+ 
+<!-- Twitter Card --> 
+<meta name="twitter:card"content="summary_large_image" /> 
+<meta name="twitter:title"content="Career Buddy College+ | Global Nursing Programs" /> 
+<meta name="twitter:description"content="BSc Nursing, GNM & Physiotherapy with Germany/Japan 
+career tracks. Dehradun."/> 
+<meta name="twitter:image" content="https://careerbuddycollege.com/assets/images/hero.png"/> 
+
+<script type="application/ld+json"> 
+
+{ 
+  "@context": "https://schema.org", 
+  "@graph": [ 
+    { 
+      "@type": "CollegeOrUniversity", 
+      "name": "Career Buddy College+", 
+      "url": "https://careerbuddycollege.com/", 
+      "logo": "https://careerbuddycollege.com/assets/images/cbc.logo.png", 
+      "description": "Career Buddy College+ offers BSc Nursing, GNM, and Bachelor in 
+Physiotherapy with global career tracks in Germany, Japan, Dubai, China, and Singapore. NAAC 
+Graded Institution Partner. Dehradun, Uttarakhand.", 
+      "address": { 
+        "@type": "PostalAddress", 
+        "streetAddress": "Chakrata Road, Jhajra", 
+        "addressLocality": "Dehradun", 
+        "addressRegion": "Uttarakhand", 
+        "postalCode": "248007", 
+        "addressCountry": "IN" 
+      }, 
+      "telephone": "+917456000100", 
+      "email": "admissions@careerbuddycollege.com", 
+      "sameAs": [ 
+        "https://careerbuddycollege.com/" 
+      ] 
+    }, 
+    { 
+      "@type": "Course", 
+      "name": "BSc Nursing (Global Track)", 
+      "url": "https://careerbuddycollege.com/#programs", 
+      "description": "4-year BSc Nursing program with global healthcare exposure in Dubai, 
+China, Singapore, Germany and Japan. Includes German language training, IELTS preparation, 
+and international clinical practice.", 
+      "provider": { "@type": "CollegeOrUniversity", "name": "Career Buddy College+", "url": 
+"https://careerbuddycollege.com/" }, 
+      "educationalLevel": "Bachelor", 
+      "hasCourseInstance": { "@type": "CourseInstance", "courseMode": "Onsite", "location": { 
+"@type": "Place", "name": "Career Buddy College Campus, Jhajra, Dehradun" } } 
+    }, 
+    { 
+      "@type": "Course", 
+      "name": "General Nursing and Midwifery — GNM (Global Track)", 
+      "url": "https://careerbuddycollege.com/#programs", 
+      "description": "3-year GNM program with global healthcare exposure in Dubai, China, 
+Japan and Germany. Includes German language training and IELTS preparation.", 
+      "provider": { "@type": "CollegeOrUniversity", "name": "Career Buddy College+", "url": 
+"https://careerbuddycollege.com/" }, 
+      "educationalLevel": "Diploma", 
+      "hasCourseInstance": { "@type": "CourseInstance", "courseMode": "Onsite", "location": { 
+"@type": "Place", "name": "Career Buddy College Campus, Jhajra, Dehradun" } } 
+    }, 
+                                                                                                    
+ 
+    { 
+      "@type": "Course", 
+      "name": "Bachelor in Physiotherapy (Global Track)", 
+      "url": "https://careerbuddycollege.com/#programs", 
+      "description": "4-year Physiotherapy program with clinical exposure in Dubai, China, 
+Japan and Germany. Includes Australia career track preparation and German language training 
+A1 to B2.", 
+      "provider": { "@type": "CollegeOrUniversity", "name": "Career Buddy College+", "url": 
+"https://careerbuddycollege.com/" }, 
+      "educationalLevel": "Bachelor", 
+      "hasCourseInstance": { "@type": "CourseInstance", "courseMode": "Onsite", "location": { 
+"@type": "Place", "name": "Career Buddy College Campus, Jhajra, Dehradun" } } 
+    } 
+  ] 
+} 
+</script>
+
 </head>
 <body>
   
@@ -24,19 +129,11 @@
       <span class="ticker-dot"></span>
       <span>NAAC  Graded Institution Partner</span>
       <span class="ticker-dot"></span>
-      <span>Next Intake Closes 15 July</span>
-      <span class="ticker-dot"></span>
-      <span>Only 30 Seats for 2026 Batch</span>
-      <span class="ticker-dot"></span>
       <span>Curriculum by Top Healthcre Experts</span>
       <span class="ticker-dot"></span>
       <span>NAAC  Graded Institution Partner</span>
       <span class="ticker-dot"></span>
-     <span>Next Intake Closes 15 July</span>
-      <span class="ticker-dot"></span>
-      <span>Only 30 Seats for 2026 Batch</span>
-      <span class="ticker-dot"></span>
-      <span>Admissions Open 2026 Cohort</span>
+      <span>Admissions Open 2027 Cohort</span>
       <span class="ticker-dot"></span>
     </div>
   </div>
@@ -46,13 +143,15 @@
     <div class="container nav-container">
       <a href="#" class="logo">
         <span class="logo-img"><img src="assets/images/cbc.logo.png" alt="Career Buddy Tech Logo" /></span>
-        <span style=" font-size:1.5rem; color:yellow " class="logo-text-accent">Career Buddy College<sup class="logo-sup">+</sup></span>
+        <span style=" font-size:1.5rem; "class="text-accent">Career Buddy College<span class="logo-sup" style="color: red !important;">+</span></span>
       </a>
       
       <nav class="nav-links" id="navLinks">
         <a href="#programs" class="nav-link">Programs</a>
         <a href="#curriculum" class="nav-link">Curriculum</a>
+        <!-- <a href="mentors.php" class="nav-link">Mentors</a> --><!-- hidden for now -->
         <a href="#faq" class="nav-link">FAQ</a>
+        <a href="https://ai.careerbuddycollege.com/" class="nav-link">AI Buddy</a>
       </nav>
       
       <a href="#apply" class="btn btn-primary btn-nav">Apply Now</a>
@@ -62,435 +161,76 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="hero">
-    <canvas id="heroCanvas" class="hero-canvas"></canvas>
-    
-    <div class="container hero-grid">
-      
-      <!-- Hero Left Content -->
-      <div class="hero-left">
-        <p class="hero-eyebrow">Built and delivered with industry leaders</p>
-        <h1 class="hero-title">
-          Bsc in <span class="text-accent-yellow" style="color: #e8e008;">Nursing</span> +<br>
-          <span class="text-accent-yellow" style="color: #e8e008;">German Career Track</span>
-        </h1>
-        <p class="hero-sub">
-          4-year nursing degree programs. Learn, lead, and care with the expertise needed to thrive in modern healthcare.
-        </p>
-
-
-
-        <div class="hero-actions">
-          <a href="#apply" class="btn btn-primary">Apply for the 2026 cohort</a>
-          <a href="#programs" class="btn btn-outline-hero">Explore Programs</a>
-        </div>
-
-        <span class="seats-badge">Only 30 seats — 2026 Batch</span>
-      </div>
-
-      <!-- Hero Right Image & Badges -->
-      <div class="hero-right">
-        <div class="hero-image-wrapper">
-          <div class="hero-person-img">
-            <img src="assets/images/hero.png" alt="Students learning technology" />
-          </div>
-          
-          <div class="hero-float-badge badge-top-right">
-            <strong><span data-count="500">500</span>+</strong>
-            <span>Students Placed</span>
-          </div>
-          <div class="hero-float-badge badge-mid-left">
-            <strong>₹<span data-count="18">22</span>L+</strong>
-            <span>Avg Placement</span>
-          </div>
-          <div class="hero-float-badge badge-bottom-right">
-            <strong>₹<span data-count="45">45</span>L</strong>
-            <span>Highest Package</span>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-
-    <!-- Anchor Pills -->
-    <div class="anchor-pills">
-      <div class="container anchor-pills-inner">
-        <a href="#placement" class="anchor-pill">Placement</a>
-        <a href="#programs" class="anchor-pill">Programs</a>
-        <a href="#curriculum" class="anchor-pill">Curriculum</a>
-        <a href="#experience" class="anchor-pill">Industry Integration</a>
-        <a href="#mentors" class="anchor-pill">Mentors</a>
-        <a href="#admission" class="anchor-pill">Admission Process</a>
-      </div>
-    </div>
-  </section>
+  <!-- Hero: full-screen video -->
+  <?php mu_section('hero'); ?>
 
   <!-- Healthcare Partners Section -->
   <section class="partners-marquee-section">
     <div class="partners-header">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px; position: relative; top: 2px;">
-        <path d="M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1v2H9V7zm0 4h1v2H9v-2zm0 4h1v2H9v-2zm4-8h1v2h-1V7zm0 4h1v2h-1v-2zm0 4h1v2h-1v-2z"></path>
-      </svg>
       HEALTHCARE PARTNERS
     </div>
     <div class="marquee-container">
       <div class="marquee-content">
-        <div class="marquee-item"><img src="assets/images/accord.svg" alt="Accord"></div>
-        <div class="marquee-item"><img src="assets/images/fortis.svg" alt="Fortis"></div>
-        <div class="marquee-item"><img src="assets/images/lifecare.svg" alt="Life Care"></div>
-        <div class="marquee-item"><img src="assets/images/metro.svg" alt="Metro Hospital"></div>
-        <div class="marquee-item"><img src="assets/images/apollo.svg" alt="Apollo"></div>
-        <div class="marquee-item"><img src="assets/images/max.svg" alt="Max Healthcare"></div>
+        <div class="marquee-item"><img src="assets/images/accord-logo.webp" alt="Accord"></div>
+        <div class="marquee-item"><img src="assets/images/fortis-logo.webp" alt="Fortis"></div>
+        <div class="marquee-item"><img src="assets/images/lif-care-logo.webp" alt="Life Care"></div>
+        <div class="marquee-item"><img src="assets/images/metro-logo.webp" alt="Metro Hospital"></div>
+        <div class="marquee-item"><img src="assets/images/apollo-logo.webp" alt="Apollo"></div>
+        <div class="marquee-item"><img src="assets/images/max-logo.webp" alt="Max Healthcare"></div>
         
         <!-- Duplicates for seamless loop -->
-        <div class="marquee-item"><img src="assets/images/accord.svg" alt="Accord"></div>
-        <div class="marquee-item"><img src="assets/images/fortis.svg" alt="Fortis"></div>
-        <div class="marquee-item"><img src="assets/images/lifecare.svg" alt="Life Care"></div>
-        <div class="marquee-item"><img src="assets/images/metro.svg" alt="Metro Hospital"></div>
-        <div class="marquee-item"><img src="assets/images/apollo.svg" alt="Apollo"></div>
-        <div class="marquee-item"><img src="assets/images/max.svg" alt="Max Healthcare"></div>
+        <div class="marquee-item"><img src="assets/images/accord-logo.webp" alt="Accord"></div>
+        <div class="marquee-item"><img src="assets/images/fortis-logo.webp" alt="Fortis"></div>
+        <div class="marquee-item"><img src="assets/images/lif-care-logo.webp" alt="Life Care"></div>
+        <div class="marquee-item"><img src="assets/images/metro-logo.webp" alt="Metro Hospital"></div>
+        <div class="marquee-item"><img src="assets/images/apollo-logo.webp" alt="Apollo"></div>
+        <div class="marquee-item"><img src="assets/images/max-logo.webp" alt="Max Healthcare"></div>
 
-        <div class="marquee-item"><img src="assets/images/accord.svg" alt="Accord"></div>
-        <div class="marquee-item"><img src="assets/images/fortis.svg" alt="Fortis"></div>
-        <div class="marquee-item"><img src="assets/images/lifecare.svg" alt="Life Care"></div>
-        <div class="marquee-item"><img src="assets/images/metro.svg" alt="Metro Hospital"></div>
-        <div class="marquee-item"><img src="assets/images/apollo.svg" alt="Apollo"></div>
-        <div class="marquee-item"><img src="assets/images/max.svg" alt="Max Healthcare"></div>
+        <div class="marquee-item"><img src="assets/images/accord-logo.webp" alt="Accord"></div>
+        <div class="marquee-item"><img src="assets/images/fortis-logo.webp" alt="Fortis"></div>
+        <div class="marquee-item"><img src="assets/images/lif-care-logo.webp" alt="Life Care"></div>
+        <div class="marquee-item"><img src="assets/images/metro-logo.webp" alt="Metro Hospital"></div>
+        <div class="marquee-item"><img src="assets/images/apollo-logo.webp" alt="Apollo"></div>
+        <div class="marquee-item"><img src="assets/images/max-logo.webp" alt="Max Healthcare"></div>
 
-        <div class="marquee-item"><img src="assets/images/accord.svg" alt="Accord"></div>
-        <div class="marquee-item"><img src="assets/images/fortis.svg" alt="Fortis"></div>
-        <div class="marquee-item"><img src="assets/images/lifecare.svg" alt="Life Care"></div>
-        <div class="marquee-item"><img src="assets/images/metro.svg" alt="Metro Hospital"></div>
-        <div class="marquee-item"><img src="assets/images/apollo.svg" alt="Apollo"></div>
-        <div class="marquee-item"><img src="assets/images/max.svg" alt="Max Healthcare"></div>
+        <div class="marquee-item"><img src="assets/images/accord-logo.webp" alt="Accord"></div>
+        <div class="marquee-item"><img src="assets/images/fortis-logo.webp" alt="Fortis"></div>
+        <div class="marquee-item"><img src="assets/images/lif-care-logo.webp" alt="Life Care"></div>
+        <div class="marquee-item"><img src="assets/images/metro-logo.webp" alt="Metro Hospital"></div>
+        <div class="marquee-item"><img src="assets/images/apollo-logo.webp" alt="Apollo"></div>
+        <div class="marquee-item"><img src="assets/images/max-logo.webp" alt="Max Healthcare"></div>
       </div>
     </div>
   </section>
 
-  <?php
-  $programFlags = [
-      ['src' => 'assets/images/flag-ae.svg', 'alt' => 'United Arab Emirates'],
-      ['src' => 'assets/images/flag-cn.svg', 'alt' => 'China'],
-      ['src' => 'assets/images/flag-de.svg', 'alt' => 'Germany'],
-      ['src' => 'assets/images/flag-jp.svg', 'alt' => 'Japan'],
-      ['src' => 'assets/images/singapore-flag.jpeg', 'alt' => 'Singapore'],
-  ];
-  ?>
 
-  <!-- Curriculum Section -->
-  
-  <style>
-    
+  <!-- Why CBC+ — bento stats -->
+  <?php mu_section('bento'); ?>
 
-    * { box-sizing: border-box; }
-    /* html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: var(--font);
-      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
-    } */
-    a { text-decoration: none; color: inherit; }
-    img { display: block; max-width: 100%; }
-    ul { list-style: none; margin: 0; padding: 0; }
+  <!-- Admissions / Global Tracks / Campus Life tabs -->
+  <?php mu_section('events'); ?>
 
-    .container {
-      width: min(1300px, calc(100% - 32px));
-      margin: 0 auto;
-    }
+  <!-- Our Programmes — tabs + carousel -->
+  <?php mu_section('programs'); ?>
 
-    .section {
-      padding:40px 0;
-      background: #ffffff;
-    }
-    .section-header { margin-bottom: 56px; text-align: center; }
-    .section-label {
-      display: inline-block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #4ade80; margin-bottom: 14px;
-    }
-    .section-title {
-      font-family: var(--font-display); font-size: clamp(1.85rem, 4vw, 3rem); font-weight: 800; line-height: 1.1; color: var(--white); margin-bottom: 16px;
-    }
-    .gradient-text {
-      background: linear-gradient(90deg, rgba(36,144,56,1) 0%, rgba(87,199,133,1) 50%, rgba(237,221,83,1) 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
+  <!-- Learn 'Globally' — sticky stacking track cards (#curriculum) -->
+  <?php mu_section('tracks'); ?>
 
-    .curriculum-section {
-      --cur-ease-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      --cur-white-05: rgba(15, 23, 42, 0.05);
-      --cur-white-10: rgba(15, 23, 42, 0.1);
-      --cur-white-40: rgba(15, 23, 42, 0.4);
-      --cur-white-50: rgba(15, 23, 42, 0.5);
-      --cur-white-75: rgba(15, 23, 42, 0.75);
-      --cur-white-80: rgba(15, 23, 42, 0.8);
-      --cur-white-85: rgba(15, 23, 42, 0.85);
-      --cur-sticky-top: calc(var(--nav-h) + var(--ticker-h));
-      --cur-stack-base: 16px;
-      --cur-stack-step: 24px;
-      background: #ffffff;
-      color: #111827;
-      padding: 72px 0;
-    }
+  <!-- Hands-on learning — scroll-synced video -->
+  <?php mu_section('handson'); ?>
 
-    .cur-nav-list li:nth-child(1), .card-purple, .metric-purple, .semester-purple, .bullet-purple { --t-accent: #a78bfa; --t-accent-sem: #c4b5fd; --t-rgb: 139, 92, 246; --t-nav-rgb: 167, 139, 250; --t-pill-rgb: 167, 139, 250; --t-card-border: rgba(167, 139, 250, 0.25); --t-card-from: rgba(20, 15, 35, 0.97); --t-card-to: rgba(12, 8, 25, 0.97); --t-card-shadow: rgba(167, 139, 250, 0.06); }
-    .cur-nav-list li:nth-child(2), .card-cyan, .metric-cyan, .semester-cyan, .bullet-cyan { --t-accent: #22d3ee; --t-accent-sem: #67e8f9; --t-rgb: 6, 182, 212; --t-nav-rgb: 34, 211, 238; --t-pill-rgb: 6, 182, 212; --t-card-border: rgba(34, 211, 238, 0.25); --t-card-from: rgba(8, 25, 35, 0.97); --t-card-to: rgba(5, 15, 22, 0.97); --t-card-shadow: rgba(34, 211, 238, 0.06); }
-    .cur-nav-list li:nth-child(3), .card-green, .metric-green, .semester-green, .bullet-green { --t-accent: #4ade80; --t-accent-sem: #86efac; --t-rgb: 34, 197, 94; --t-nav-rgb: 74, 222, 128; --t-pill-rgb: 34, 197, 94; --t-card-border: rgba(74, 222, 128, 0.25); --t-card-from: rgba(8, 35, 18, 0.97); --t-card-to: rgba(5, 22, 10, 0.97); --t-card-shadow: rgba(74, 222, 128, 0.06); }
-    .cur-nav-list li:nth-child(4), .card-orange, .metric-orange, .semester-orange, .bullet-orange { --t-accent: #fb923c; --t-accent-sem: #fdba74; --t-rgb: 249, 115, 22; --t-nav-rgb: 251, 146, 60; --t-pill-rgb: 249, 115, 22; --t-card-border: rgba(251, 146, 60, 0.25); --t-card-from: rgba(35, 20, 8, 0.97); --t-card-to: rgba(22, 12, 5, 0.97); --t-card-shadow: rgba(251, 146, 60, 0.06); }
+  <!-- Masterclass videos -->
+  <?php mu_section('talks'); ?>
 
-    .container--curriculum { max-width: 1450px; }
-    .curriculum-layout { display: grid; grid-template-columns: 280px 1fr; gap: 60px; align-items: start; }
-    .curriculum-cards-stack { position: relative; padding-bottom: 10vh; }
-    .curriculum-header { margin-bottom: 48px; }
-    .curriculum-path-badge {
-      display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: 0.35em; text-transform: uppercase; color: #475569; padding: 8px 16px; background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 100px; margin-bottom: 18px;
-    }
+  <!-- Learning model — scroll-driven steps -->
+  <?php mu_section('model'); ?>
 
-    .curriculum-sidebar { position: sticky; top: 100px; padding: 24px 0; z-index: 10; }
-    .cur-nav-list { display: flex; flex-direction: column; gap: 20px; }
-    .curriculum-section .cur-nav-link { display: flex; flex-direction: column; padding: 16px 20px 16px 50px; color: var(--cur-white-40); font-weight: 700; border-radius: 12px; transition: all 0.3s var(--cur-ease-bounce); position: relative; cursor: pointer; }
-    .curriculum-section .cur-nav-link::before { content: ''; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); width: 12px; height: 12px; border-radius: 50%; background: var(--cur-white-10); transition: all 0.3s ease; }
-    .cur-nav-num { display: inline-flex; align-items: center; justify-content: center; width: auto; min-width: 86px; height: auto; padding: 8px 10px; border-radius: 999px; font-size: 12px; font-weight: 800; background: var(--cur-white-10); color: var(--cur-white-50); margin-bottom: 8px; flex-shrink: 0; white-space: nowrap; }
-    .cur-nav-title { font-size: 18px; color: inherit; line-height: 1.2;display: flex; justify-content:flex-start;gap: 10px; }
-    .curriculum-section .cur-nav-link:hover { color: #111827; background: #f8fafc; transform: translateX(10px); }
-    .curriculum-section .cur-nav-link.active { color: #111827; background: #f1f5f9; }
-    .cur-nav-list li .cur-nav-num { background: rgba(var(--t-nav-rgb), 0.2); color: #000; }
-    .curriculum-section .cur-nav-link.active .cur-nav-title { color: #0f766e; }
-    .cur-nav-list li .cur-nav-link.active::before { background: #10b981; box-shadow: 0 0 15px rgba(16, 185, 129, 0.35); }
+  <!-- Faculty model — scroll-driven 40 / 40 / 20 split -->
+  <?php mu_section('faculty'); ?>
 
-    .curriculum-card { position: sticky; top: calc(100px + var(--cur-stack-base) + var(--cur-stack-step) * var(--stack-index)); z-index: 1; background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border-radius: 20px; padding: 28px; margin-bottom: 20px; border: 1px solid rgba(148, 163, 184, 0.25); box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08); color: #0f172a; transition: transform 0.4s var(--cur-ease-bounce), border-color 0.4s ease, box-shadow 0.4s ease; will-change: transform; }
-    .curriculum-card:hover { transform: translateY(-5px); }
-    .curriculum-card.card-purple, .curriculum-card.card-cyan, .curriculum-card.card-green, .curriculum-card.card-orange, .curriculum-card.card-white { border-color: rgba(148, 163, 184, 0.35); background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08); color: #0f172a; }
-    .curriculum-card .curriculum-year-num { color: #0a0a0a; opacity: 1; }
-    .curriculum-card .curriculum-card-header h3 { color: #0f172a; }
-    .curriculum-card .curriculum-card-subtitle { color: #475569; }
-    .curriculum-card .curriculum-course-item { color: #334155; }
-    .curriculum-card .curriculum-bottom-tag { background: #f1f5f9; color: #334155; border: 1px solid #e2e8f0; }
-    .curriculum-card .curriculum-semester-box { background: #ffffff; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
+  <!-- Hospitals are your classroom -->
+  <?php mu_section('industry'); ?>
 
-    #curriculum #year1 { --stack-index: 0; }
-    #curriculum #year2 { --stack-index: 1; }
-    #curriculum #year3 { --stack-index: 2; }
-    #curriculum #year4 { --stack-index: 3; }
-
-    .curriculum-card-body { display: block; max-height: 440px; overflow-y: auto; padding-right: 10px; }
-    .curriculum-card-body::-webkit-scrollbar { width: 5px; }
-    .curriculum-card-body::-webkit-scrollbar-track { background: var(--cur-white-05); }
-    .curriculum-card-body::-webkit-scrollbar-thumb { background: var(--cur-white-10); border-radius: 10px; }
-
-    .curriculum-card-header { display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto auto; gap: 16px; margin-bottom: 32px; align-items: start; position: relative; }
-    .curriculum-title-row { grid-column: 1 / 2; grid-row: 1 / 2; display: flex; align-items: center; gap: 16px; }
-    .curriculum-country-flag { position: absolute; top: 0; right: 0; width: 60px; height: auto; object-fit: contain; }
-    .curriculum-card-subtitle { grid-column: 1 / -1; grid-row: 2 / 3; font-size: 15px; color: var(--cur-white-75); line-height: 1.6; margin: 0; }
-    .curriculum-card-header h3 { font-family: var(--font-display); font-size: 32px; font-weight: 800; margin: 0; color: #111827; }
-    .card-purple h3, .card-cyan h3, .card-green h3, .card-orange h3 { text-shadow: 0 0 30px rgba(var(--t-rgb), 0.4); }
-    .curriculum-year-num { width: auto; min-width: 96px; height: auto; padding: 10px 14px; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 22px; font-weight: 800; border-radius: 12px; flex-shrink: 0; transition: transform 0.3s var(--cur-ease-bounce); white-space: nowrap; }
-    .curriculum-card:hover .curriculum-year-num { transform: scale(1.1); }
-    .curriculum-card .curriculum-year-num { background: linear-gradient(135deg, #eef2ff, #f8fafc); color: #111827; text-shadow: none; border: 1px solid #e5e7eb; }
-
-    .curriculum-semesters { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 24px; align-items: stretch; }
-    .curriculum-semester-box { background: #ffffff; border-radius: 14px; padding: 16px; transition: background 0.3s ease, transform 0.3s ease; display: flex; flex-direction: column; border: 1px solid #eef2f7; }
-    .curriculum-semester-box .curriculum-course-list { flex: 1; }
-    .curriculum-semester-box img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; margin-top: auto; }
-    .curriculum-semester-box:hover { background: #f8fafc; transform: translateY(-2px); }
-    .curriculum-semester-tag { display: inline-flex; align-items: center; padding: 6px 16px; border-radius: 20px; font-size: 14px; font-weight: 700; margin-bottom: 14px; margin-right: 8px; }
-    .semester-purple, .semester-cyan, .semester-green, .semester-orange { background: #f1f5f9; color: #334155; text-shadow: none; border: 1px solid #e5e7eb; }
-    .semester-dark { background: #1e293b; color: #ffffff; border: 1px solid #334155; }
-    .curriculum-course-list { display: flex; flex-direction: column; gap: 10px; }
-    .curriculum-course-item { padding: 6px 0; font-size: 13.5px; color: #334155; display: flex; align-items: flex-start; gap: 10px; transition: transform 0.2s ease, color 0.2s ease; }
-    .curriculum-course-item:hover { transform: translateX(6px); color: #111827; }
-    .curriculum-section [class^="bullet-"] { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
-    .bullet-purple, .bullet-cyan, .bullet-green, .bullet-orange { background: #10b981; box-shadow: none; }
-    .bullet-yellow { background: #fbbf24; box-shadow: 0 0 10px rgba(251,191,36,0.8); }
-    .bullet-pink { background: #f472b6; box-shadow: 0 0 10px rgba(244,114,182,0.8); }
-
-    .curriculum-bottom-tags { display: flex; gap: 20px; flex-wrap: wrap; padding: 16px 32px; background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 16px; justify-content: center; margin-top: 24px; }
-    .curriculum-bottom-tag { display: flex; align-items: center; gap: 8px; font-size: 15px; color: #334155; transition: transform 0.2s ease, color 0.2s ease; }
-    .curriculum-bottom-tag:hover { transform: translateY(-3px); color: #111827; }
-    .curriculum-tag-dot { width: 8px; height: 8px; border-radius: 50%; }
-    .tag-dot-purple { background: #a855f7; }
-    .tag-dot-cyan { background: #06b6d4; }
-    .tag-dot-emerald { background: #10b981; }
-    .tag-dot-amber { background: #f59e0b; }
-
-    @media (max-width: 991.98px) {
-      .curriculum-layout { grid-template-columns: minmax(0, 1fr); gap: 0; }
-      .curriculum-sidebar { position: sticky; top: 0; padding: 10px 0; background: rgba(6, 6, 16, 0.96); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.07); margin-bottom: 0; }
-      .cur-nav-list { flex-direction: row; gap: 10px; overflow-x: auto; padding: 4px 16px 10px; scrollbar-width: none; }
-      .cur-nav-list::-webkit-scrollbar { display: none; }
-      .curriculum-section .cur-nav-link { flex-shrink: 0; flex-direction: row; gap: 8px; align-items: center; padding: 8px 16px; border-radius: 100px; white-space: nowrap; min-height: 44px; transform: none !important; border: 1px solid var(--cur-white-10); background: rgba(255,255,255,0.04); }
-      .curriculum-section .cur-nav-link::before { position: static; transform: none; width: 8px; height: 8px; }
-      .cur-nav-num { margin-bottom: 0; }
-      .cur-nav-title { font-size: 14px; color:white;}
-      .cur-nav-list li .cur-nav-link.active { background: rgba(var(--t-pill-rgb), 0.2); border-color: rgba(var(--t-pill-rgb), 0.5); color: #ffffff; }
-      .cur-nav-list li .cur-nav-link.active .cur-nav-num { background: rgba(255,255,255,0.25); color: #ffffff; }
-      .cur-nav-list li .cur-nav-link.active .cur-nav-title { color: #ffffff; }
-      .curriculum-card { margin-bottom: 16px; }
-      .curriculum-semesters { display: flex; flex-wrap: nowrap; gap: 16px; overflow-x: auto; padding-bottom: 8px; scrollbar-width: none; }
-      .curriculum-semesters::-webkit-scrollbar { display: none; }
-      .curriculum-semester-box { flex: 0 0 45%; min-width: 300px; }
-    }
-
-    @media (max-width: 767.98px) {
-      .curriculum-card { padding: 20px 16px; margin-bottom: 14px; }
-      .curriculum-card-header { grid-template-columns: 1fr; grid-template-rows: auto auto auto; gap: 12px; margin-bottom: 20px; }
-      .curriculum-title-row { grid-column: 1 / -1; grid-row: 1 / 2; }
-      .curriculum-card-subtitle { grid-row: 2 / 3; font-size: 13px; }
-      .curriculum-year-num { min-width: 84px; padding: 8px 12px; font-size: 18px; border-radius: 10px; }
-      .curriculum-card-header h3 { font-size: 15px; }
-      .curriculum-semesters { gap: 12px; margin-bottom: 16px; }
-      .curriculum-semester-box { padding: 14px; border-radius: 12px; flex: 0 0 88%; min-width: 88%; max-width: 88%; width: 88%; }
-      .curriculum-semester-tag { font-size: 13px; padding: 6px 14px; margin-bottom: 12px; }
-      .curriculum-course-item { font-size: 13px; padding: 4px 0; }
-      .curriculum-bottom-tags { padding: 14px 16px; gap: 12px; margin-top: 18px; border-radius: 14px; }
-      .curriculum-bottom-tag { font-size: 13px; }
-      .year-4-flg{display: none;}
-      .curriculum-sidebar{display:none;}
-    }
-  </style>
-
-   <main class="section curriculum-section" id="curriculum">
-    <div class="container container--curriculum">
-      <div class="section-header">
-        <span class="curriculum-path-badge">Curriculum Path</span>
-        <h2 class="section-title">Your Global<span class="gradient-text"> Learning Journey</span></h2>
-      </div>
-
-      <div class="curriculum-layout">
-        <nav class="curriculum-sidebar" aria-label="Curriculum years">
-          <ul class="cur-nav-list">
-            <li><a href="#year1" data-target="year1" class="cur-nav-link active"><span class="cur-nav-num">1st Year</span><span class="cur-nav-title">Dubai Track <img src="assets/images/flag-ae.svg" alt="UAE flag" style="width: 20px;"/></span></a></li>
-            <li><a href="#year2" data-target="year2" class="cur-nav-link"><span class="cur-nav-num">2nd Year</span><span class="cur-nav-title">China Track <img src="assets/images/flag-cn.svg" alt="UAE flag" style="width: 20px; height:15px; margin-top:3px"/></span></a></li>
-            <li><a href="#year3" data-target="year3" class="cur-nav-link"><span class="cur-nav-num">3rd Year</span><span class="cur-nav-title">Singapore Track <img src="assets/images/singapore-flag.jpeg" alt="UAE flag" style="width: 20px;height:15px; margin-top:3px"/></span></a></li>
-            <li><a href="#year4" data-target="year4" class="cur-nav-link"><span class="cur-nav-num">4th Year</span><span class="cur-nav-title">Japan/Germany Career Track <img src="assets/images/jp-flag.jpg" alt="UAE flag" style="width: 20px;height:15px; margin-top:3px"/> <img src="assets/images/flag-de.svg" alt="UAE flag" style="width: 20px;height:15px; margin-top:3px"/></span></a></li>
-          </ul>
-        </nav>
-
-        <div class="curriculum-cards-stack">
-          <section id="year1" class="curriculum-card card-purple">
-            <div class="curriculum-card-header">
-              <img class="curriculum-country-flag" src="assets/images/flag-ae.svg" alt="UAE flag" />
-              <div class="curriculum-title-row"><span class="curriculum-year-num" aria-hidden="true">1st Year</span><h3>Dubai Track</h3></div>
-              <p class="curriculum-card-subtitle">Dubai track is the specially designed health care study & practice tour for Nursing & Physiotherpay students offering a unique opportunity to explore Dubai's world-class health care eco-system, Modern medical facilities & International health care practices.</p>
-            </div>
-            <div class="curriculum-card-body">
-              <div class="curriculum-semesters">
-                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-purple">Program Outcome</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-purple" aria-hidden="true"></span>Hospital & healthcare facility visits</li><li class="curriculum-course-item"><span class="bullet-cyan" aria-hidden="true"></span>Understanding International health care standards & patient care practices</li><li class="curriculum-course-item"><span class="bullet-pink" aria-hidden="true"></span>Professional learning sessions</li>
-              <li class="curriculum-course-item"><span class="bullet-pink" aria-hidden="true"></span>Guidance on health care licensing pathways in the UAE</li>
-            </ul></div>
-                <div class="curriculum-semester-box"><img src="assets/images/dubai-design.jpeg"></div>
-              </div>
-              <div class="curriculum-bottom-tags"><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-purple"></span>International Exposure</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-cyan"></span>Multi-cultural health care environment</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-emerald"></span>Interaction with UAE health care professionals</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-amber"></span>Certifications</span></div>
-            </div>
-          </section>
-
-          <section id="year2" class="curriculum-card card-cyan">
-            <div class="curriculum-card-header">
-              <img class="curriculum-country-flag" src="assets/images/flag-cn.svg" alt="China flag" />
-              <div class="curriculum-title-row"><span class="curriculum-year-num" aria-hidden="true">2nd Year</span><h3>China Track</h3></div>
-              <p class="curriculum-card-subtitle">The China track is a speically designed study & practice tour for Nursing & Physiotherapy students, offering an exciting opportunity to experience how Artificial Intelligence(AI) is transforming health care in one of the world's leading technology & innovation hubs.</p>
-            </div>
-            <div class="curriculum-card-body">
-              <div class="curriculum-semesters">
-                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-cyan">Program Outcome</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-cyan"></span>Learning how AI assist in diagnosis, patient monitoring, & treatment planning</li><li class="curriculum-course-item"><span class="bullet-purple"></span>Visits to advanced health care institutions & innovation centers</li><li class="curriculum-course-item"><span class="bullet-green"></span>Introduction to robotic rehabilitation systems</li><li class="curriculum-course-item"><span class="bullet-pink"></span>Experienced Chinese culture, Education & tehnological advancement</li></ul></div>
-                <div class="curriculum-semester-box"><img src="assets/images/china.jpg"></div>
-              </div>
-          </section>
-
-          <section id="year3" class="curriculum-card card-white">
-            <div class="curriculum-card-header">
-              <img class="curriculum-country-flag" src="assets/images/singapore-flag.jpeg" alt="Japan flag" />
-              <div class="curriculum-title-row"><span class="curriculum-year-num" aria-hidden="true">3rd Year</span><h3>Singapore Track</h3></div>
-              <p class="curriculum-card-subtitle">The Singapore track is a specially designed health care study & practice tour for students offering an opportunity to experience a high health care standards, excellent preparation outcomes, advanced medical infrastructure & strong emphasis on preventive care, making it an ideal destination for future health care professionals.</p>  
-            </div>
-            <div class="curriculum-card-body">
-              <div class="curriculum-semesters">
-                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-dark">Program Outcome</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-green"></span>Understanding Singapore's health care delivery model</li><li class="curriculum-course-item"><span class="bullet-pink"></span>Learning evidence-based clinical practices</li><li class="curriculum-course-item"><span class="bullet-purple"></span>Understanding digital health & electronic medical records</li><li class="curriculum-course-item"><span class="bullet-orange"></span>Exposure to community & preventive health care programs</li><li class="curriculum-course-item"><span class="bullet-yellow"></span>Understanding elderly care & rehabilitation services in Singapore</li></ul></div>
-                <div class="curriculum-semester-box"><img src="assets/images/nursing.png"></div>
-              </div>
-          </section>
-
-          <section id="year4" class="curriculum-card card-orange">
-            <div class="curriculum-card-header">
-              <img class="curriculum-country-flag year-4-flg" src="assets/images/jp-flag.jpg" alt="Japan flag" style="right: 80px;" />
-              <img class="curriculum-country-flag year-4-flg" src="assets/images/flag-de.svg" alt="Germany flag" style="right: 10px;"/>
-              <div class="curriculum-title-row"><span class="curriculum-year-num" aria-hidden="true">4th Year</span><h3>Germany/Japan Career Track</h3></div>
-              <p class="curriculum-card-subtitle">The Japan/Germany career track is a specialised placement-driven program designed for nursing & physiotherapy students who aspire to build succedful careers in Germany or Japan.<br>
-            Unlike a study tour, this is long-term career development pathway that prepares students through language training, International health care orientation, interview preparation, certification support, & placement assistance.</p>
-            </div>
-            <div class="curriculum-card-body">
-              <div class="curriculum-semesters">
-                <div class="curriculum-semester-box"><div class="curriculum-semester-tag semester-orange">Program Details</div><ul class="curriculum-course-list"><li class="curriculum-course-item"><span class="bullet-orange"></span>International career planning</li><li class="curriculum-course-item"><span class="bullet-yellow"></span>German language training</li>
-              <li class="curriculum-course-item"><span class="bullet-orange"></span>Japanese language training</li>
-              <li class="curriculum-course-item"><span class="bullet-yellow"></span>English & IELTS preparation</li>
-              <li class="curriculum-course-item"><span class="bullet-orange"></span>AR/VR classes for advanced health care training purpose</li>
-              <li class="curriculum-course-item"><span class="bullet-yellow"></span>Mock examinations & practice sessions</li>
-            </ul></div>
-                <div class="curriculum-semester-box"><img src="assets/images/germany.webp"></div>
-              </div>
-              <div class="curriculum-bottom-tags"><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-amber"></span>Global placement assistance</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-emerald"></span>Health care workforce preparation</span><span class="curriculum-bottom-tag"><span class="curriculum-tag-dot tag-dot-cyan"></span>language training & certification supports</span>
-            </div>
-          </section>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <script>
-    (function () {
-      const section = document.getElementById('curriculum');
-      if (!section) return;
-
-      const navLinks = section.querySelectorAll('.cur-nav-link');
-      const cards = section.querySelectorAll('.curriculum-card');
-
-      function setActive(cardId) {
-        navLinks.forEach((link) => {
-          link.classList.toggle('active', link.dataset.target === cardId);
-        });
-      }
-
-      function updateActiveFromScroll() {
-        const trigger = window.innerHeight * 0.35;
-        let activeId = cards[0]?.id || null;
-
-        for (let i = cards.length - 1; i >= 0; i--) {
-          const card = cards[i];
-          const rect = card.getBoundingClientRect();
-          if (rect.top <= trigger) {
-            activeId = card.id;
-            break;
-          }
-        }
-
-        setActive(activeId);
-      }
-
-      navLinks.forEach((link) => {
-        link.addEventListener('click', (e) => {
-          e.preventDefault();
-          const target = document.getElementById(link.dataset.target);
-          if (!target) return;
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          setActive(target.id);
-        });
-      });
-
-      cards.forEach((card) => {
-        card.addEventListener('click', (e) => {
-          if (e.target.closest('a, button')) return;
-          setActive(card.id);
-        });
-      });
-
-      updateActiveFromScroll();
-      window.addEventListener('scroll', updateActiveFromScroll, { passive: true });
-      window.addEventListener('resize', updateActiveFromScroll, { passive: true });
-    })();
-  </script>
 <!-- AI Trends vs Traditional Education -->
     <section id="ai-trends" class="section">
         <div class="container" style="max-width: 1600px;">
@@ -631,8 +371,8 @@ function initAITrendsCharts() {
                 datasets: [{
                     label: 'Avg. Monthly Salary (INR)',
                     data: [28000, 260000, 320000],
-                    backgroundColor: ['rgba(255, 255, 255, 0.2)', '#22d3ee', '#a78bfa'],
-                    borderColor: ['rgba(255, 255, 255, 0.5)', '#22d3ee', '#a78bfa'],
+                    backgroundColor: ['rgba(0, 0, 0, 0.1)', '#0369a1', '#6d28d9'],
+                    borderColor: ['rgba(0, 0, 0, 0.3)', '#0369a1', '#6d28d9'],
                     borderWidth: 1,
                     borderRadius: 8
                 }]
@@ -643,8 +383,8 @@ function initAITrendsCharts() {
                 animation: { duration: 2000, easing: 'easeOutQuart' },
                 plugins: { legend: { display: false } },
                 scales: {
-                    x: { grid: { display: false }, ticks: { color: 'rgba(255,255,255,0.7)' } },
-                    y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: 'rgba(255,255,255,0.5)' } }
+                    x: { grid: { display: false }, ticks: { color: 'rgba(0,0,0,0.6)' } },
+                    y: { grid: { color: 'rgba(0,0,0,0.1)' }, ticks: { color: 'rgba(0,0,0,0.6)' } }
                 }
             }
         });
@@ -660,12 +400,12 @@ function initAITrendsCharts() {
                 datasets: [{
                     label: 'Nursing Vacancies',
                     data: [180000, 260000, 340000, 420000, 500000],
-                    borderColor: '#fbbf24',
-                    backgroundColor: 'rgba(251, 191, 36, 0.1)',
+                    borderColor: '#b45309',
+                    backgroundColor: 'rgba(180, 83, 9, 0.1)',
                     borderWidth: 3,
                     fill: true,
                     tension: 0.4,
-                    pointBackgroundColor: '#fbbf24'
+                    pointBackgroundColor: '#b45309'
                 }]
             },
             options: {
@@ -674,8 +414,8 @@ function initAITrendsCharts() {
                 animation: { duration: 2000, easing: 'easeOutQuart' },
                 plugins: { legend: { display: false } },
                 scales: {
-                    x: { grid: { display: false }, ticks: { color: 'rgba(255,255,255,0.7)' } },
-                    y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: 'rgba(255,255,255,0.5)' } }
+                    x: { grid: { display: false }, ticks: { color: 'rgba(0,0,0,0.6)' } },
+                    y: { grid: { color: 'rgba(0,0,0,0.1)' }, ticks: { color: 'rgba(0,0,0,0.6)' } }
                 }
             }
         });
@@ -690,7 +430,7 @@ function initAITrendsCharts() {
                 labels: ['Germany', 'Japan', 'Other EU'],
                 datasets: [{
                     data: [45, 35, 20],
-                    backgroundColor: ['#a78bfa', '#22d3ee', 'rgba(255, 255, 255, 0.1)'],
+                    backgroundColor: ['#6d28d9', '#0369a1', 'rgba(0, 0, 0, 0.1)'],
                     borderWidth: 0,
                     hoverOffset: 15
                 }]
@@ -702,7 +442,7 @@ function initAITrendsCharts() {
                 plugins: { 
                     legend: { 
                         position: 'bottom',
-                        labels: { color: 'rgba(255,255,255,0.8)', padding: 12, font: { size: 10 } } 
+                        labels: { color: 'rgba(0,0,0,0.8)', padding: 12, font: { size: 10 } } 
                     } 
                 }
             }
@@ -728,7 +468,7 @@ function initAITrendsCharts() {
                     { 
                         label: 'Local Track (Savings)', 
                         data: [1, 2.5, 4.5, 7, 10], 
-                        borderColor: 'rgba(255,255,255,0.3)', 
+                        borderColor: 'rgba(0,0,0,0.3)', 
                         borderWidth: 2, 
                         borderDash: [5, 5], 
                         fill: false 
@@ -741,12 +481,12 @@ function initAITrendsCharts() {
                 plugins: { 
                     legend: { 
                         position: 'top',
-                        labels: { color: 'rgba(255,255,255,0.7)', font: { size: 9 }, padding: 8 } 
+                        labels: { color: 'rgba(0,0,0,0.7)', font: { size: 9 }, padding: 8 } 
                     } 
                 },
                 scales: {
-                    x: { grid: { display: false }, ticks: { color: 'rgba(255,255,255,0.5)' } },
-                    y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: 'rgba(255,255,255,0.5)' } }
+                    x: { grid: { display: false }, ticks: { color: 'rgba(0,0,0,0.6)' } },
+                    y: { grid: { color: 'rgba(0,0,0,0.1)' }, ticks: { color: 'rgba(0,0,0,0.6)' } }
                 }
             }
         });
@@ -767,190 +507,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
       </script>
-  <!-- Featured Programs -->
-  <section class="section programs-section" id="programs">
-      <div class="container">
-          <div class="section-header">
-              <span class="section-label reveal-up">Featured Programs</span>
-              <h2 class="section-title reveal-up">Choose Your Path to the <span class="text-accent">Top 1%</span></h2>
-              <p class="section-desc reveal-up text-center">Three Global Healthcare-aligned undergraduated programs designed to make you Global Healthcare job-ready from day one.</p>
-          </div>
 
-          <div class="programs-slider-wrap" style="position: relative;">
-              <div class="swiper programs-swiper" style="padding-bottom: 50px;">
-                  <div class="swiper-wrapper">
-                  <article class="program-card swiper-slide reveal-up" data-tilt>
-                      <div class="program-ribbon">Most Popular</div>
+  <!-- Full-bleed "Watch Video" -->
+  <?php mu_section('film'); ?>
 
-                      <div class="program-card-shine"></div>
-                      <div class="program-top">
-                          <span class="program-badge">
-                              Global Healthcare Ready
-                              <?php foreach ($programFlags as $flag): ?>
-                              <img class="flag-icon" src="<?= htmlspecialchars($flag['src']) ?>" alt="<?= htmlspecialchars($flag['alt']) ?>" width="20" height="14" loading="lazy" />
-                              <?php endforeach; ?>
-                          </span>
-                          <span class="program-duration">4 Years · Full Time</span>
-                      </div>
-                      <h3 class="program-name">Bsc in Nursing (Global Track)</h3>
-                      <p class="program-desc">Master Global Healthcare practices, Real practice in Dubai, China, Japan, Germany Hospitals, International certifications built for top global healthcare roles.</p>
-                      <div class="program-metrics">
-                          <div class="metric-item"><strong>18.50 Lakhs</strong><span>Fees</span></div>
-                          <div class="metric-divider"></div>
-                          <div class="metric-item"><strong>100+</strong><span>Global Hiring Partners</span></div>
-                          <div class="metric-divider"></div>
-                          <div class="metric-item"><strong>₹18–35 LPA</strong><span>Avg. Package</span></div>
-                      </div>
-                      <ul class="program-tags">
-                          <li>AI in Health Care Practice in China</li>
-                          <li>German Language Classes</li>
-                          <li>International Clinical Practice</li>
-                          <li>IELTS Classes</li>
-                      </ul>
-                      <div class="program-eligibility">
-                          <span class="program-eligibility-label">Eligibility</span>
-                          <ul class="program-eligibility-list">
-                              <li>10+2 (12th) pass with Physics, Chemistry, Biology &amp; English</li>
-                              <li>Minimum 50% aggregate marks in PCB</li>
-                              <li>Age: 17–35 years as on 31 December of the admission year</li>
-                          </ul>
-                      </div>
-                      <div class="program-actions">
-                          <a href="#apply" class="btn btn-primary magnetic-btn">Apply Now</a>
-                          <a href="#curriculum" class="btn btn-ghost magnetic-btn">View Curriculum</a>
-                      </div>
-                  </article>
+  <!-- Clinical experiences carousel -->
+  <?php mu_section('experiences'); ?>
 
-                  <article class="program-card program-card--featured swiper-slide reveal-up" data-tilt>
-                      <div class="program-card-shine"></div>
-                      <div class="program-top">
-                          <span class="program-badge">
-                              Global Healthcare Ready
-                              <?php foreach ($programFlags as $flag): ?>
-                              <img class="flag-icon" src="<?= htmlspecialchars($flag['src']) ?>" alt="<?= htmlspecialchars($flag['alt']) ?>" width="20" height="14" loading="lazy" />
-                              <?php endforeach; ?>
-                          </span>
-                          <span class="program-duration">3 Years · Full Time</span>
-                      </div>
-                      <h3 class="program-name">General Nursing and Midwifery (GNM) <br>(Global Track)</h3>
-                      <p class="program-desc">Master Global Healthcare practices, Real practice in Dubai, China, Japan/Germany Hospitals, International certifications built for top global healthcare roles.</p>
-                      <div class="program-metrics">
-                          <div class="metric-item"><strong>₹11.50 Lakhs</strong><span>Fees</span></div>
-                          <div class="metric-divider"></div>
-                          <div class="metric-item"><strong>₹15-30 LPA</strong><span>Avg. Package</span></div>
-                          <div class="metric-divider"></div>
-                          <div class="metric-item"><strong>100+</strong><span>Global Hiring Partners</span></div>
-                      </div>
-                      <ul class="program-tags">
-                          <li>International General Nursing Practices</li>
-                          <li>Global Practice Exposure</li>
-                          <li>German Language Classes</li>
-                          <li>IELTS Classes</li>
-                      </ul>
-                      <div class="program-eligibility">
-                          <span class="program-eligibility-label">Eligibility</span>
-                          <ul class="program-eligibility-list">
-                              <li>10+2 (12th) pass in any stream (Arts, Science or Commerce)</li>
-                              <li>Minimum 50% aggregate marks</li>
-                              <li>Age: 17–35 years as on 31 December of the admission year</li>
-                          </ul>
-                      </div>
-                      <div class="program-actions">
-                          <a href="#apply" class="btn btn-primary magnetic-btn">Apply Now</a>
-                          <a href="#curriculum" class="btn btn-ghost magnetic-btn">View Curriculum</a>
-                      </div>
-                  </article>
+  <!-- What it's really like — vertical marquee -->
+  <?php mu_section('breather'); ?>
 
-                  <article class="program-card swiper-slide reveal-up" data-tilt>
-                      <div class="program-card-shine"></div>
-                      <div class="program-top">
-                          <span class="program-badge">
-                              Global Healthcare Ready
-                              <?php foreach ($programFlags as $flag): ?>
-                              <img class="flag-icon" src="<?= htmlspecialchars($flag['src']) ?>" alt="<?= htmlspecialchars($flag['alt']) ?>" width="20" height="14" loading="lazy" />
-                              <?php endforeach; ?>
-                          </span>
-                          <span class="program-duration">4 Years · Full Time</span>
-                      </div>
-                      <h3 class="program-name">Bachelor in Physiotherapy <br>(Global Track)</h3>
-                      <p class="program-desc">Master in Global Physiotherapy practices, practice in Dubai, China, Japan/Germany hospitals and Australian global entrance examination preparation built for global standard physiotherapy roles.</p>
-                      <div class="program-metrics">
-                          <div class="metric-item"><strong>₹12.50 Lakhs</strong><span>Fees</span></div>
-                          <div class="metric-divider"></div>
-                          <div class="metric-item"><strong>₹20-40 LPA</strong><span>Avg. Package</span></div>
-                          <div class="metric-divider"></div>
-                          <div class="metric-item"><strong>80+</strong><span>Global Hiring Partners</span></div>
-                      </div>
-                      <ul class="program-tags">
-                          <li>Dubai Clinical Exposure Pathway</li>
-                          <li>China AI & Smart Rehabilitation</li>
-                          <li>Australia Career Track Preparation</li>
-                          <li>German Language Training (A1, A2, B1 & B2)</li>
-                      </ul>
-                      <div class="program-eligibility">
-                          <span class="program-eligibility-label">Eligibility</span>
-                          <ul class="program-eligibility-list">
-                              <li>10+2 (12th) pass with Physics, Chemistry, Biology &amp; English</li>
-                              <li>Minimum 50% aggregate marks in PCB</li>
-                              <li>Age: 17–25 years as on 31 December of the admission year</li>
-                          </ul>
-                      </div>
-                      <div class="program-actions">
-                          <a href="#apply" class="btn btn-primary magnetic-btn">Apply Now</a>
-                          <a href="#curriculum" class="btn btn-ghost magnetic-btn">View Curriculum</a>
-                      </div>
-                  </article>
-              </div>
-                  <div class="swiper-pagination"></div>
-              </div>
-              
-              <!-- Swiper Navigation Arrows (Desktop) -->
-              <div class="swiper-button-prev programs-button-prev"></div>
-              <div class="swiper-button-next programs-button-next"></div>
-          </div>
-      </div>
-  </section>
+  <!-- Student stories — coverflow -->
+  <?php mu_section('alumni'); ?>
 
+  <!-- Placement Section  -->
+  <?php require 'placement.php'; ?>
 
-  <!-- Campus -->
+  <!-- Graduation video -->
+  <?php mu_section('convocation'); ?>
 
-  <section class="section campus-section" id="campus">
-        <div class="container">
-            <div class="campus-grid">
-                <div class="campus-info reveal-up">
-                    <span class="section-label">Your degree is awarded by</span>
-                    <h2 class="section-title">Partner Institution<br><span class="text-muted">NAAC Grade</span></h2>
-                    <p class="section-desc">A recognized university with modern infrastructure. Don't miss out on the full college experience.</p>
-                    <div class="campus-stats">
-                        <div class="campus-stat"><strong>YES</strong><span>IAP</span></div>|
-                        <div class="campus-stat"><strong>Yes</strong><span>INC</span></div>|
-                        <div class="campus-stat"><strong>Yes</strong><span>State Govt Approved</span></div>|
-                        <div class="campus-stat"><strong>Yes</strong><span>Govt Degree</span></div>
-                        
-                    </div>
-                </div>
-                <div class="campus-gallery reveal-up">
-                    <div class="swiper campus-swiper">
-                        <div class="swiper-wrapper">
-                             <div class="swiper-slide"><img src="assets/images/7.webp" alt="Campus-Lab" loading="lazy"></div>
-                            <div class="swiper-slide"><img src="assets/images/lab-2.jpg" alt="Campus-Lab" loading="lazy"></div>
-                            <div class="swiper-slide"><img src="assets/images/1.webp" alt="Campus-Lab" loading="lazy"></div>
-                            <div class="swiper-slide"><img src="assets/images/lab-3.jpg" alt="Campus-Lab" loading="lazy"></div>
-                            <div class="swiper-slide"><img src="assets/images/lab-4.jpg" alt="Campus-Lab" loading="lazy"></div>
-                            <div class="swiper-slide"><img src="assets/images/4.webp" alt="Campus-Lab" loading="lazy"></div>
-                            <div class="swiper-slide"><img src="assets/images/lab-8.jpg" alt="Campus-Lab" loading="lazy"></div>
-                            <div class="swiper-slide"><img src="assets/images/lab-6.jpg" alt="Campus-Lab" loading="lazy"></div>
-                            <div class="swiper-slide"><img src="assets/images/lab-13.jpg" alt="Campus-Lab" loading="lazy"></div>
-                            <div class="swiper-slide"><img src="assets/images/lab-15.jpg" alt="Campus-Lab" loading="lazy"></div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Campus hub + map (#campus) -->
+  <?php mu_section('campus'); ?>
 
+  <!-- Visit the campus: directions, QR, India map -->
+  <?php mu_section('visit'); ?>
 
+  <!-- Why Choose Us (hidden: its points now live in the bento, hands-on & learning-model sections; change false to true to show it again) -->
+  <?php if (false): ?>
   <!-- Why Choose Us -->
   <section class="section why-section" id="why-us">
     <div class="container">
@@ -987,7 +570,10 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     </div>
   </section>
+  <?php endif; ?>
 
+  <!-- Mentors Section (hidden for now — remove the comment markers to bring it back) -->
+  <?php /* require 'mentors-section.php'; */ ?>
   <!-- Admission Process -->
  <?php require 'admission.php'; ?>
   
@@ -1023,7 +609,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="cta-contact-grid">
           <article class="cta-contact-info cta-reveal-up">
             <span class="cta-section-label">Get In Touch</span>
-            <h2 class="cta-section-title">Ready to Join the <span class="text-accent">2026 Cohort?</span></h2>
+            <h2 class="cta-section-title">Ready to Join the <span class="text-accent">2027 Cohort?</span></h2>
             <p class="cta-section-desc">Take the first step. Our admissions team is ready to guide you through the process.</p>
 
             <div class="cta-contact-details">
@@ -1070,7 +656,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="#" class="logo"><span class="logo-mark"><img src="assets/images/cbc.logo.png" alt="Career Buddy College Logo"></span><span class="logo-text" style="color: #e8e008;">Career Buddy College<sup class="logo-sup">+</sup></span></a>
-                    <p>Empowering the next generation of tech innovators with premium, industry-ready education.</p>
+                    <p>Empowering the next generation of healthcare professionals with premium, global healthcare industry ready education.</p>
                     
                 </div>
                 <div class="footer-links-wrapper">
@@ -1095,6 +681,12 @@ Where a university or a programme is listed on CBC website, CBC acts as the indu
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Shared video popup + video section behaviour -->
+    <?php mu_section('modal'); ?>
+    <?php mu_section('mobilecta'); ?>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="assets/js/mu-home.js?v=<?= filemtime(__DIR__ . '/assets/js/mu-home.js') ?>"></script>
 
 </body>
 </html>
