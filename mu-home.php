@@ -140,23 +140,22 @@ $muModel = [
      'cards' => [['assets/images/germany.webp', 'Career Planning', 'Germany & Japan pathways'], ['assets/images/lab-13.jpg', 'Interview Prep', 'Mock interviews & exams'], ['assets/images/lab-15.jpg', 'Placement Support', 'Abroad placement assistance']]],
 ];
 
-/* Faculty model — scroll-driven like $muModel. 4 faculty per group.
- * PLACEHOLDER faculty: names/photos are demo (Pexels stock). Replace with real faculty before going live. */
+/* Faculty model — scroll-driven like $muModel. Each person: [photo, name, role, credential ('' hides the line)].
+ * Language & Full-Time use real photos from assets/images/. Visiting Faculty is still PLACEHOLDER (Pexels stock) — replace before going live. */
+function mu_fac_img($dir, $file) { return 'assets/images/' . rawurlencode($dir) . '/' . rawurlencode($file); } // folder/file names contain spaces and &
 function mu_photo($id, $w = 480) { return 'https://images.pexels.com/photos/' . $id . '/pexels-photo-' . $id . '.jpeg?auto=compress&cs=tinysrgb&w=' . $w . '&h=' . round($w * 1.05) . '&fit=crop'; }
 $muFaculty = [
     ['n' => '40', 'b' => 'Language & Global Exposure', 'l' => 'Certified language trainers and global-placement experts preparing you for Germany, Japan, Dubai & beyond.',
-     'people' => [
-        [mu_photo('5998474'), 'Dr. Anna Weber',   'German Language Lead (A1–B2)', 'Goethe-Certified Trainer'],
-        [mu_photo('5452293'), 'Ms. Yuki Tanaka',  'Japanese Language Faculty',    'JLPT N1 Certified'],
-        [mu_photo('8460157'), 'Mr. Omar Haddad',  'Global Placement Head',        'Dubai Healthcare Network'],
-        [mu_photo('5207104'), 'Ms. Clara Jensen', 'IELTS & OET Trainer',          'British Council Certified'],
+     'people' => [ // photos: assets/images/Language-&-Global-Exposure/
+        [mu_fac_img('Language-&-Global-Exposure', 'Prof Navmi.webp'),   'Prof. Navmi',   'Language & Global Exposure', ''],
+        [mu_fac_img('Language-&-Global-Exposure', 'Prof Vandana.webp'), 'Prof. Vandana', 'Language & Global Exposure', ''],
      ]],
     ['n' => '40', 'b' => 'Full-Time Faculty', 'l' => 'Dedicated nursing and physiotherapy educators shaping your core clinical learning every day.',
-     'people' => [
-        [mu_photo('4173251'), 'Dr. Priya Sharma', 'Principal, College of Nursing', 'PhD Nursing · 18+ yrs'],
-        [mu_photo('6234600'), 'Dr. Arjun Mehta',  'Head of Physiotherapy',          'MPT, Orthopaedics'],
-        [mu_photo('8376277'), 'Ms. Neha Kapoor',  'Associate Professor',            'MSc Nursing, Critical Care'],
-        [mu_photo('5407206'), 'Ms. Ritu Verma',   'Clinical Instructor',            'Simulation & Skill Labs'],
+     'people' => [ // photos: assets/images/full-time-faculty/
+        [mu_fac_img('full-time-faculty', 'Dr. Aslam.webp'),       'Dr. Aslam',       'Full-Time Faculty', ''],
+        [mu_fac_img('full-time-faculty', 'Mrs Lolita.webp'),      'Mrs. Lolita',     'Full-Time Faculty', ''],
+        [mu_fac_img('full-time-faculty', 'Prof. Neha Pant.webp'), 'Prof. Neha Pant', 'Full-Time Faculty', ''],
+        [mu_fac_img('full-time-faculty', 'Prof. Shyamli.webp'),   'Prof. Shyamli',   'Full-Time Faculty', ''],
      ]],
     ['n' => '20', 'b' => 'Visiting Faculty', 'l' => 'Senior clinicians and international experts from partner hospitals and universities abroad.',
      'people' => [
@@ -532,7 +531,7 @@ case 'model': ?>
   </section>
 <?php break;
 
-/* =========================================================== 8b. FACULTY MODEL — scroll-driven tabs, 4 faculty each */
+/* =========================================================== 8b. FACULTY MODEL — scroll-driven tabs; 3 faculty shown, chevron reveals the 4th */
 case 'faculty': ?>
   <section class="mu-dark mu-model mu-model--faculty" id="faculty" style="--steps:<?= count($muFaculty) ?>">
     <div class="mu-model-sticky">
@@ -553,13 +552,22 @@ case 'faculty': ?>
           </div>
           <div class="mu-model-right">
             <?php foreach ($muFaculty as $i => $f): ?>
-            <div class="mu-model-panel<?= $i === 0 ? ' is-active' : '' ?>" data-model-panel="<?= $i ?>">
-              <?php foreach ($f['people'] as $p): ?>
-              <figure class="mu-fac-card">
-                <div class="mu-fac-photo"><img src="<?= mu_e($p[0]) ?>" alt="<?= mu_e($p[1]) ?>" loading="lazy" decoding="async"></div>
-                <figcaption><b><?= mu_e($p[1]) ?></b><span><?= mu_e($p[2]) ?></span><em><?= mu_e($p[3]) ?></em></figcaption>
-              </figure>
-              <?php endforeach; ?>
+            <div class="mu-model-panel mu-fac-panel<?= $i === 0 ? ' is-active' : '' ?>" data-model-panel="<?= $i ?>">
+              <div class="mu-fac-viewport" id="mu-fac-vp-<?= $i ?>">
+                <div class="mu-fac-track">
+                  <?php foreach ($f['people'] as $k => $p): ?>
+                  <figure class="mu-fac-card<?= $k >= 3 ? ' mu-fac-card--extra' : '' ?>">
+                    <div class="mu-fac-photo"><img src="<?= mu_e($p[0]) ?>" alt="<?= mu_e($p[1]) ?>" loading="lazy" decoding="async"></div>
+                    <figcaption><b><?= mu_e($p[1]) ?></b><?php if ($p[2] !== ''): ?><span><?= mu_e($p[2]) ?></span><?php endif; ?><?php if ($p[3] !== ''): ?><em><?= mu_e($p[3]) ?></em><?php endif; ?></figcaption>
+                  </figure>
+                  <?php endforeach; ?>
+                </div>
+              </div>
+              <?php if (count($f['people']) > 3): ?>
+              <button type="button" class="mu-fac-more" aria-controls="mu-fac-vp-<?= $i ?>" aria-expanded="false" aria-label="Show more <?= mu_e($f['b']) ?>">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <?php endif; ?>
             </div>
             <?php endforeach; ?>
           </div>

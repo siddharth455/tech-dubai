@@ -508,13 +508,12 @@ button, input, select, textarea { font-family: inherit; }
   .cta-contact-section { padding: 40px 0; }
 }
 
-/* ---------- faculty model (reuses .mu-model scroll mechanics; 4 faculty per step) ---------- */
+/* ---------- faculty model (reuses .mu-model scroll mechanics; 3 faculty shown + chevron for the 4th) ---------- */
 .mu-model--faculty .mu-model-num { flex: 0 0 auto; font-size: clamp(3.4rem, 5.6vw, 5rem); }
 .mu-model--faculty .mu-model-text { padding-top: 2px; }
 .mu-fac-pct { display: block; font-style: normal; font-family: var(--font-serif); font-size: 1.5rem; line-height: 1; margin-bottom: 4px; background: var(--mu-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
 .mu-model--faculty .mu-model-item { gap: 12px; padding: 18px 0; }
 .mu-model--faculty .mu-model-body { grid-template-columns: 340px minmax(0, 1fr); }
-.mu-model--faculty .mu-model-panel { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .mu-fac-card { display: flex; flex-direction: column; margin: 0; border: 1px solid rgba(255, 255, 255, .14); border-radius: 8px; overflow: hidden; background: #141414; color: #fff; transition: border-color .3s ease, transform .3s var(--mu-ease); }
 .mu-fac-card:hover { border-color: rgba(255, 255, 255, .35); transform: translateY(-4px); }
 .mu-fac-photo { position: relative; aspect-ratio: 4 / 4.2; overflow: hidden; background: radial-gradient(120% 90% at 50% 20%, #2a2a2a, #0d0d0d); }
@@ -526,20 +525,50 @@ button, input, select, textarea { font-family: inherit; }
 .mu-fac-card span { font-family: var(--font-serif); font-size: .86rem; color: rgba(255, 255, 255, .7); }
 .mu-fac-card span { min-height: 2.6em; margin-bottom: 10px; }
 .mu-fac-card em { margin-top: auto; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, .14); font-style: normal; font-size: .82rem; font-weight: 600; color: rgba(255, 255, 255, .9); }
-.mu-model--faculty .mu-model-panel { align-items: stretch; align-content: start; }
+
+/* 3 cards visible; the chevron slides the track one card left to reveal the 4th */
+.mu-model--faculty .mu-fac-panel { display: flex; align-items: center; gap: 18px; }
+.mu-fac-viewport { --fac-gap: 16px; flex: 1 1 auto; min-width: 0; overflow: hidden; padding: 6px 0; margin: -6px 0; }
+.mu-fac-track { display: flex; gap: var(--fac-gap); transition: transform .7s var(--mu-ease); will-change: transform; }
+.mu-fac-track > .mu-fac-card { flex: 0 0 calc((100% - 2 * var(--fac-gap)) / 3); min-width: 0; }
+.mu-fac-panel.is-more .mu-fac-track { transform: translateX(calc((-100% - var(--fac-gap)) / 3)); }
+.mu-fac-track > .mu-fac-card:first-child, .mu-fac-card--extra { transition: opacity .6s ease, border-color .3s ease, transform .3s var(--mu-ease); }
+.mu-fac-card--extra { opacity: .35; }
+.mu-fac-panel.is-more .mu-fac-card--extra { opacity: 1; }
+.mu-fac-panel.is-more .mu-fac-track > .mu-fac-card:first-child { opacity: .35; }
+.mu-fac-more { flex: none; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid rgba(255, 255, 255, .28); border-radius: 50%; background: rgba(255, 255, 255, .04); color: #fff; cursor: pointer; transition: background .3s ease, border-color .3s ease, color .3s ease, transform .3s var(--mu-ease); }
+.mu-fac-more svg { transition: transform .5s var(--mu-ease); }
+.mu-fac-more:hover { background: #fff; border-color: #fff; color: var(--mu-ink, #111); }
+.mu-fac-more:hover svg { transform: translateX(2px); }
+.mu-fac-more:focus-visible { outline: 2px solid var(--mu-yellow, #ffd400); outline-offset: 3px; }
+.mu-fac-panel.is-more .mu-fac-more svg { transform: rotate(180deg); }
+.mu-fac-panel.is-more .mu-fac-more:hover svg { transform: rotate(180deg) translateX(2px); }
 
 @media (max-width: 1100px) {
-  .mu-model--faculty .mu-model-body { grid-template-columns: 260px minmax(0, 1fr); }
-  .mu-model--faculty .mu-model-panel { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .mu-model--faculty .mu-fac-photo { aspect-ratio: 2 / 1; }
+  .mu-model--faculty .mu-model-body { grid-template-columns: 240px minmax(0, 1fr); gap: 28px; }
+  .mu-model--faculty .mu-fac-panel { gap: 12px; }
+  .mu-fac-viewport { --fac-gap: 12px; }
+  .mu-fac-more { width: 38px; height: 38px; }
   .mu-model--faculty .mu-fac-card figcaption { padding: 10px 12px 12px; }
+  .mu-model--faculty .mu-fac-card b { font-size: .92rem; }
+  .mu-model--faculty .mu-fac-card span, .mu-model--faculty .mu-fac-card em { font-size: .78rem; }
 }
+/* tablet / mobile: plain swipeable row of all 4, no chevron */
 @media (max-width: 900px) {
   .mu-model--faculty .mu-model-body { grid-template-columns: 1fr; }
-  .mu-model--faculty .mu-model-panel { grid-template-columns: repeat(4, 62%); }
-  .mu-model--faculty .mu-fac-photo { aspect-ratio: 4 / 4.2; }
+  .mu-model--faculty .mu-fac-panel { display: none; overflow: visible; }
+  .mu-model--faculty .mu-fac-panel.is-active { display: block; }
+  .mu-fac-viewport { overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin: 0; padding: 0 0 6px; }
+  .mu-fac-viewport::-webkit-scrollbar { display: none; }
+  .mu-fac-track, .mu-fac-panel.is-more .mu-fac-track { transform: none; transition: none; }
+  .mu-fac-track > .mu-fac-card { flex-basis: 62%; scroll-snap-align: start; }
+  .mu-fac-card--extra, .mu-fac-panel.is-more .mu-fac-track > .mu-fac-card:first-child { opacity: 1; }
+  .mu-fac-more { display: none; }
   .mu-model--faculty .mu-model-num { font-size: 2.8rem; }
   .mu-fac-pct { font-size: 1.1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mu-fac-track, .mu-fac-more svg { transition: none; }
 }
 
 /* ---------- hero: round-1 admission countdown (right side) ---------- */

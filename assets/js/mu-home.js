@@ -221,6 +221,23 @@
     layout();
   }
 
+  /* ---------------- faculty: chevron reveals the 4th faculty member ---------------- */
+  function setFacMore(panel, on) {
+    var btn = panel.querySelector('.mu-fac-more');
+    if (!btn) return;
+    panel.classList.toggle('is-more', on);
+    btn.setAttribute('aria-expanded', on ? 'true' : 'false');
+    btn.setAttribute('aria-label', btn.getAttribute('aria-label').replace(/^Show (more|first)/, on ? 'Show first' : 'Show more'));
+  }
+  function initFacultyMore() {
+    $$('.mu-fac-more').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var panel = btn.closest('.mu-fac-panel');
+        setFacMore(panel, !panel.classList.contains('is-more'));
+      });
+    });
+  }
+
   /* ---------------- learning model: scroll position drives the active step ---------------- */
   function initModel() { $$('.mu-model').forEach(initModelSection); }
   function initModelSection(sec) {
@@ -235,6 +252,7 @@
       current = i;
       items.forEach(function (it, n) { it.classList.toggle('is-active', n === i); });
       panels.forEach(function (p, n) { p.classList.toggle('is-active', n === i); });
+      panels.forEach(function (p, n) { if (n !== i) setFacMore(p, false); }); // new step starts on its first 3 faculty
     }
     function onScroll() {
       if (!desktop.matches) return;
@@ -403,6 +421,7 @@
       });
     }
     initModel();
+    initFacultyMore();
     initCountdown();
     initCampusVideo();
     initImpact();
