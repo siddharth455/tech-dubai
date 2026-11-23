@@ -680,3 +680,65 @@ button, input, select, textarea { font-family: inherit; }
   .mu-hero { --mu-lift: clamp(16px, 4.5vh, 52px); }
   .mu-hero-inner { padding-bottom: calc(var(--mu-pad-b) + var(--mu-lift)); }
 }
+
+/* ---------- navbar brand lockup: logo mark + wordmark as one unit ---------- */
+.navbar .nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 1;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.navbar .nav-brand-mark {
+  display: block;
+  height: 46px;          /* ≈ 2× the wordmark cap height: mark and text read at equal weight */
+  width: auto;           /* keep the speech bubble's real 1.37:1 shape — no square crop */
+  object-fit: contain;
+  flex-shrink: 0;
+  transition: transform .25s ease;
+}
+.navbar .nav-brand:hover .nav-brand-mark { transform: rotate(-4deg) scale(1.04); }
+.navbar .nav-brand-text {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  white-space: nowrap;
+  padding-bottom: 2px;   /* optical centring against the bubble (its tail sits low-left) */
+  /* deeper end-stop so "College" stays readable on white instead of fading to pale yellow */
+  background: linear-gradient(90deg, #1f8a35 0%, #3aa95b 55%, #8cc63f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.navbar.scrolled .nav-brand-text {
+  background: linear-gradient(90deg, #57c785 0%, #a6d86a 60%, #e8e008 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.navbar .nav-brand-plus {
+  display: inline-block;
+  margin-left: 1px;
+  font-size: .8em;
+  font-weight: 800;
+  vertical-align: super;
+  line-height: 0;
+  color: #e11d2a;
+  -webkit-text-fill-color: #e11d2a;
+}
+.navbar .nav-link { font-size: 1rem; letter-spacing: -0.01em; }
+.navbar .nav-links { gap: 28px; }
+
+@media (max-width: 1100px) {
+  .navbar .nav-links { gap: 20px; }
+  .navbar .nav-brand-mark { height: 42px; }
+  .navbar .nav-brand-text { font-size: 1.25rem; }
+}
+@media (max-width: 640px) {
+  .navbar .nav-brand { gap: 9px; }
+  .navbar .nav-brand-mark { height: 36px; }
+  .navbar .nav-brand > .nav-brand-text { font-size: clamp(1rem, 4.6vw, 1.15rem) !important; }
+}
+@media (max-width: 380px) {
+  .navbar .nav-brand-mark { height: 32px; }
+}
