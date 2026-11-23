@@ -141,9 +141,9 @@ A1 to B2.",
   <!-- Header / Navbar -->
   <header class="navbar" id="navbar">
     <div class="container nav-container">
-      <a href="#" class="logo">
-        <span class="logo-img"><img src="assets/images/cbc.logo.png" alt="Career Buddy Tech Logo" /></span>
-        <span style=" font-size:1.5rem; "class="text-accent">Career Buddy College<span class="logo-sup" style="color: red !important;">+</span></span>
+      <a href="#" class="logo nav-brand" aria-label="Career Buddy College+ home">
+        <img class="nav-brand-mark" src="assets/images/cbc-logo-mark.png" width="264" height="192" alt="Career Buddy College logo" />
+        <span class="nav-brand-text text-accent">Career Buddy College<span class="nav-brand-plus" aria-hidden="true">+</span></span>
       </a>
       
       <nav class="nav-links" id="navLinks">
