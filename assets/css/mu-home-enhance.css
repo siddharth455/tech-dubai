@@ -526,16 +526,16 @@ button, input, select, textarea { font-family: inherit; }
 .mu-fac-card span { min-height: 2.6em; margin-bottom: 10px; }
 .mu-fac-card em { margin-top: auto; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, .14); font-style: normal; font-size: .82rem; font-weight: 600; color: rgba(255, 255, 255, .9); }
 
-/* 3 cards visible; the chevron slides the track one card left to reveal the 4th */
+/* 3 cards visible; the chevron slides the track --fac-shift cards left (set in PHP: count - 3) to reveal the rest */
 .mu-model--faculty .mu-fac-panel { display: flex; align-items: center; gap: 18px; }
 .mu-fac-viewport { --fac-gap: 16px; flex: 1 1 auto; min-width: 0; overflow: hidden; padding: 6px 0; margin: -6px 0; }
 .mu-fac-track { display: flex; gap: var(--fac-gap); transition: transform .7s var(--mu-ease); will-change: transform; }
 .mu-fac-track > .mu-fac-card { flex: 0 0 calc((100% - 2 * var(--fac-gap)) / 3); min-width: 0; }
-.mu-fac-panel.is-more .mu-fac-track { transform: translateX(calc((-100% - var(--fac-gap)) / 3)); }
-.mu-fac-track > .mu-fac-card:first-child, .mu-fac-card--extra { transition: opacity .6s ease, border-color .3s ease, transform .3s var(--mu-ease); }
+.mu-fac-panel.is-more .mu-fac-track { transform: translateX(calc((-100% - var(--fac-gap)) / 3 * var(--fac-shift, 1))); }
+.mu-fac-card--lead, .mu-fac-card--extra { transition: opacity .6s ease, border-color .3s ease, transform .3s var(--mu-ease); }
 .mu-fac-card--extra { opacity: .35; }
 .mu-fac-panel.is-more .mu-fac-card--extra { opacity: 1; }
-.mu-fac-panel.is-more .mu-fac-track > .mu-fac-card:first-child { opacity: .35; }
+.mu-fac-panel.is-more .mu-fac-card--lead { opacity: .35; }
 .mu-fac-more { flex: none; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid rgba(255, 255, 255, .28); border-radius: 50%; background: rgba(255, 255, 255, .04); color: #fff; cursor: pointer; transition: background .3s ease, border-color .3s ease, color .3s ease, transform .3s var(--mu-ease); }
 .mu-fac-more svg { transition: transform .5s var(--mu-ease); }
 .mu-fac-more:hover { background: #fff; border-color: #fff; color: var(--mu-ink, #111); }
@@ -553,7 +553,7 @@ button, input, select, textarea { font-family: inherit; }
   .mu-model--faculty .mu-fac-card b { font-size: .92rem; }
   .mu-model--faculty .mu-fac-card span, .mu-model--faculty .mu-fac-card em { font-size: .78rem; }
 }
-/* tablet / mobile: plain swipeable row of all 4, no chevron */
+/* tablet / mobile: plain swipeable row of all cards, no chevron */
 @media (max-width: 900px) {
   .mu-model--faculty .mu-model-body { grid-template-columns: 1fr; }
   .mu-model--faculty .mu-fac-panel { display: none; overflow: visible; }
@@ -562,7 +562,7 @@ button, input, select, textarea { font-family: inherit; }
   .mu-fac-viewport::-webkit-scrollbar { display: none; }
   .mu-fac-track, .mu-fac-panel.is-more .mu-fac-track { transform: none; transition: none; }
   .mu-fac-track > .mu-fac-card { flex-basis: 62%; scroll-snap-align: start; }
-  .mu-fac-card--extra, .mu-fac-panel.is-more .mu-fac-track > .mu-fac-card:first-child { opacity: 1; }
+  .mu-fac-card--extra, .mu-fac-panel.is-more .mu-fac-card--lead { opacity: 1; }
   .mu-fac-more { display: none; }
   .mu-model--faculty .mu-model-num { font-size: 2.8rem; }
   .mu-fac-pct { font-size: 1.1rem; }

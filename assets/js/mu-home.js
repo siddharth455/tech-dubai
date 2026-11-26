@@ -221,7 +221,7 @@
     layout();
   }
 
-  /* ---------------- faculty: chevron reveals the 4th faculty member ---------------- */
+  /* ---------------- faculty: chevron slides to the remaining faculty members ---------------- */
   function setFacMore(panel, on) {
     var btn = panel.querySelector('.mu-fac-more');
     if (!btn) return;

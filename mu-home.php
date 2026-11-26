@@ -83,14 +83,14 @@ $muTracks = [
         'img' => 'assets/images/dubai-design.jpeg', 'video' => mu_vid('6130037', 'hd_1280_720_30fps'),
     ],
     [
-        'year' => '2nd Year', 'flags' => ['cn'], 'tag' => 'China Track',
+        'year' => '2nd Year', 'flags' => ['cn'], 'tag' => 'China/Japan Track',
         'h' => 'See How AI Is', 'em' => 'Transforming Healthcare',
         'p' => "Experience AI-assisted diagnosis, patient monitoring and robotic rehabilitation in one of the world's leading innovation hubs.",
         'list' => ['AI in diagnosis, monitoring & treatment planning', 'Visits to advanced healthcare & innovation centres', 'Introduction to robotic rehabilitation systems', 'Chinese culture, education & technology'],
         'img' => 'assets/images/china.jpg', 'video' => mu_vid('6130223', 'hd_1280_720_30fps'),
     ],
     [
-        'year' => '3rd Year', 'flags' => ['sg'], 'tag' => 'Singapore Track',
+        'year' => '3rd Year', 'flags' => ['sg'], 'tag' => 'Singapore/Germany Track',
         'h' => 'Learn From One of the', 'em' => 'Best Health Systems',
         'p' => 'High standards, excellent patient outcomes, advanced infrastructure and a strong focus on preventive care.',
         'list' => ["Singapore's healthcare delivery model", 'Evidence-based clinical practice', 'Digital health & electronic medical records', 'Elderly care & rehabilitation services'],
@@ -147,15 +147,18 @@ function mu_photo($id, $w = 480) { return 'https://images.pexels.com/photos/' . 
 $muFaculty = [
     ['n' => '40', 'b' => 'Language & Global Exposure', 'l' => 'Certified language trainers and global-placement experts preparing you for Germany, Japan, Dubai & beyond.',
      'people' => [ // photos: assets/images/Language-&-Global-Exposure/
-        [mu_fac_img('Language-&-Global-Exposure', 'Prof Navmi.webp'),   'Prof. Navmi',   'Language & Global Exposure', ''],
-        [mu_fac_img('Language-&-Global-Exposure', 'Prof Vandana.webp'), 'Prof. Vandana', 'Language & Global Exposure', ''],
+        [mu_fac_img('Language-&-Global-Exposure', 'Assistant-Professor-Navmi-Joshi.webp'),         'Navmi Joshi',         'Assistant Professor',     'Language & Global Exposure'],
+        [mu_fac_img('Language-&-Global-Exposure', 'Assistant-Professor-Vandana.webp'),             'Vandana',             'Assistant Professor',     'Language & Global Exposure'],
+        [mu_fac_img('Language-&-Global-Exposure', 'Assistant-Professor For German Language.webp'), 'Assistant Professor', 'German Language Faculty', 'Language & Global Exposure'], // name to be added later
      ]],
     ['n' => '40', 'b' => 'Full-Time Faculty', 'l' => 'Dedicated nursing and physiotherapy educators shaping your core clinical learning every day.',
      'people' => [ // photos: assets/images/full-time-faculty/
-        [mu_fac_img('full-time-faculty', 'Dr. Aslam.webp'),       'Dr. Aslam',       'Full-Time Faculty', ''],
-        [mu_fac_img('full-time-faculty', 'Mrs Lolita.webp'),      'Mrs. Lolita',     'Full-Time Faculty', ''],
-        [mu_fac_img('full-time-faculty', 'Prof. Neha Pant.webp'), 'Prof. Neha Pant', 'Full-Time Faculty', ''],
-        [mu_fac_img('full-time-faculty', 'Prof. Shyamli.webp'),   'Prof. Shyamli',   'Full-Time Faculty', ''],
+        [mu_fac_img('full-time-faculty', 'Dr. Aslam.webp'),                          'Dr. Aslam',     'Full-Time Faculty',   ''],
+        [mu_fac_img('full-time-faculty', 'Dr.Lolita.webp'),                          'Dr. Lolita',    'Full-Time Faculty',   ''],
+        [mu_fac_img('full-time-faculty', 'Assistant-Professor-Neha-Pant.webp'),      'Neha Pant',     'Assistant Professor', 'Full-Time Faculty'],
+        [mu_fac_img('full-time-faculty', 'Assistant-Professor-Shyamli.webp'),        'Shyamli',       'Assistant Professor', 'Full-Time Faculty'],
+        [mu_fac_img('full-time-faculty', 'Assistant Professor - Ashish-Kunwar.webp'), 'Ashish Kunwar', 'Assistant Professor', 'Full-Time Faculty'],
+        [mu_fac_img('full-time-faculty', 'Assistant Professor - Tannu-Pathak.webp'),  'Tannu Pathak',  'Assistant Professor', 'Full-Time Faculty'],
      ]],
     ['n' => '20', 'b' => 'Visiting Faculty', 'l' => 'Senior clinicians and international experts from partner hospitals and universities abroad.',
      'people' => [
@@ -531,7 +534,7 @@ case 'model': ?>
   </section>
 <?php break;
 
-/* =========================================================== 8b. FACULTY MODEL — scroll-driven tabs; 3 faculty shown, chevron reveals the 4th */
+/* =========================================================== 8b. FACULTY MODEL — scroll-driven tabs; 3 faculty shown, chevron slides to the rest */
 case 'faculty': ?>
   <section class="mu-dark mu-model mu-model--faculty" id="faculty" style="--steps:<?= count($muFaculty) ?>">
     <div class="mu-model-sticky">
@@ -554,9 +557,10 @@ case 'faculty': ?>
             <?php foreach ($muFaculty as $i => $f): ?>
             <div class="mu-model-panel mu-fac-panel<?= $i === 0 ? ' is-active' : '' ?>" data-model-panel="<?= $i ?>">
               <div class="mu-fac-viewport" id="mu-fac-vp-<?= $i ?>">
-                <div class="mu-fac-track">
+                <?php $facShift = max(0, count($f['people']) - 3); /* chevron slides to the last 3 cards */ ?>
+                <div class="mu-fac-track" style="--fac-shift:<?= $facShift ?>">
                   <?php foreach ($f['people'] as $k => $p): ?>
-                  <figure class="mu-fac-card<?= $k >= 3 ? ' mu-fac-card--extra' : '' ?>">
+                  <figure class="mu-fac-card<?= $k >= 3 ? ' mu-fac-card--extra' : '' ?><?= $k < $facShift ? ' mu-fac-card--lead' : '' ?>">
                     <div class="mu-fac-photo"><img src="<?= mu_e($p[0]) ?>" alt="<?= mu_e($p[1]) ?>" loading="lazy" decoding="async"></div>
                     <figcaption><b><?= mu_e($p[1]) ?></b><?php if ($p[2] !== ''): ?><span><?= mu_e($p[2]) ?></span><?php endif; ?><?php if ($p[3] !== ''): ?><em><?= mu_e($p[3]) ?></em><?php endif; ?></figcaption>
                   </figure>
@@ -693,15 +697,7 @@ case 'alumni': ?>
 
 /* =========================================================== 14. CONVOCATION */
 case 'convocation': ?>
-  <section class="mu-sec mu-dark mu-convo">
-    <div class="mu-container mu-convo-wrap">
-      <div>
-        <h2 class="mu-h2">Graduate <br><em class="mu-em">Global-Ready</em></h2>
-        <button type="button" class="mu-btn mu-btn--white" data-video-modal="<?= mu_e($mu['graduation']['src']) ?>">Watch the Graduation Video <span class="mu-btn-arrow"><?= mu_arrow_svg() ?></span></button>
-      </div>
-      <?= mu_media($mu['graduation']['poster'], $mu['graduation']['src'], 'Graduation ceremony', 'mu-convo-media') ?>
-    </div>
-  </section>
+  
 <?php break;
 
 /* =========================================================== 15. CAMPUS HUB */
