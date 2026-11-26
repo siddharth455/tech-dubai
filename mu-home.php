@@ -83,14 +83,14 @@ $muTracks = [
         'img' => 'assets/images/dubai-design.jpeg', 'video' => mu_vid('6130037', 'hd_1280_720_30fps'),
     ],
     [
-        'year' => '2nd Year', 'flags' => ['cn'], 'tag' => 'China Track',
+        'year' => '2nd Year', 'flags' => ['cn'], 'tag' => 'China/Japan Track',
         'h' => 'See How AI Is', 'em' => 'Transforming Healthcare',
         'p' => "Experience AI-assisted diagnosis, patient monitoring and robotic rehabilitation in one of the world's leading innovation hubs.",
         'list' => ['AI in diagnosis, monitoring & treatment planning', 'Visits to advanced healthcare & innovation centres', 'Introduction to robotic rehabilitation systems', 'Chinese culture, education & technology'],
         'img' => 'assets/images/china.jpg', 'video' => mu_vid('6130223', 'hd_1280_720_30fps'),
     ],
     [
-        'year' => '3rd Year', 'flags' => ['sg'], 'tag' => 'Singapore Track',
+        'year' => '3rd Year', 'flags' => ['sg'], 'tag' => 'Singapore/Germany Track',
         'h' => 'Learn From One of the', 'em' => 'Best Health Systems',
         'p' => 'High standards, excellent patient outcomes, advanced infrastructure and a strong focus on preventive care.',
         'list' => ["Singapore's healthcare delivery model", 'Evidence-based clinical practice', 'Digital health & electronic medical records', 'Elderly care & rehabilitation services'],
@@ -693,15 +693,7 @@ case 'alumni': ?>
 
 /* =========================================================== 14. CONVOCATION */
 case 'convocation': ?>
-  <section class="mu-sec mu-dark mu-convo">
-    <div class="mu-container mu-convo-wrap">
-      <div>
-        <h2 class="mu-h2">Graduate <br><em class="mu-em">Global-Ready</em></h2>
-        <button type="button" class="mu-btn mu-btn--white" data-video-modal="<?= mu_e($mu['graduation']['src']) ?>">Watch the Graduation Video <span class="mu-btn-arrow"><?= mu_arrow_svg() ?></span></button>
-      </div>
-      <?= mu_media($mu['graduation']['poster'], $mu['graduation']['src'], 'Graduation ceremony', 'mu-convo-media') ?>
-    </div>
-  </section>
+  
 <?php break;
 
 /* =========================================================== 15. CAMPUS HUB */
