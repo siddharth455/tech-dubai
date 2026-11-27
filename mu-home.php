@@ -10,9 +10,10 @@
  * Usage: require_once 'mu-home.php'; then mu_section('hero'), mu_section('bento') ... where needed.
  */
 
-function mu_vid($id, $file)  { return 'https://videos.pexels.com/video-files/' . $id . '/' . $id . '-' . $file . '.mp4'; }
-function mu_thumb($id, $w = 640) { return 'https://images.pexels.com/videos/' . $id . '/pexels-photo-' . $id . '.jpeg?auto=compress&cs=tinysrgb&w=' . $w; }
-function mu_e($s) { return htmlspecialchars((string) $s, ENT_QUOTES, 'UTF-8'); }
+function mu_vid(string $id, string $file): string { return 'https://videos.pexels.com/video-files/' . $id . '/' . $id . '-' . $file . '.mp4'; }
+function mu_thumb(string $id, int $w = 640): string { return 'https://images.pexels.com/videos/' . $id . '/pexels-photo-' . $id . '.jpeg?auto=compress&cs=tinysrgb&w=' . $w; }
+/** @param mixed $s */
+function mu_e($s): string { return htmlspecialchars((string) $s, ENT_QUOTES, 'UTF-8'); }
 
 $mu = [
     'hero_bg'     => mu_vid('6129925', 'hd_1280_720_30fps'),
@@ -140,23 +141,23 @@ $muModel = [
      'cards' => [['assets/images/germany.webp', 'Career Planning', 'Germany & Japan pathways'], ['assets/images/lab-13.jpg', 'Interview Prep', 'Mock interviews & exams'], ['assets/images/lab-15.jpg', 'Placement Support', 'Abroad placement assistance']]],
 ];
 
-/* Faculty model — scroll-driven like $muModel. Each person: [photo, name, role, credential ('' hides the line)].
+/* Faculty model — scroll-driven like $muModel. Each person: [photo, name, role, (optional experience line,) credential ('' hides the line)]. The last item is always the bottom tag; any item between role and it shows as an extra line under the role.
  * Language & Full-Time use real photos from assets/images/. Visiting Faculty is still PLACEHOLDER (Pexels stock) — replace before going live. */
-function mu_fac_img($dir, $file) { return 'assets/images/' . rawurlencode($dir) . '/' . rawurlencode($file); } // folder/file names contain spaces and &
-function mu_photo($id, $w = 480) { return 'https://images.pexels.com/photos/' . $id . '/pexels-photo-' . $id . '.jpeg?auto=compress&cs=tinysrgb&w=' . $w . '&h=' . round($w * 1.05) . '&fit=crop'; }
+function mu_fac_img(string $dir, string $file): string { return 'assets/images/' . rawurlencode($dir) . '/' . rawurlencode($file); } // folder/file names contain spaces and &
+function mu_photo(string $id, int $w = 480): string { return 'https://images.pexels.com/photos/' . $id . '/pexels-photo-' . $id . '.jpeg?auto=compress&cs=tinysrgb&w=' . $w . '&h=' . round($w * 1.05) . '&fit=crop'; }
 $muFaculty = [
     ['n' => '40', 'b' => 'Language & Global Exposure', 'l' => 'Certified language trainers and global-placement experts preparing you for Germany, Japan, Dubai & beyond.',
      'people' => [ // photos: assets/images/Language-&-Global-Exposure/
-        [mu_fac_img('Language-&-Global-Exposure', 'Assistant-Professor-Navmi-Joshi.webp'),         'Navmi Joshi',         'Assistant Professor',     'Language & Global Exposure'],
-        [mu_fac_img('Language-&-Global-Exposure', 'Assistant-Professor-Vandana.webp'),             'Vandana',             'Assistant Professor',     'Language & Global Exposure'],
-        [mu_fac_img('Language-&-Global-Exposure', 'Assistant-Professor For German Language.webp'), 'Assistant Professor', 'German Language Faculty', 'Language & Global Exposure'], // name to be added later
+        [mu_fac_img('Language-&-Global-Exposure', 'Assistant-Professor-Navmi-Joshi.webp'),         'Navmi Joshi',         'Personality Development Trainer',     'Language & Global Exposure'],
+        [mu_fac_img('Language-&-Global-Exposure', 'Assistant-Professor-Vandana.webp'),             'Vandana Arora',       'Personality Development Trainer',    'Language & Global Exposure'],
+        [mu_fac_img('Language-&-Global-Exposure', 'Assistant-Professor For German Language.webp'), 'Priyanka Rawat',      'Global German Language Trainer', 'Language & Global Exposure'], 
      ]],
     ['n' => '40', 'b' => 'Full-Time Faculty', 'l' => 'Dedicated nursing and physiotherapy educators shaping your core clinical learning every day.',
      'people' => [ // photos: assets/images/full-time-faculty/
-        [mu_fac_img('full-time-faculty', 'Dr. Aslam.webp'),                          'Dr. Aslam',     'Full-Time Faculty',   ''],
-        [mu_fac_img('full-time-faculty', 'Dr.Lolita.webp'),                          'Dr. Lolita',    'Full-Time Faculty',   ''],
+        [mu_fac_img('full-time-faculty', 'Dr. Aslam.webp'),                          'Professor Dr. Mod. Aslam',     'Principal', '21 years of Experience', 'Full-Time Faculty'],
+        [mu_fac_img('full-time-faculty', 'Dr.Lolita.webp'),                          'Professor Lolita Lal',    'Principal', '25 years of Experience', 'Full-Time Faculty'],
         [mu_fac_img('full-time-faculty', 'Assistant-Professor-Neha-Pant.webp'),      'Neha Pant',     'Assistant Professor', 'Full-Time Faculty'],
-        [mu_fac_img('full-time-faculty', 'Assistant-Professor-Shyamli.webp'),        'Shyamli',       'Assistant Professor', 'Full-Time Faculty'],
+        [mu_fac_img('full-time-faculty', 'Assistant-Professor-Shyamli.webp'),        'Dr. Shyamli Silmana','Assistant Professor', 'Full-Time Faculty'],
         [mu_fac_img('full-time-faculty', 'Assistant Professor - Ashish-Kunwar.webp'), 'Ashish Kunwar', 'Assistant Professor', 'Full-Time Faculty'],
         [mu_fac_img('full-time-faculty', 'Assistant Professor - Tannu-Pathak.webp'),  'Tannu Pathak',  'Assistant Professor', 'Full-Time Faculty'],
      ]],
@@ -191,23 +192,23 @@ $muWall = [ // "What it's really like" marquee images (two columns)
 
 function mu_play_svg() { return '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.53.85l10.2-6.5a1 1 0 0 0 0-1.7L9.53 4.65A1 1 0 0 0 8 5.5Z" fill="currentColor"/></svg>'; }
 function mu_arrow_svg() { return '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'; }
-function mu_nav($prefix, $label) {
+function mu_nav(string $prefix, string $label): string {
     return '<div class="mu-navbtns"><button type="button" class="mu-navbtn ' . $prefix . '-prev" aria-label="Previous ' . $label . '"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'
          . '<button type="button" class="mu-navbtn ' . $prefix . '-next" aria-label="Next ' . $label . '"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>';
 }
-function mu_flags($keys, $cls = 'mu-flag') {
+function mu_flags(array $keys, string $cls = 'mu-flag'): string {
     global $muFlags; $o = '';
     foreach ($keys as $k) { $o .= '<img class="' . $cls . '" src="' . mu_e($muFlags[$k][0]) . '" alt="' . mu_e($muFlags[$k][1]) . ' flag" width="28" height="19" loading="lazy">'; }
     return $o;
 }
 /* A thumbnail that opens the video popup */
-function mu_media($poster, $video, $alt, $cls = '') {
+function mu_media(string $poster, string $video, string $alt, string $cls = ''): string {
     return '<button type="button" class="mu-media ' . $cls . '" data-video-modal="' . mu_e($video) . '" aria-label="Play video: ' . mu_e($alt) . '">'
          . '<img src="' . mu_e($poster) . '" alt="' . mu_e($alt) . '" loading="lazy" decoding="async">'
          . '<span class="mu-media-play">' . mu_play_svg() . '</span></button>';
 }
 
-function mu_section($name) {
+function mu_section(string $name): void {
     global $mu, $muFlags, $muLogos, $muPrograms, $muTracks, $muHandsOn, $muTalks, $muModel, $muFaculty, $muStories, $muAlumni, $muWall;
 
     switch ($name) {
@@ -541,7 +542,7 @@ case 'faculty': ?>
       <div class="mu-container">
         <div class="mu-model-head">
           <h2 class="mu-h2">Faculty Model at <em class="mu-em">Career Buddy College<span class="mu-plus">+</span></em></h2>
-          <a href="mentors.php" class="mu-btn mu-btn--outline">View Faculty <span class="mu-btn-arrow"><?= mu_arrow_svg() ?></span></a>
+          <!-- <a href="mentors.php" class="mu-btn mu-btn--outline">View Faculty <span class="mu-btn-arrow"><?= mu_arrow_svg() ?></span></a> -->
         </div>
         <div class="mu-model-body">
           <div class="mu-model-left">
@@ -562,7 +563,7 @@ case 'faculty': ?>
                   <?php foreach ($f['people'] as $k => $p): ?>
                   <figure class="mu-fac-card<?= $k >= 3 ? ' mu-fac-card--extra' : '' ?><?= $k < $facShift ? ' mu-fac-card--lead' : '' ?>">
                     <div class="mu-fac-photo"><img src="<?= mu_e($p[0]) ?>" alt="<?= mu_e($p[1]) ?>" loading="lazy" decoding="async"></div>
-                    <figcaption><b><?= mu_e($p[1]) ?></b><?php if ($p[2] !== ''): ?><span><?= mu_e($p[2]) ?></span><?php endif; ?><?php if ($p[3] !== ''): ?><em><?= mu_e($p[3]) ?></em><?php endif; ?></figcaption>
+                    <figcaption><b><?= mu_e($p[1]) ?></b><?php if ($p[2] !== ''): ?><span><?= mu_e($p[2]) ?></span><?php endif; ?><?php for ($x = 3; $x < count($p) - 1; $x++): if (trim($p[$x]) !== ''): ?><i class="mu-fac-exp"><?= mu_e(trim($p[$x])) ?></i><?php endif; endfor; ?><?php $cred = count($p) > 3 ? trim($p[count($p) - 1]) : ''; if ($cred !== ''): ?><em><?= mu_e($cred) ?></em><?php endif; ?></figcaption>
                   </figure>
                   <?php endforeach; ?>
                 </div>
